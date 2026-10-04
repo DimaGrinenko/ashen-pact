@@ -1,0 +1,104 @@
+/* Original raster ornament keeps the Paperclip control geometry and hitboxes.
+   The independent Spine frame surrounds an exact 1000 × 800 opening. */
+.ashen-app .reel-frame-art {
+  position:absolute;inset:auto;width:112%;height:130%;left:-6%;top:-15%;
+  z-index:4;pointer-events:none;max-width:none;
+  filter:drop-shadow(0 4px 4px #0009);
+}
+.ashen-app .reel-frame-art canvas {display:block;width:100%;height:100%;}
+.ashen-app .reel-board {
+  border-color:#10212a;
+  background:linear-gradient(180deg,#111f29f5,#10121ded);
+  box-shadow:inset 0 6px 20px #0008,0 5px 24px #0007;
+}
+.ashen-app .control-bar {position:relative;isolation:isolate;box-shadow:0 7px 18px #0007;}
+.ashen-app .control-bar::before {
+  content:'';position:absolute;inset:-3px;z-index:-1;pointer-events:none;
+  border:12px solid transparent;
+  border-image:url('/ashen/ui/v6/hud-shell.png') 48 110 fill / 12px / 0 stretch;
+}
+.ashen-app .buy-button,
+.ashen-app .buy-button:hover:not(:disabled) {
+  position:relative;isolation:isolate;overflow:visible;
+  background:#102b36!important;box-shadow:0 6px 12px #0005;
+}
+.ashen-app .buy-button::before {
+  content:'';position:absolute;inset:-6%;z-index:-1;pointer-events:none;
+  background:url('/ashen/ui/v6/bonus-rim.png') center / 100% 100% no-repeat;
+  transition:filter .18s;
+}
+.ashen-app .buy-button .pc-icon {filter:none;}
+.ashen-app .buy-button b {color:#e9faf9;text-shadow:0 1px 3px #000;}
+.ashen-app .buy-button.mode-red::before {filter:hue-rotate(142deg) saturate(1.35);}
+.ashen-app .buy-button:hover:not(:disabled)::before {filter:brightness(1.16);}
+.ashen-app .buy-button.mode-red:hover:not(:disabled)::before {filter:hue-rotate(142deg) saturate(1.35) brightness(1.16);}
+.ashen-app .spin-button,
+.ashen-app .spin-button:hover:not(:disabled) {
+  isolation:isolate;border-color:transparent!important;
+  background:radial-gradient(circle at 40% 28%,#284754,#13232d 55%,#050d12)!important;
+  box-shadow:0 6px 13px #0007,inset 0 0 18px #03070a;
+}
+.ashen-app .spin-button::before {
+  content:'';position:absolute;inset:-8%;z-index:-1;pointer-events:none;
+  background:url('/ashen/ui/v6/spin-rim.png') center / 100% 100% no-repeat;
+  transition:filter .18s;
+}
+.ashen-app .spin-button .pc-icon {filter:none;}
+.ashen-app .spin-button:hover:not(:disabled)::before {filter:brightness(1.15);}
+.ashen-app .spin-button.busy {opacity:1;}
+.ashen-app .spin-button.auto-running::before {filter:brightness(1.08) saturate(1.25);}
+.ashen-app .auto-button,.ashen-app .turbo-button {
+  box-shadow:inset 0 -2px 0 #aaa99e,0 2px 5px #0006;
+}
+.ashen-app .auto-button.active,.ashen-app .turbo-button.active {box-shadow:inset 0 -2px 0 #45939e,0 0 9px #76e7ed33;}
+
+/* Affordability lives in the existing gap below the price, without moving the
+   buttons or making the otherwise identical purchase cards change height. */
+.ashen-app .buy-modal {--pc-action-height:43px;--pc-body-bottom:13px;--pc-status-font:9px;--pc-status-gap:16px;}
+.ashen-app .buy-modal strong.purchase-price {margin-bottom:var(--pc-status-gap);}
+.ashen-app .buy-modal .purchase-availability {
+  position:absolute;left:3px;right:3px;bottom:calc(var(--pc-action-height) + var(--pc-body-bottom) + 1px);
+  display:block;margin:0;font-size:var(--pc-status-font);line-height:1.25;color:#a33149;
+  font-weight:700;white-space:nowrap;
+}
+.ashen-app .autoplay-start {width:100%;margin-top:12px;}
+.ashen-app .autoplay-options button {background:#273944;color:#dbe7eb;}
+.ashen-app .autoplay-options button[aria-pressed=true] {background:var(--pc-accent);color:var(--pc-ink);box-shadow:inset 0 0 0 2px #c5ffff;}
+.ashen-app .autoplay-options button:hover:not(:disabled) {background:#385462;color:#fff;}
+.ashen-app .autoplay-options button[aria-pressed=true]:hover:not(:disabled) {background:#abf7f6;color:var(--pc-ink);}
+.ashen-app .language-options {display:flex;gap:8px;margin:0 0 17px;}
+.ashen-app .language-options button {flex:1;min-height:34px;padding:8px 10px;border:0;border-radius:7px;background:#253641;color:#dce9ec;font-size:11px;font-weight:700;}
+.ashen-app .language-options button[aria-pressed=true] {background:var(--pc-accent);color:var(--pc-ink);}
+.ashen-app .language-options button:hover:not(:disabled) {filter:brightness(1.12);}
+@media(max-height:600px) and (orientation:landscape) {
+  .ashen-app .buy-modal {--pc-action-height:37px;--pc-body-bottom:10px;--pc-status-font:7px;--pc-status-gap:12px;}
+  .ashen-app .control-bar::before {border-image-width:10px;}
+}
+@media(max-height:480px) and (orientation:landscape) {
+  .ashen-app .buy-modal {--pc-action-height:31px;--pc-body-bottom:9px;--pc-status-font:7px;--pc-status-gap:12px;}
+}
+@media(max-height:280px) and (orientation:landscape) {
+  .ashen-app .buy-modal {--pc-action-height:19px;--pc-body-bottom:5px;--pc-status-font:4.5px;--pc-status-gap:8px;}
+  .ashen-app .control-bar::before {inset:-1px;border-image-width:5px;}
+  .ashen-app .autoplay-modal .autoplay-options {margin:6px 0;}
+  .ashen-app .autoplay-modal .autoplay-options button {min-height:28px;padding:4px 2px;font-size:14px;}
+  .ashen-app .autoplay-modal .autoplay-cost {padding:4px;margin:4px 0;}
+  .ashen-app .autoplay-modal .autoplay-start {margin-top:3px;padding:6px 12px;}
+  .ashen-app .autoplay-modal>p:last-child {font-size:7px;line-height:1.25;}
+  .ashen-app .settings-modal .settings-list {margin:4px 0 6px;}
+  .ashen-app .settings-modal .settings-list label {min-height:23px;padding:2px 0;}
+  .ashen-app .settings-modal .language-options {gap:6px;margin-bottom:7px;}
+  .ashen-app .settings-modal .language-options button {min-height:19px;padding:3px 6px;font-size:7.5px;border-radius:4px;}
+  .ashen-app .settings-modal .text-button {padding-top:7px;}
+}
+@media(orientation:portrait) {
+  .ashen-app .control-bar::before {inset:-2px;border-image-width:12px;}
+  .ashen-app .buy-button,.ashen-app .buy-button:hover:not(:disabled) {position:absolute;}
+  .ashen-app .buy-modal {--pc-action-height:34px;--pc-body-bottom:10px;--pc-status-font:7px;--pc-status-gap:12px;}
+}
+@media(orientation:portrait) and (max-height:690px) {
+  .ashen-app .buy-modal {--pc-action-height:30px;--pc-body-bottom:8px;--pc-status-font:6.5px;--pc-status-gap:11px;}
+}
+@media(orientation:portrait) and (max-width:340px) {
+  .ashen-app .buy-modal {--pc-action-height:28px;--pc-body-bottom:7px;--pc-status-font:6px;--pc-status-gap:10px;}
+}

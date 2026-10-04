@@ -1,0 +1,89 @@
+/* V12 materials: every illustrated surface below is a new original raster painting.
+   The tested V11 geometry is retained while the art becomes ivory eclipse/enamel. */
+@font-face {font-family:AshenRounded;src:url('/alchemist/fonts/manrope-700.ttf') format('truetype');font-weight:700 900;font-display:swap;}
+.ashen-app {
+ --v9-ui-font:AshenRounded,AshenSans,Arial,sans-serif;
+ --v12-panel:url('/ashen/ui/v12/panel.webp');
+ --v12-action:url('/ashen/ui/v12/action.webp');
+ --v12-spin:url('/ashen/ui/v12/spin.webp');
+ --v12-bonus:url('/ashen/ui/v12/bonus.webp');
+ --v10-panel:var(--v12-panel);--v11-hud:var(--v12-panel);
+ --v10-action:var(--v12-action);--v10-spin:var(--v12-spin);--v11-bonus:var(--v12-bonus);
+ --v10-ivory:#fff2e4;--v10-muted:#c6e6ff;--v9-ivory:#fff3e8;--v9-muted:#c2e7ff;
+ --pc-paper:#fff2e4;--pc-accent:#ffbdc8;--cyan:#44e8ff;--red:#ff394b;
+ color:#fff1e5;
+}
+.ashen-app .reel-board {
+ background:#1b141c url('/ashen/ui/v12/reel-bed.webp') center / 100% 100% no-repeat;
+ box-shadow:inset 0 9px 22px #0a071266,0 12px 24px #18061488;
+}
+.ashen-app .symbol-cell {box-shadow:inset -1px -1px #65c7ff12;}
+.ashen-app .reel-column:last-child .symbol-cell {box-shadow:inset 0 -1px #65c7ff12;}
+.ashen-app .symbol-cell.winning {background:#34cbff1b;}
+.ashen-app .reel-frame-art {filter:drop-shadow(0 3px 5px #03112dcc);}
+.ashen-app .hud-v11 .control-bar {
+ border-image:var(--v12-panel) 110 205 fill / calc(17 * var(--g-unit)) calc(29 * var(--g-unit)) / 0 stretch;
+ box-shadow:0 10px 26px #16061699;
+}
+.ashen-app .hud-v11 .balance-block>span,.ashen-app .hud-v11 .win-block>span,.ashen-app .hud-v11 .bet-value>span {
+ color:#c0e9ff;letter-spacing:.065em;text-shadow:0 1px 2px #001533;
+}
+.ashen-app .hud-v11 .balance-block em {color:#9dd0ef;}
+.ashen-app .hud-v11 .balance-block strong,.ashen-app .hud-v11 .bet-controls strong {color:#fff1de;text-shadow:0 2px 1px #001833;}
+.ashen-app .hud-v11 .balance-block strong,.ashen-app .hud-v11 .bet-controls strong,.ashen-app .hud-v11 .win-block strong {font-weight:800;}
+.ashen-app .hud-v11 .fit-amount[data-compact=true] .raster-number-text {font-family:AshenRounded,AshenSans,sans-serif;font-weight:800;letter-spacing:-.035em;}
+.ashen-app .hud-v11 .win-block strong,.ashen-app .hud-v11 .win-block.has-win strong {color:#60ffdd;text-shadow:0 2px 1px #002739;}
+.ashen-app .hud-v11 .win-block:not(.has-win) strong {color:#fff1de;}
+.ashen-app .hud-v11 .buy-button,.ashen-app .hud-v11 .spin-button {filter:drop-shadow(0 3px 4px #001023aa);}
+.ashen-app .hud-v11 .buy-button .pc-icon,.ashen-app .hud-v11 .spin-button .pc-icon {filter:drop-shadow(0 2px 1px #002e52);}
+.ashen-app .hud-v11 .buy-button b,.ashen-app .hud-v11 .spin-caption {color:#fff2e3;text-shadow:0 1px 2px #002242;letter-spacing:.04em;}
+.ashen-app .hud-v11 .menu-button,.ashen-app .hud-v11 .auto-button,.ashen-app .hud-v11 .turbo-button {
+ background:#25212faa!important;border-color:#76bded44!important;box-shadow:inset 0 1px #97dcff16;
+}
+.ashen-app .hud-v11 .menu-button:hover:not(:disabled),.ashen-app .hud-v11 .auto-button:hover:not(:disabled),.ashen-app .hud-v11 .turbo-button:hover:not(:disabled) {background:#41313c!important;border-color:#7ddeff!important;}
+.ashen-app .hud-v11 .auto-button.active,.ashen-app .hud-v11 .turbo-button.active {background:#194457!important;border-color:#ffe0d7!important;box-shadow:inset 0 -2px #ffafbd;}
+.ashen-app .hud-v11 .bet-stepper>button {background:#21172380;border-color:#79cdf348;color:#f3dacb;}
+.ashen-app .hud-v11 .bet-stepper>button:hover:not(:disabled) {background:#4b2838;border-color:#ffd6c4;}
+.ashen-app .game-premise,.ashen-app .header-center>span {color:#fff0d9;text-shadow:0 2px 3px #071b3b;}
+.ashen-app .header-right .info-button,.ashen-app .header-right .settings-button {background:#201724bd;border:1px solid #6cdbed38;}
+.ashen-app .message-bar,.ashen-app .message-bar strong {color:#fff0dd;text-shadow:0 2px 3px #011436;}
+.ashen-app .feature-status,.ashen-app .footer-notes {color:#b5e6f4;text-shadow:0 1px 3px #00102c;}
+.ashen-app .feature-status strong {color:#fff1e3;}
+.ashen-app .fact-cards {border-image:var(--v12-panel) 110 205 fill / 14px 26px / 0 stretch;box-shadow:0 10px 24px #04103e88;}
+.ashen-app .fact-cards h3 {color:#fff0dc;}
+.ashen-app .fact-cards p {color:#bfedff;}
+.ashen-app .startup-title>.eyebrow {color:#9eeeff;text-shadow:0 2px 3px #072946;}
+.ashen-app .startup-title>p {color:#f4d4cc;text-shadow:0 2px 3px #2d1a04;}
+.ashen-app .welcome-audio {color:#d5f1fa;text-shadow:0 1px 3px #031128;}
+.ashen-app .welcome button.enter-button.primary,.ashen-app .modal button.primary,.ashen-app .celebration-copy button.primary {color:#fff1df;text-shadow:0 2px 1px #701031;}
+.ashen-app button.primary,.ashen-app button.primary:hover:not(:disabled),.ashen-app .modal button.primary,.ashen-app .modal button.primary:hover:not(:disabled),.ashen-app .welcome button.enter-button.primary,.ashen-app .welcome button.enter-button.primary:hover:not(:disabled),.ashen-app .celebration-copy button.primary,.ashen-app .celebration-copy button.primary:hover:not(:disabled) {border-image:var(--v12-action) 90 140 fill / 10px 18px / 0 stretch;}
+.ashen-app button.secondary,.ashen-app button.secondary:hover:not(:disabled),.ashen-app .modal button.secondary,.ashen-app .modal button.secondary:hover:not(:disabled) {border-image:var(--v12-panel) 110 205 fill / 10px 18px / 0 stretch;}
+.ashen-app .modal:not(.buy-modal):not(.bonus-intro):not(.deal-modal):not(.deal-wheel-modal) {border-image-slice:110 205;border-image-width:20px 30px;}
+.ashen-app .modal h2,.ashen-app .modal h3 {color:#fff0e1;}
+.ashen-app .modal p {color:#c7e9ff;}
+.ashen-app .menu-options button,.ashen-app .autoplay-options button,.ashen-app .language-options button {background:#282130;border-color:#6c6074;color:#e8f7ff;border-radius:6px;}
+.ashen-app .menu-options button:hover,.ashen-app .autoplay-options button:hover,.ashen-app .language-options button:hover {background:#403047;border-color:#eccbbd;}
+.ashen-app .autoplay-options button.selected,.ashen-app .language-options button.selected {background:#254452;border-color:#e4c2b4;color:#fff0de;}
+.ashen-app .confirm-cost {background:#1c1423ba;border-color:#e2bca770;border-radius:8px;}
+.ashen-app .confirm-description,.ashen-app .confirm-balance {color:#cce7fb;}
+.ashen-app .buy-modal .purchase-cards article.purchase-card {border-image-slice:110 205;border-image-width:14px 20px;}
+.ashen-app .buy-modal .purchase-body h3 {color:#fff1e6;}
+.ashen-app .buy-modal .purchase-body p {color:#b4dcf7;}
+.ashen-app .buy-modal .purchase-kind {color:#59e5ff;}
+.ashen-app .buy-modal .mode-red .purchase-kind,.ashen-app .buy-modal .tier-2 .purchase-kind {color:#ffa17c;}
+.ashen-app .buy-modal .purchase-footer {background:#190f22d9;border-color:#5ea9d854;}
+.ashen-app .buy-modal button.purchase-action,.ashen-app .buy-modal button.purchase-action:hover:not(:disabled),.ashen-app .buy-modal .mode-red button.purchase-action,.ashen-app .buy-modal .mode-red button.purchase-action:hover:not(:disabled),.ashen-app .buy-modal .tier-2 button.purchase-action,.ashen-app .buy-modal .tier-2 button.purchase-action:hover:not(:disabled) {border-image:var(--v12-action) 90 140 fill / 8px 14px / 0 stretch;}
+.ashen-app .loading-track {background:#17111e;}
+.ashen-app .loading-track i {background:#31dfff;box-shadow:0 0 16px #40e5ff;}
+@media(orientation:portrait) {
+ .ashen-app .hud-v11 .control-bar {border-image-width:16px 22px;}
+ .ashen-app .fact-cards {border-image-width:12px 18px;}
+ .ashen-app .modal:not(.buy-modal):not(.bonus-intro):not(.deal-modal):not(.deal-wheel-modal) {border-image-width:16px 22px;}
+}
+@media(orientation:portrait) and (max-height:590px) {
+ .ashen-app .hud-v11 .control-bar {border-image-width:14px 18px;}
+}
+@media(orientation:landscape) and (max-width:699px) {
+ .ashen-app .hud-v11 .control-bar {border-image-width:8px 14px;}
+ .ashen-app .fact-cards {border-image-width:7px 10px;}
+}

@@ -1,0 +1,54 @@
+character-blue.webp
+size: 2048, 1856
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+keeper-v14-body
+  rotate: false
+  xy: 4, 4
+  size: 1024, 1286
+  orig: 1024, 1286
+  offset: 0, 0
+  index: -1
+keeper-v14-far
+  rotate: false
+  xy: 1032, 4
+  size: 315, 680
+  orig: 315, 680
+  offset: 0, 0
+  index: -1
+keeper-v14-near
+  rotate: false
+  xy: 1674, 4
+  size: 350, 540
+  orig: 350, 540
+  offset: 0, 0
+  index: -1
+keeper-v14-head
+  rotate: false
+  xy: 507, 1294
+  size: 395, 345
+  orig: 395, 345
+  offset: 0, 0
+  index: -1
+keeper-v14-glow
+  rotate: false
+  xy: 906, 1294
+  size: 334, 324
+  orig: 334, 324
+  offset: 0, 0
+  index: -1
+keeper-v14-fire
+  rotate: false
+  xy: 1351, 4
+  size: 319, 546
+  orig: 319, 546
+  offset: 0, 0
+  index: -1
+keeper-v14-mist
+  rotate: false
+  xy: 4, 1294
+  size: 499, 511
+  orig: 499, 511
+  offset: 0, 0
+  index: -1

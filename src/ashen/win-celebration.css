@@ -1,0 +1,68 @@
+.ashen-app .celebration-screen.win-celebration {
+  --win-unit:min(calc(100vw / 1100),calc(100dvh / 760));
+  --win-veil:0;
+  overflow:hidden;
+  isolation:isolate;
+  background:rgb(5 7 11 / var(--win-veil));
+  backdrop-filter:none;
+}
+.ashen-app .celebration-screen.win-celebration>.win-performance {
+  position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
+}
+.ashen-app .win-celebration .win-copy {
+  position:absolute;inset:0;width:100%;height:100%;padding:0;display:block;pointer-events:none;
+}
+.ashen-app .win-celebration .win-copy h2 {
+  position:absolute;left:50%;right:auto;bottom:auto;top:calc(50% - 115 * var(--win-unit));
+  width:86%;max-width:calc(790 * var(--win-unit));margin:0;
+  transform:translate(-50%,-50%);opacity:0;text-align:center;
+  font-family:AshenSerif,Georgia,serif;font-weight:600;
+  font-size:clamp(28px,68 * var(--win-unit),104px);line-height:1.06;
+  letter-spacing:.075em;color:#e9e0cf;
+  text-shadow:0 3px 6px #000,0 0 23px #8dd9e71f;
+  animation:none;will-change:transform,opacity;
+}
+.ashen-app .win-celebration .win-copy>.win-total {
+  position:absolute;left:50%;top:calc(50% + 18 * var(--win-unit));
+  display:flex;align-items:center;justify-content:center;
+  width:calc(750 * var(--win-unit));max-width:86%;margin:0;padding:0 4px;
+  transform:translate(-50%,-50%);opacity:0;
+  font-size:clamp(36px,108 * var(--win-unit),140px);line-height:1.1;
+  font-weight:400;letter-spacing:0;white-space:nowrap;
+  filter:drop-shadow(0 5px 8px #000b);
+  animation:none;will-change:transform,opacity;
+}
+.ashen-app .win-celebration .win-copy>.win-continue {
+  position:absolute;left:50%;top:calc(50% + 218 * var(--win-unit));bottom:auto;
+  width:calc(325 * var(--win-unit));min-width:180px;max-width:65%;
+  min-height:40px;margin:0;padding:12px 18px;
+  transform:translate(-50%,-50%);font-size:clamp(10px,15 * var(--win-unit),16px);
+  pointer-events:auto;animation:none;
+}
+.ashen-app .win-celebration[data-tier=max] h2 {
+  color:#f6e5c5;text-shadow:0 3px 6px #000,0 0 27px #e7a27b38;
+}
+.ashen-app .win-celebration[data-phase=hold] .win-total,
+.ashen-app .win-celebration[data-phase=hold] h2 {will-change:auto;}
+.ashen-app .win-celebration .win-copy h2.award-title{height:calc(110 * var(--win-unit));max-width:calc(630 * var(--win-unit));line-height:0;text-shadow:none}
+.ashen-app .award-title>img{width:100%;height:100%;display:block;object-fit:contain;filter:drop-shadow(0 4px 7px #0009)}
+.ashen-app .win-celebration[data-phase=hold][data-motion=full] .award-title>img{animation:award-title-breath 6.4s ease-in-out infinite}
+.ashen-app .win-celebration[data-tier=max][data-phase=hold][data-motion=full] .award-title>img{animation-name:award-max-title-breath}
+.ashen-app.presentation-paused .win-celebration .award-title>img{animation-play-state:paused}
+@keyframes award-title-breath{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-1px) scale(1.008)}}
+@keyframes award-max-title-breath{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(1.015)}}
+.ashen-app .award-title-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(orientation:portrait){
+  /* Same design-space coordinates as the Spine frame: title and value remain
+     inside its aperture rather than straddling the upper/lower stonework. */
+  .ashen-app .win-celebration .win-copy h2.award-title{height:calc(150 * var(--win-unit));max-width:calc(700 * var(--win-unit))}
+  .ashen-app .win-celebration .win-copy h2 {top:calc(50% - 105 * var(--win-unit));max-width:76%;font-size:clamp(24px,9vw,44px);}
+  .ashen-app .win-celebration .win-copy>.win-total {top:calc(50% + 56 * var(--win-unit));width:calc(755 * var(--win-unit));max-width:72%;font-size:calc(145 * var(--win-unit));}
+  .ashen-app .win-celebration .win-copy>.win-continue {top:calc(50% + 365 * var(--win-unit));min-height:44px;width:66%;font-size:12px;}
+}
+@media(prefers-reduced-motion:reduce){.ashen-app .win-celebration .award-title>img{animation:none!important}}
+@media(orientation:landscape) and (max-height:450px){
+  .ashen-app .win-celebration .win-copy h2 {font-size:calc(65 * var(--win-unit));}
+  .ashen-app .win-celebration .win-copy>.win-total {font-size:calc(102 * var(--win-unit));}
+  .ashen-app .win-celebration .win-copy>.win-continue {min-width:110px;min-height:24px;padding:6px 12px;font-size:clamp(7px,15 * var(--win-unit),11px);}
+}

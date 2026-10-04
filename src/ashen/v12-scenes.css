@@ -1,0 +1,6 @@
+/* Original Eclipse Observatory / Rift of Two Moons raster worlds.
+   Keep the existing anchored Spine atmosphere and hand-to-board choreography. */
+.ashen-app .world-scene{background:#18152f}
+.ashen-app .world-base{background-image:url('/ashen/background-v12.webp')}
+.ashen-app .world-bonus{background-image:url('/ashen/bonus-background-v12.webp')}
+.ashen-app .bonus-arrival .ritual-caption{color:#fff3df;text-shadow:0 2px 8px #160b24,0 0 20px #290924}

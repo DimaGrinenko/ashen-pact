@@ -1,0 +1,173 @@
+/* V11: one centered instrument, equal finance columns and equal round actions.
+   All illustrated material is generated raster. Layout does not draw artwork. */
+.ashen-app {
+ --v11-hud:url('/ashen/ui/v11/hud-panel.webp');
+ --v11-bonus:url('/ashen/ui/v11/bonus-button.webp');
+ --hud-panel-width:calc(940 * var(--g-unit));--hud-panel-height:calc(116 * var(--g-unit));
+ --hud-action:calc(80 * var(--g-unit));--hud-inset:calc(16 * var(--g-unit));
+ --hud-gap:calc(18 * var(--g-unit));--hud-label-size:calc(11 * var(--g-unit));
+ --hud-amount-size:calc(26 * var(--g-unit));--hud-utility:calc(28 * var(--g-unit));
+ --hud-utility-gap:calc(10 * var(--g-unit));--hud-arrow:calc(24 * var(--g-unit));
+ --g-controls:calc(var(--hud-panel-height) + 16 * var(--g-unit));
+}
+.ashen-app .hud-v11 .control-bar {
+ grid-template-columns:var(--hud-action) minmax(0,1fr) var(--hud-action);
+ border:1px solid transparent;background:none;border-radius:0;
+ border-image:var(--v11-hud) 150 fill / calc(21 * var(--g-unit)) / 0 stretch;
+ padding:var(--hud-inset);gap:var(--hud-gap);box-shadow:0 10px 28px #0009;
+}
+.ashen-app .hud-v11 .hud-center {gap:calc(8 * var(--g-unit));}
+.ashen-app .hud-v11 .hud-money-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(12 * var(--g-unit));align-items:start;}
+.ashen-app .hud-v11 .balance-block,.ashen-app .hud-v11 .win-block,.ashen-app .hud-v11 .bet-controls {align-self:start;width:100%;min-width:0;}
+.ashen-app .hud-v11 .balance-block>span,.ashen-app .hud-v11 .win-block>span,.ashen-app .hud-v11 .bet-value>span {
+ font-family:AshenSans,Arial,sans-serif;font-size:var(--hud-label-size);font-weight:700;
+ color:#b9c5cf;letter-spacing:.06em;height:calc(var(--hud-label-size) * 1.25);line-height:1.25;
+ margin:0 0 calc(3 * var(--g-unit));
+}
+.ashen-app .hud-v11 .balance-block em {font-size:.67em;color:#94a4b1;}
+.ashen-app .hud-v11 .balance-block strong,.ashen-app .hud-v11 .win-block strong,.ashen-app .hud-v11 .bet-controls strong {
+ font-size:var(--hud-amount-size);line-height:1.1;color:#fff1d8;font-weight:700;
+}
+.ashen-app .hud-v11 .fit-amount[data-compact=true] .raster-number-text {font-family:AshenSans,Arial,sans-serif;font-weight:700;color:inherit;text-shadow:none;letter-spacing:-.035em;}
+.ashen-app .hud-v11 .win-block:not(.has-win) strong {color:#d2d7db;}
+.ashen-app .hud-v11 .win-block.has-win strong {color:#fff1d8;}
+.ashen-app .hud-v11 .bet-controls {display:block;text-align:center;}
+.ashen-app .hud-v11 .bet-value {width:100%;padding:0;}
+.ashen-app .hud-v11 .bet-stepper {
+ display:grid;grid-template-columns:var(--hud-arrow) minmax(0,1fr) var(--hud-arrow);
+ align-items:center;gap:calc(4 * var(--g-unit));height:calc(var(--hud-amount-size) * 1.1);
+ width:min(100%,calc(var(--hud-amount-size) * 3.8 + 2 * var(--hud-arrow) + 8 * var(--g-unit)));
+ margin:0 auto;
+}
+.ashen-app .hud-v11 .bet-stepper>.fit-amount {grid-column:2;grid-row:1;min-width:0;}
+.ashen-app .hud-v11 .bet-stepper>button {
+ display:grid;place-items:center;grid-row:1;align-self:center;
+ width:var(--hud-arrow);height:calc(var(--hud-amount-size) * 1.1);padding:0;margin:0;
+ border:1px solid #d8e5f523;border-radius:calc(4 * var(--g-unit));background:#08111c8c;
+ color:#eef3f4;opacity:1;font-family:AshenSans,Arial,sans-serif;
+ font-size:calc(var(--hud-arrow) * .72);line-height:1;font-weight:700;
+}
+.ashen-app .hud-v11 .bet-stepper>button:first-child {grid-column:1;}
+.ashen-app .hud-v11 .bet-stepper>button:last-child {grid-column:3;}
+.ashen-app .hud-v11 .bet-stepper>button:disabled {opacity:.3;}
+.ashen-app .hud-v11 .bet-stepper>button:hover:not(:disabled) {background:#233b52;border-color:#9edff1a6;}
+.ashen-app .hud-v11 .hud-utilities {height:var(--hud-utility);gap:var(--hud-utility-gap);}
+.ashen-app .hud-v11 .menu-button,.ashen-app .hud-v11 .auto-button,.ashen-app .hud-v11 .turbo-button {
+ background:#0c15228c!important;border:1px solid #b5cdd438!important;border-image:none!important;
+ border-radius:calc(6 * var(--g-unit))!important;width:var(--hud-utility);height:var(--hud-utility);
+ padding:calc(6 * var(--g-unit));opacity:1;
+}
+.ashen-app .hud-v11 .menu-button:hover:not(:disabled),.ashen-app .hud-v11 .auto-button:hover:not(:disabled),.ashen-app .hud-v11 .turbo-button:hover:not(:disabled) {background:#254252!important;border-color:#8cd4e2aa!important;filter:none;}
+.ashen-app .hud-v11 .auto-button.active,.ashen-app .hud-v11 .turbo-button.active {background:#174d65!important;border-color:#58dffd!important;border-image:none!important;box-shadow:inset 0 -2px #7cecfd;}
+.ashen-app .hud-v11 .buy-button,.ashen-app .hud-v11 .buy-button:hover:not(:disabled) {
+ background:var(--v11-bonus) center / 100% 100% no-repeat!important;
+ border:0!important;border-image:none!important;border-radius:50%;box-shadow:none;
+}
+.ashen-app .hud-v11 .spin-button,.ashen-app .hud-v11 .spin-button:hover:not(:disabled) {
+ background:var(--v10-spin) center / 100% 100% no-repeat!important;
+ border:0!important;border-image:none!important;border-radius:50%;box-shadow:none;
+}
+.ashen-app .hud-v11 .buy-button,.ashen-app .hud-v11 .spin-button {width:var(--hud-action);height:var(--hud-action);gap:calc(3 * var(--g-unit));filter:drop-shadow(0 3px 5px #0008);}
+.ashen-app .hud-v11 .buy-button .pc-icon,.ashen-app .hud-v11 .spin-button .pc-icon {width:42%;height:42%;}
+.ashen-app .hud-v11 .buy-button b,.ashen-app .hud-v11 .spin-caption {font-family:var(--v9-ui-font);font-size:calc(var(--hud-action) * .115);line-height:1;letter-spacing:.06em;color:#fff6e2;}
+.ashen-app .hud-v11 .buy-button:hover:not(:disabled),.ashen-app .hud-v11 .spin-button:hover:not(:disabled) {filter:brightness(1.15) drop-shadow(0 3px 5px #0009);}
+.ashen-app .hud-v11 .spin-button.auto-running .pc-icon {width:33%;height:33%;}
+
+/* The welcome is now a symmetrical tableau: blue and red Keepers flank a
+   centered title and one shared three-fact tablet. Blue is mirrored by Spine. */
+.ashen-app .startup-title {left:33%;top:4%;width:34%;text-align:center;}
+.ashen-app .startup h1 {height:24dvh;max-height:218px;margin:9px 0 0;}
+.ashen-app .startup-title>.eyebrow {font-size:clamp(7px,.9vw,11px);letter-spacing:.22em;}
+.ashen-app .startup-title>p {font-size:clamp(8px,1vw,12px);margin:8px 0;letter-spacing:.18em;}
+.ashen-app .startup-character {top:4%;bottom:auto;width:30%;height:82%;mask-image:linear-gradient(#000 83%,transparent);}
+.ashen-app .startup-character-blue {left:0;right:auto;}
+.ashen-app .startup-character-red {left:auto;right:0;}
+.ashen-app .startup-character>.spine-view {left:0;top:0;width:100%;height:100%;}
+.ashen-app .welcome,.ashen-app .loading-block {left:23%;width:54%;bottom:6%;}
+.ashen-app .fact-cards {
+ gap:0;padding:12px 10px 14px;margin:0 0 16px;border:0 solid transparent;
+ border-image:var(--v11-hud) 150 fill / 15px / 0 stretch;background:none;backdrop-filter:none;box-shadow:0 8px 24px #0007;
+}
+.ashen-app .fact-cards article,.ashen-app .fact-cards article:nth-child(2) {border:0;border-image:none;border-radius:0;background:none;box-shadow:none;padding:0 8px;}
+.ashen-app .fact-cards article:nth-child(n) {grid-template-rows:clamp(60px,10dvh,86px) 34px 34px;padding:0 8px;}
+.ashen-app .fact-cards article:nth-child(n)>h3 {height:34px;}
+.ashen-app .fact-cards article:nth-child(n)>p {height:34px;}
+.ashen-app .fact-cards article>.spine-view,.ashen-app .fact-cards article>b {height:clamp(60px,10dvh,86px);}
+.ashen-app .fact-cards h3 {font-size:clamp(10px,1.1vw,14px);letter-spacing:.03em;}
+.ashen-app .fact-cards p {font-size:clamp(8px,.8vw,10px);line-height:1.5;}
+.ashen-app .welcome button.enter-button.primary {width:100%;max-width:100%;margin:0;min-height:50px;}
+.ashen-app .welcome-audio {margin-top:12px;}
+
+@media(orientation:landscape) and (min-width:700px) {
+ .ashen-app {--hud-panel-height:max(94px,calc(116 * var(--g-unit)));--hud-action:max(64px,calc(80 * var(--g-unit)));--hud-inset:max(12px,calc(16 * var(--g-unit)));--hud-gap:max(12px,calc(18 * var(--g-unit)));--hud-label-size:10px;--hud-amount-size:max(21px,calc(26 * var(--g-unit)));--hud-utility:max(26px,calc(28 * var(--g-unit)));--hud-arrow:max(20px,calc(24 * var(--g-unit)));}
+}
+@media(orientation:portrait) {
+ .ashen-app {--hud-panel-width:100%;--hud-panel-height:154px;--hud-action:60px;--hud-inset:14px;--hud-gap:10px;--hud-label-size:8px;--hud-amount-size:19px;--hud-utility:28px;--hud-utility-gap:8px;--hud-arrow:20px;--g-controls:166px;}
+ .ashen-app .hud-v11 .control-bar {grid-template-rows:minmax(0,1fr) var(--hud-action);gap:10px; border-image-width:17px;}
+ .ashen-app .hud-v11 .hud-money-grid {gap:8px;align-self:center;}
+ .ashen-app .hud-v11 .balance-block>span,.ashen-app .hud-v11 .win-block>span,.ashen-app .hud-v11 .bet-value>span {letter-spacing:.025em;margin-bottom:4px;}
+ .ashen-app .hud-v11 .bet-stepper {gap:3px;}
+ .ashen-app .hud-v11 .bet-stepper>button {font-size:15px;border-radius:4px;}
+ .ashen-app .hud-v11 .menu-button,.ashen-app .hud-v11 .auto-button,.ashen-app .hud-v11 .turbo-button {padding:6px;border-radius:5px!important;}
+ .ashen-app .hud-v11 .buy-button,.ashen-app .hud-v11 .spin-button {gap:3px;}
+ .ashen-app .startup-title {left:15%;top:3%;width:70%;}
+ .ashen-app .startup h1 {height:16dvh;max-height:132px;margin:6px 0 0;}
+ .ashen-app .startup-title>.eyebrow {font-size:7px;letter-spacing:.14em;}
+ .ashen-app .startup-title>p {font-size:7px;letter-spacing:.12em;margin:6px 0;}
+ .ashen-app .startup-character {top:25%;width:calc(52% - 2px);height:34%;mask-image:linear-gradient(#000 85%,transparent);}
+ .ashen-app .startup-character-blue {left:0;right:auto;}
+ .ashen-app .startup-character-red {left:auto;right:0;}
+ .ashen-app .startup-character>.spine-view {height:110%;top:0;width:100%;}
+ .ashen-app .welcome,.ashen-app .loading-block {left:4%;width:92%;bottom:5%;}
+ .ashen-app .fact-cards {padding:12px 6px;margin-bottom:14px;border-image-width:12px;}
+ .ashen-app .fact-cards article:nth-child(n) {grid-template-rows:62px 36px 34px;padding:0 3px;}
+ .ashen-app .fact-cards article:nth-child(n)>h3 {height:36px;}
+ .ashen-app .fact-cards article>.spine-view,.ashen-app .fact-cards article>b {height:62px;}
+ .ashen-app .fact-cards article>b {font-size:25px;}
+ .ashen-app .fact-cards h3 {font-size:11px;}
+ .ashen-app .fact-cards p {font-size:8px;}
+ .ashen-app .welcome button.enter-button.primary {min-height:48px;font-size:14px;}
+ /* Preserve the hood tip in the cropped deal portrait; fade only the robe. */
+ .ashen-app .deal-keeper>.spine-view {top:-40px;}
+}
+@media(orientation:portrait) and (max-height:590px) {
+ .ashen-app {--hud-panel-height:136px;--hud-action:54px;--hud-inset:10px;--hud-gap:8px;--hud-label-size:7.5px;--hud-amount-size:17px;--hud-utility:24px;--hud-utility-gap:6px;--hud-arrow:18px;--g-controls:146px;}
+ .ashen-app .hud-v11 .control-bar {gap:8px;border-image-width:15px;}
+ .ashen-app .hud-v11 .hud-money-grid {gap:5px;}
+ .ashen-app .hud-v11 .bet-stepper {gap:2px;}
+ .ashen-app .hud-v11 .menu-button,.ashen-app .hud-v11 .auto-button,.ashen-app .hud-v11 .turbo-button {padding:5px;}
+ .ashen-app .fact-cards article:nth-child(n) {grid-template-rows:55px 34px 32px;}
+ .ashen-app .fact-cards article:nth-child(n)>h3 {height:34px;}
+ .ashen-app .fact-cards article:nth-child(n)>p {height:32px;}
+ .ashen-app .fact-cards article>.spine-view,.ashen-app .fact-cards article>b {height:55px;}
+ .ashen-app .fact-cards h3 {font-size:10px;}
+ .ashen-app .fact-cards p {font-size:7.5px;}
+ .ashen-app .fact-cards article>b {font-size:23px;}
+}
+@media(orientation:landscape) and (max-width:699px) {
+ .ashen-app {--hud-panel-height:54px;--hud-action:34px;--hud-inset:6px;--hud-gap:8px;--hud-label-size:5.5px;--hud-amount-size:12px;--hud-utility:13px;--hud-utility-gap:5px;--hud-arrow:14px;--g-controls:64px;}
+ .ashen-app .hud-v11 .control-bar {border-image-width:10px;}
+ .ashen-app .hud-v11 .hud-center {gap:4px;}
+ .ashen-app .hud-v11 .hud-money-grid {gap:4px;}
+ .ashen-app .hud-v11 .bet-stepper {gap:2px;}
+ .ashen-app .hud-v11 .bet-stepper>button {font-size:11px;border-radius:2px;}
+ .ashen-app .hud-v11 .menu-button,.ashen-app .hud-v11 .auto-button,.ashen-app .hud-v11 .turbo-button {padding:3px;border-radius:3px!important;}
+}
+@media(max-height:480px) and (orientation:landscape) {
+ .ashen-app .startup-title {left:32%;width:36%;top:4%;}
+ .ashen-app .startup h1 {height:21dvh;margin:2px 0 0;}
+ .ashen-app .startup-title>.eyebrow {font-size:1.6dvh;letter-spacing:.12em;}
+ .ashen-app .startup-title>p {font-size:1.7dvh;margin:3px 0;}
+ .ashen-app .startup-character {top:3%;width:29%;height:86%;}
+ .ashen-app .welcome {left:23%;width:54%;bottom:4%;}
+ .ashen-app .fact-cards {padding:5px 4px;margin-bottom:7px;border-image-width:7px;}
+ .ashen-app .fact-cards article:nth-child(n) {grid-template-rows:13dvh 5dvh 6dvh;padding:0 3px;}
+ .ashen-app .fact-cards article:nth-child(n)>h3 {height:5dvh;}
+ .ashen-app .fact-cards article:nth-child(n)>p {height:6dvh;}
+ .ashen-app .fact-cards article>.spine-view,.ashen-app .fact-cards article>b {height:13dvh;}
+ .ashen-app .fact-cards article>b {font-size:5dvh;}
+ .ashen-app .fact-cards h3 {font-size:2.4dvh;}
+ .ashen-app .fact-cards p {font-size:1.7dvh;}
+ .ashen-app .welcome button.enter-button.primary {min-height:0;padding:2.2dvh 10px;font-size:3dvh;}
+ .ashen-app .welcome-audio {font-size:1.9dvh;margin-top:5px;}
+}

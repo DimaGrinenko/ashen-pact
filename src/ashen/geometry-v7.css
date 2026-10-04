@@ -1,0 +1,339 @@
+/* V7 geometry: one viewport scale for landscape and one spacing grid for portrait.
+   The painted frame is 1120 × 1040 around a 1000 × 800 aperture. Its whole
+   rectangle, rather than only its aperture, is budgeted inside the stage. */
+.ashen-app {
+  --g-unit:min(.083333333vw,.148148148dvh,1px);
+  --g-space:calc(8 * var(--g-unit));
+  --g-panel-space:clamp(16px,3vmin,32px);
+  --g-panel-radius:16px;
+  --g-panel-gap:12px;
+  --g-hud:calc(84 * var(--g-unit));
+  --g-header:calc(28 * var(--g-unit));
+  --g-message:calc(20 * var(--g-unit));
+  --g-feature:calc(20 * var(--g-unit));
+  --g-controls:calc(108 * var(--g-unit));
+  --g-footer:calc(16 * var(--g-unit));
+  --g-session:calc(18 * var(--g-unit));
+  --hud-size:var(--g-hud);
+}
+.ashen-app .game-shell {
+  padding:0 calc(24 * var(--g-unit));
+  grid-template-rows:var(--g-header) minmax(0,1fr) var(--g-message) var(--g-feature) var(--g-controls) var(--g-footer);
+}
+.ashen-app .game-header {gap:var(--g-space);padding:0;align-items:center;}
+.ashen-app .header-center {left:0;top:auto;gap:calc(3 * var(--g-unit));width:auto;text-align:left;}
+.ashen-app .game-premise {font-size:calc(8 * var(--g-unit));letter-spacing:.045em;}
+.ashen-app .header-center>span {font-size:calc(8 * var(--g-unit));}
+.ashen-app .header-center b {font-size:calc(18 * var(--g-unit));line-height:1;}
+.ashen-app .header-center small {font-size:calc(8 * var(--g-unit));}
+.ashen-app .header-right {gap:calc(12 * var(--g-unit));padding:0;}
+.ashen-app .session-chip {font-size:calc(7 * var(--g-unit));}
+.ashen-app .header-right .info-button,.ashen-app .header-right .settings-button {width:calc(24 * var(--g-unit));height:calc(24 * var(--g-unit));padding:calc(4 * var(--g-unit));}
+.ashen-app .wordmark {width:calc(156 * var(--g-unit));height:calc(108 * var(--g-unit));right:calc(24 * var(--g-unit));left:auto;top:calc(44 * var(--g-unit));}
+.ashen-app .game-stage {padding:0;display:flex;align-items:center;justify-content:center;container-type:size;}
+.ashen-app .reels-area {width:min(68vw,96cqh);height:auto;aspect-ratio:5/4;max-height:none;padding:0;}
+.ashen-app .reel-board {width:100%;height:100%;aspect-ratio:5/4;border:0;max-height:none;}
+.ashen-app .reel-column {border:0;}
+.ashen-app .symbol-cell {border:0;box-shadow:inset -1px -1px #a5cfdf09;}
+.ashen-app .reel-column:last-child .symbol-cell {box-shadow:inset 0 -1px #a5cfdf09;}
+.ashen-app .symbol-cell:last-child {border:0;}
+.ashen-app .reel-frame-art {left:-6%;top:-15%;width:112%;height:130%;}
+.ashen-app .message-bar {grid-row:3;position:static;top:auto;left:auto;width:100%;height:100%;font-size:calc(10 * var(--g-unit));gap:var(--g-space);line-height:1.2;margin:0;flex-direction:row;}
+.ashen-app .message-bar strong {font-size:calc(8 * var(--g-unit));}
+.ashen-app .message-bar .error-message {font-size:calc(9 * var(--g-unit));line-height:1.3;}
+.ashen-app .feature-status {grid-row:4;font-size:calc(7 * var(--g-unit));gap:calc(12 * var(--g-unit));line-height:1.3;align-self:center;min-height:0;flex-direction:row;}
+.ashen-app .character-stage {right:calc(-48 * var(--g-unit));top:18%;width:34%;height:82%;bottom:auto;}
+.ashen-app .character-stage>.spine-view {position:relative;inset:0;width:100%;height:100%;}
+.ashen-app .stage-relic {left:0;width:15%;bottom:6%;height:30%;}
+.ashen-app .hud-dock {grid-row:5;width:min(100%,calc(920 * var(--g-unit)));height:100%;display:flex;align-items:center;gap:calc(16 * var(--g-unit));align-self:center;}
+.ashen-app .control-bar {position:relative;display:grid;grid-template-columns:calc(32 * var(--g-unit)) minmax(0,1.15fr) minmax(0,1fr) auto auto;align-items:center;justify-content:initial;gap:calc(16 * var(--g-unit));height:calc(72 * var(--g-unit));padding:0 calc(16 * var(--g-unit));border-radius:calc(8 * var(--g-unit));}
+.ashen-app .control-bar::before {inset:calc(-2 * var(--g-unit));border-image-width:calc(10 * var(--g-unit));}
+.ashen-app .buy-button,.ashen-app .buy-button:hover:not(:disabled) {position:relative;width:var(--g-hud);height:var(--g-hud);left:auto;bottom:auto;padding:calc(9 * var(--g-unit));border-radius:calc(10 * var(--g-unit));}
+.ashen-app .buy-button b {font-size:calc(9 * var(--g-unit));}
+.ashen-app .menu-button {position:static;width:calc(32 * var(--g-unit));height:calc(36 * var(--g-unit));padding:calc(4 * var(--g-unit));}
+.ashen-app .balance-block,.ashen-app .win-block {position:static;min-width:0;transform:none;}
+.ashen-app .balance-block {text-align:left;}
+.ashen-app .win-block {text-align:center;}
+.ashen-app .balance-block>span,.ashen-app .win-block>span,.ashen-app .bet-value>span {font-size:calc(8 * var(--g-unit));line-height:1.25;margin:0 0 calc(4 * var(--g-unit));letter-spacing:.02em;white-space:nowrap;}
+.ashen-app .balance-block em {font-size:calc(6 * var(--g-unit));}
+.ashen-app .balance-block strong,.ashen-app .bet-controls strong,.ashen-app .win-block strong {display:block;font-size:calc(22 * var(--g-unit));font-weight:700;line-height:1.2;letter-spacing:-.045em;white-space:nowrap;font-variant-numeric:tabular-nums;}
+.ashen-app .bet-controls {position:static;gap:calc(6 * var(--g-unit));grid-area:auto;text-align:left;}
+.ashen-app .bet-controls>.bet-value {padding:0;background:none;min-width:0;}
+.ashen-app .bet-controls strong {min-width:calc(48 * var(--g-unit));}
+.ashen-app .bet-arrows {gap:0;}
+.ashen-app .bet-arrows button {width:calc(24 * var(--g-unit));height:calc(24 * var(--g-unit));padding:calc(4 * var(--g-unit));}
+.ashen-app .spin-controls {position:static;display:flex;gap:calc(12 * var(--g-unit));padding:0;grid-area:auto;}
+.ashen-app .spin-button,.ashen-app .spin-button:hover:not(:disabled) {width:calc(92 * var(--g-unit));height:calc(92 * var(--g-unit));padding:calc(21 * var(--g-unit));border-width:0!important;}
+.ashen-app .spin-button.auto-running {padding:calc(29 * var(--g-unit));}
+.ashen-app .spin-count {font-size:calc(17 * var(--g-unit));}
+.ashen-app .spin-options {gap:calc(8 * var(--g-unit));}
+.ashen-app .auto-button,.ashen-app .turbo-button {width:calc(28 * var(--g-unit));height:calc(28 * var(--g-unit));padding:calc(6 * var(--g-unit));}
+.ashen-app .footer-notes {grid-row:6;width:min(100%,calc(920 * var(--g-unit)));font-size:calc(6 * var(--g-unit));padding:0;line-height:1;letter-spacing:.02em;}
+.ashen-app .game-shell:has(>.session-info) {padding-bottom:var(--g-session);}
+.ashen-app .session-info {height:var(--g-session);left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:calc(12 * var(--g-unit));padding:0 calc(8 * var(--g-unit));font-size:calc(7 * var(--g-unit));line-height:1.2;}
+.ashen-app .game-shell:has(>.replay-info) {grid-template-rows:var(--g-header) auto minmax(0,1fr) var(--g-message) var(--g-feature) var(--g-controls) var(--g-footer);}
+.ashen-app .game-shell>.replay-info {grid-row:2;position:static;inset:auto;width:100%;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:calc(12 * var(--g-unit));margin:0;padding:calc(6 * var(--g-unit)) calc(12 * var(--g-unit));font-size:calc(8 * var(--g-unit));line-height:1.35;}
+.ashen-app .replay-info>span:nth-child(2) {text-align:center;overflow-wrap:anywhere;}
+.ashen-app .replay-info button {font-size:inherit;padding:calc(6 * var(--g-unit));white-space:nowrap;}
+.ashen-app .game-shell:has(>.replay-info)>.game-stage {grid-row:3;}
+.ashen-app .game-shell:has(>.replay-info)>.message-bar {grid-row:4;}
+.ashen-app .game-shell:has(>.replay-info)>.feature-status {grid-row:5;}
+.ashen-app .game-shell:has(>.replay-info)>.hud-dock {grid-row:6;}
+.ashen-app .game-shell:has(>.replay-info)>.footer-notes {grid-row:7;}
+
+/* At normal desktop widths the information keeps a readable floor instead of
+   shrinking every label with the decorative buttons. */
+@media(orientation:landscape) and (min-width:700px) {
+  .ashen-app .game-premise,.ashen-app .header-center>span {font-size:9px;}
+  .ashen-app .session-chip {font-size:7px;}
+  .ashen-app .header-right .info-button,.ashen-app .header-right .settings-button {width:24px;height:24px;padding:4px;}
+  .ashen-app .message-bar {font-size:11px;}
+  .ashen-app .message-bar strong,.ashen-app .feature-status {font-size:8px;}
+  .ashen-app .message-bar .error-message {font-size:10px;}
+  .ashen-app .balance-block>span,.ashen-app .win-block>span,.ashen-app .bet-value>span {font-size:9px;}
+  .ashen-app .balance-block em {font-size:6px;}
+  .ashen-app .balance-block strong,.ashen-app .bet-controls strong,.ashen-app .win-block strong {font-size:max(16px,calc(22 * var(--g-unit)));}
+  .ashen-app .buy-button b {font-size:max(8px,calc(9 * var(--g-unit)));}
+  .ashen-app .footer-notes {font-size:6px;}
+  .ashen-app .game-shell>.replay-info {font-size:8px;}
+  .ashen-app .session-info {font-size:7px;}
+}
+
+/* Dialogs share one heading inset, radius, control height and vertical rhythm. */
+.ashen-app .modal-backdrop {padding:var(--g-panel-space);}
+.ashen-app .modal {padding:var(--g-panel-space);border-radius:var(--g-panel-radius);max-height:calc(100dvh - 2 * var(--g-panel-space));}
+.ashen-app .modal:not(.buy-modal):not(.bonus-intro):not(.deal-modal):not(.deal-wheel-modal) {padding:var(--g-panel-space);}
+.ashen-app .modal h2 {font-size:clamp(22px,3.8vmin,30px);line-height:1.15;margin:8px 0 24px;padding:0 32px;text-align:center;}
+.ashen-app .modal>.eyebrow {font-size:9px;line-height:1.25;margin:0;padding:0 32px;text-align:center;}
+.ashen-app .modal .close-button {top:var(--g-panel-space);right:var(--g-panel-space);width:32px;height:32px;padding:5px;}
+.ashen-app .menu-options {gap:8px;}
+.ashen-app .menu-options button {min-height:52px;padding:12px 16px;gap:16px;font-size:13px;line-height:1.3;border-radius:8px;}
+.ashen-app .menu-options button>.pc-icon {width:24px;height:24px;}
+.ashen-app .settings-list {margin:0 0 20px;gap:0;}
+.ashen-app .settings-list label {min-height:56px;padding:12px 0;font-size:12px;line-height:1.4;}
+.ashen-app .language-options {gap:8px;margin-bottom:20px;}
+.ashen-app .language-options button {min-height:36px;font-size:12px;}
+.ashen-app .settings-modal .text-button {padding:20px 0 0;font-size:12px;line-height:1.4;}
+.ashen-app .autoplay-options {gap:8px;margin:20px 0;}
+.ashen-app .autoplay-options button {min-height:52px;font-size:22px;}
+.ashen-app .autoplay-start {min-height:44px;margin:8px 0;}
+.ashen-app .rules-content h3 {margin:28px 0 12px;line-height:1.25;}
+.ashen-app .paytable-grid {gap:12px;margin:20px 0;}
+.ashen-app .paytable-item {padding:12px 8px;}
+.ashen-app .paytable-item b {display:block;min-height:2.5em;line-height:1.25;}
+
+/* Purchase bodies use named rows: every title, description, price and action
+   aligns with its neighbours even when availability differs. */
+.ashen-app .buy-modal {--g-card-gap:16px;--g-card-pad:16px;--g-card-title:40px;--g-card-copy:36px;--g-card-price:34px;--g-card-status:18px;--g-card-action:44px;--g-card-art:clamp(90px,18dvh,156px);--g-card-font:18px;--g-card-body-font:10px;--g-card-price-font:28px;--g-card-small-font:9px;}
+.ashen-app .modal.buy-modal {padding:40px max(5vw,16px) 24px;max-height:none;gap:0;}
+.ashen-app .buy-modal>h2 {font-size:clamp(20px,3.3vmin,28px);line-height:1.2;margin:0 0 24px;padding:0;max-width:calc(100% - 64px);text-align:center;}
+.ashen-app .buy-modal>.close-button {position:fixed;top:20px;right:20px;width:40px;height:40px;}
+.ashen-app .buy-modal .purchase-cards {width:100%;max-width:1040px;gap:var(--g-card-gap);margin:0 auto;}
+.ashen-app .buy-modal .purchase-cards article.purchase-card {border-radius:14px;}
+.ashen-app .buy-modal .purchase-art {height:var(--g-card-art);}
+.ashen-app .buy-modal .purchase-body {display:grid;grid-template-rows:auto var(--g-card-title) var(--g-card-copy) var(--g-card-price) var(--g-card-status) var(--g-card-action);align-items:center;justify-items:center;padding:var(--g-card-pad);margin-top:-8px;border-radius:14px;}
+.ashen-app .buy-modal .purchase-kind {grid-row:1;font-size:var(--g-card-small-font);line-height:1.2;margin:0;}
+.ashen-app .buy-modal .purchase-body h3 {grid-row:2;min-height:0;margin:0;font-size:var(--g-card-font);line-height:1.15;}
+.ashen-app .buy-modal .purchase-body p {grid-row:3;min-height:0;margin:0;font-size:var(--g-card-body-font);line-height:1.45;}
+.ashen-app .buy-modal strong.purchase-price {grid-row:4;margin:0;font-size:var(--g-card-price-font);line-height:1.2;white-space:nowrap;overflow-wrap:normal;}
+.ashen-app .buy-modal .purchase-availability {grid-row:5;position:static;margin:0;font-size:var(--g-card-small-font);line-height:1.2;}
+.ashen-app .buy-modal button.purchase-action {grid-row:6;height:100%;min-height:0;margin:0;padding:8px 4px;font-size:var(--g-card-body-font);line-height:1.2;border-radius:8px;}
+.ashen-app .buy-modal .purchase-footer {margin:24px 0 0;padding:12px 24px;gap:24px;border-radius:12px;}
+.ashen-app .buy-modal .purchase-balance>span,.ashen-app .buy-modal .purchase-bet>span {line-height:1.25;font-size:9px;margin-bottom:4px;}
+.ashen-app .buy-modal .purchase-balance>strong,.ashen-app .buy-modal .purchase-bet-row>strong {font-size:24px;line-height:1.2;font-variant-numeric:tabular-nums;}
+.ashen-app .buy-modal .purchase-bet-row {gap:12px;}
+.ashen-app .buy-modal .purchase-bet-row button {width:28px;height:28px;}
+.ashen-app .buy-modal>p.purchase-disclosure {font-size:9px!important;line-height:1.5;margin:12px 0 0;max-width:620px;}
+
+@media(orientation:portrait) {
+  .ashen-app {--g-space:8px;--g-panel-space:16px;--g-hud:64px;--g-header:104px;--g-message:24px;--g-feature:32px;--g-controls:144px;--g-footer:20px;--g-session:24px;}
+  .ashen-app .game-shell {padding:0 12px;}
+  .ashen-app .game-header {align-items:flex-start;padding-top:12px;}
+  .ashen-app .header-center {top:14px;gap:4px;}
+  .ashen-app .game-premise,.ashen-app .header-center>span {font-size:7px;}
+  .ashen-app .header-center b {font-size:18px;}
+  .ashen-app .header-center small {font-size:8px;}
+  .ashen-app .header-right {gap:8px;}
+  .ashen-app .session-chip {font-size:5px;}
+  .ashen-app .header-right .info-button,.ashen-app .header-right .settings-button {width:24px;height:24px;padding:4px;}
+  .ashen-app .wordmark {width:124px;height:84px;left:0;right:auto;top:30px;}
+  .ashen-app .reels-area {width:min(88vw,96cqh);max-height:none;}
+  .ashen-app .character-stage {position:fixed;top:0;right:4%;width:48vw;height:calc(var(--g-header) + 32px);overflow:hidden;}
+  .ashen-app .character-stage>.spine-view {position:absolute;width:140%;height:330px;left:-20%;top:-14px;}
+  .ashen-app .message-bar {top:auto;height:100%;font-size:9px;gap:3px;flex-direction:column;}
+  .ashen-app .message-bar strong {font-size:7px;}
+  .ashen-app .message-bar .error-message {font-size:8px;}
+  .ashen-app .feature-status {font-size:6px;gap:3px;flex-direction:column;line-height:1.3;}
+  .ashen-app .hud-dock {display:block;width:100%;height:132px;align-self:end;}
+  .ashen-app .control-bar {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:40px 72px;gap:0 8px;padding:10px 12px;width:100%;height:132px;border-radius:12px;}
+  .ashen-app .control-bar::before {inset:-2px;border-image-width:10px;}
+  .ashen-app .balance-block,.ashen-app .win-block,.ashen-app .bet-controls {position:static;grid-row:1;min-width:0;align-self:start;transform:none;text-align:left;}
+  .ashen-app .balance-block {grid-column:1;}
+  .ashen-app .win-block {grid-column:2;text-align:center;}
+  .ashen-app .bet-controls {grid-column:3;justify-self:stretch;display:flex;align-items:flex-start;gap:0;justify-content:space-between;}
+  .ashen-app .balance-block>span,.ashen-app .win-block>span,.ashen-app .bet-value>span {font-size:7px;line-height:1.2;margin-bottom:4px;}
+  .ashen-app .balance-block em {font-size:5px;}
+  .ashen-app .balance-block strong,.ashen-app .bet-controls strong,.ashen-app .win-block strong {font-size:clamp(14px,4.2vw,18px);line-height:1.2;min-width:0;}
+  .ashen-app .bet-controls>.bet-value {padding:0;}
+  .ashen-app .bet-arrows button {width:20px;height:18px;padding:3px;}
+  .ashen-app .menu-button {position:absolute;left:12px;bottom:28px;width:28px;height:28px;padding:4px;}
+  .ashen-app .buy-button,.ashen-app .buy-button:hover:not(:disabled) {position:absolute;left:calc(25% - 30px);bottom:12px;width:60px;height:60px;padding:6px;z-index:2;}
+  .ashen-app .buy-button b {font-size:8px;}
+  .ashen-app .spin-controls {position:static;display:contents;}
+  .ashen-app .spin-button,.ashen-app .spin-button:hover:not(:disabled) {position:absolute;left:calc(75% - 36px);right:auto;bottom:6px;width:72px;height:72px;padding:17px;}
+  .ashen-app .spin-button.auto-running {padding:24px;}
+  .ashen-app .spin-count {font-size:14px;}
+  .ashen-app .spin-options {position:absolute;right:12px;bottom:16px;gap:8px;}
+  .ashen-app .auto-button,.ashen-app .turbo-button {width:24px;height:24px;padding:5px;}
+  .ashen-app .footer-notes {width:100%;font-size:5px;padding:0;}
+  .ashen-app .session-info {font-size:6px;gap:8px;flex-wrap:wrap;padding:3px 8px;}
+  .ashen-app .game-shell>.replay-info {gap:8px;padding:6px 8px;font-size:7px;}
+  .ashen-app .replay-info button {padding:6px;}
+  .ashen-app .buy-modal {--g-card-gap:12px;--g-card-pad:12px;--g-card-title:32px;--g-card-copy:32px;--g-card-price:28px;--g-card-status:14px;--g-card-action:36px;--g-card-art:clamp(52px,9dvh,84px);--g-card-font:13px;--g-card-body-font:9px;--g-card-price-font:23px;--g-card-small-font:7px;}
+  .ashen-app .modal.buy-modal {padding:44px 16px 20px;}
+  .ashen-app .buy-modal>h2 {font-size:19px;margin-bottom:20px;max-width:calc(100% - 24px);}
+  .ashen-app .buy-modal>.close-button {top:12px;right:12px;width:28px;height:28px;}
+  .ashen-app .buy-modal .purchase-cards {max-width:480px;gap:var(--g-card-gap);margin:0 auto;grid-template-columns:repeat(2,minmax(0,1fr));}
+  .ashen-app .buy-modal .purchase-footer {width:100%;max-width:360px;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:12px 16px;margin-top:20px;}
+  .ashen-app .buy-modal .purchase-balance>span,.ashen-app .buy-modal .purchase-bet>span {font-size:8px;}
+  .ashen-app .buy-modal .purchase-balance>strong,.ashen-app .buy-modal .purchase-bet-row>strong {font-size:21px;}
+  .ashen-app .buy-modal .purchase-bet-row {gap:8px;}
+  .ashen-app .buy-modal .purchase-bet-row button {width:24px;height:24px;}
+  .ashen-app .buy-modal>p.purchase-disclosure {font-size:8px!important;margin-top:12px;}
+  .ashen-app .paytable-grid {gap:8px;}
+}
+
+@media(orientation:portrait) and (max-height:690px) {
+  .ashen-app {--g-header:88px;--g-message:22px;--g-feature:30px;--g-controls:138px;--g-footer:18px;}
+  .ashen-app .wordmark {width:112px;height:76px;top:26px;}
+  .ashen-app .buy-modal {--g-card-gap:10px;--g-card-pad:10px;--g-card-title:28px;--g-card-copy:28px;--g-card-price:26px;--g-card-status:12px;--g-card-action:32px;--g-card-art:56px;--g-card-font:12px;--g-card-body-font:8px;--g-card-price-font:21px;}
+  .ashen-app .modal.buy-modal {padding:40px 16px 16px;}
+  .ashen-app .buy-modal>h2 {font-size:17px;margin-bottom:16px;}
+  .ashen-app .buy-modal .purchase-footer {margin-top:16px;padding:10px 16px;gap:8px;}
+  .ashen-app .buy-modal>p.purchase-disclosure {font-size:7px!important;margin-top:8px;}
+}
+@media(orientation:portrait) and (max-height:590px) {
+  .ashen-app {--g-header:72px;--g-message:22px;--g-feature:28px;--g-controls:130px;--g-footer:16px;}
+  .ashen-app .wordmark {width:98px;height:66px;top:25px;}
+  .ashen-app .hud-dock,.ashen-app .control-bar {height:124px;}
+  .ashen-app .control-bar {grid-template-rows:36px 68px;padding:10px;gap:0 6px;}
+  .ashen-app .buy-button,.ashen-app .buy-button:hover:not(:disabled) {left:calc(25% - 28px);width:56px;height:56px;bottom:10px;}
+  .ashen-app .spin-button,.ashen-app .spin-button:hover:not(:disabled) {left:calc(75% - 33px);width:66px;height:66px;bottom:5px;padding:15px;}
+  .ashen-app .menu-button {left:10px;bottom:24px;}
+  .ashen-app .spin-options {right:10px;bottom:11px;}
+  .ashen-app .buy-modal {--g-card-gap:8px;--g-card-pad:8px;--g-card-title:24px;--g-card-copy:24px;--g-card-price:24px;--g-card-status:12px;--g-card-action:28px;--g-card-art:44px;--g-card-font:11px;--g-card-body-font:7.5px;--g-card-price-font:20px;--g-card-small-font:6.5px;}
+  .ashen-app .modal.buy-modal {padding:38px 12px 12px;}
+  .ashen-app .buy-modal>h2 {font-size:16px;margin-bottom:12px;}
+  .ashen-app .buy-modal .purchase-footer {padding:8px 12px;margin-top:12px;}
+  .ashen-app .buy-modal .purchase-balance>strong,.ashen-app .buy-modal .purchase-bet-row>strong {font-size:18px;}
+  .ashen-app .buy-modal>p.purchase-disclosure {font-size:6.5px!important;}
+}
+
+@media(orientation:landscape) and (max-height:600px) {
+  .ashen-app .buy-modal {--g-card-gap:14px;--g-card-pad:12px;--g-card-title:32px;--g-card-copy:30px;--g-card-price:28px;--g-card-status:14px;--g-card-action:36px;--g-card-font:16px;--g-card-body-font:9px;--g-card-price-font:24px;--g-card-small-font:8px;}
+  .ashen-app .modal.buy-modal {padding-top:32px;padding-bottom:16px;}
+  .ashen-app .buy-modal>h2 {margin-bottom:20px;}
+  .ashen-app .buy-modal .purchase-footer {margin-top:20px;padding:10px 20px;}
+}
+@media(orientation:landscape) and (max-height:480px) {
+  .ashen-app {--g-panel-space:16px;--g-panel-radius:12px;}
+  .ashen-app .modal h2 {font-size:24px;margin-bottom:16px;}
+  .ashen-app .menu-options button {min-height:40px;padding:8px 12px;font-size:12px;}
+  .ashen-app .settings-list {margin-bottom:12px;}
+  .ashen-app .settings-list label {min-height:40px;padding:8px 0;}
+  .ashen-app .language-options {margin-bottom:12px;}
+  .ashen-app .settings-modal .text-button {padding-top:12px;}
+  .ashen-app .buy-modal {--g-card-art:72px;--g-card-gap:12px;--g-card-pad:10px;--g-card-title:28px;--g-card-copy:26px;--g-card-price:26px;--g-card-status:12px;--g-card-action:32px;--g-card-font:13px;--g-card-body-font:8px;--g-card-price-font:22px;--g-card-small-font:7px;}
+  .ashen-app .modal.buy-modal {padding:24px 5% 12px;}
+  .ashen-app .buy-modal>h2 {font-size:18px;margin-bottom:12px;}
+  .ashen-app .buy-modal .purchase-footer {margin-top:12px;padding:8px 16px;}
+  .ashen-app .buy-modal .purchase-balance>strong,.ashen-app .buy-modal .purchase-bet-row>strong {font-size:20px;}
+  .ashen-app .buy-modal>p.purchase-disclosure {font-size:7px!important;margin-top:8px;}
+}
+@media(orientation:landscape) and (max-height:280px) {
+  .ashen-app {--g-panel-space:8px;--g-panel-radius:8px;}
+  .ashen-app .modal h2 {font-size:16px;margin:4px 0 8px;padding:0 24px;}
+  .ashen-app .modal>.eyebrow {font-size:6px;padding:0 24px;}
+  .ashen-app .modal .close-button {width:24px;height:24px;padding:4px;}
+  .ashen-app .modal.menu-modal {width:280px;}
+  .ashen-app .menu-options {gap:6px;}
+  .ashen-app .menu-options button {min-height:34px;padding:6px 8px;font-size:9px;gap:8px;}
+  .ashen-app .menu-options button>.pc-icon {width:20px;height:20px;}
+  .ashen-app .settings-list {margin-bottom:8px;}
+  .ashen-app .settings-list label {min-height:26px;padding:4px 0;font-size:9px;}
+  .ashen-app .language-options {margin-bottom:8px;}
+  .ashen-app .language-options button {min-height:24px;padding:4px;font-size:9px;}
+  .ashen-app .settings-modal .text-button {font-size:9px;padding-top:8px;}
+  .ashen-app .autoplay-options {margin:8px 0;gap:6px;}
+  .ashen-app .autoplay-options button {min-height:28px;font-size:16px;padding:4px;}
+  .ashen-app .autoplay-start {min-height:28px;margin:4px 0;}
+  .ashen-app .buy-modal {--g-card-art:32px;--g-card-gap:6px;--g-card-pad:5px;--g-card-title:18px;--g-card-copy:16px;--g-card-price:17px;--g-card-status:8px;--g-card-action:20px;--g-card-font:8px;--g-card-body-font:5.5px;--g-card-price-font:14px;--g-card-small-font:4.5px;}
+  .ashen-app .modal.buy-modal {padding:12px 5% 6px;}
+  .ashen-app .buy-modal>h2 {font-size:11px;margin:0 0 8px;}
+  .ashen-app .buy-modal>.close-button {width:20px;height:20px;top:4px;right:4px;}
+  .ashen-app .buy-modal .purchase-cards article.purchase-card,.ashen-app .buy-modal .purchase-body {border-radius:8px;}
+  .ashen-app .buy-modal .purchase-body {margin-top:-4px;}
+  .ashen-app .buy-modal button.purchase-action {padding:4px 2px;border-radius:4px;}
+  .ashen-app .buy-modal .purchase-footer {margin-top:8px;padding:4px 12px;gap:12px;border-radius:6px;}
+  .ashen-app .buy-modal .purchase-balance>span,.ashen-app .buy-modal .purchase-bet>span {font-size:5px;margin-bottom:2px;}
+  .ashen-app .buy-modal .purchase-balance>strong,.ashen-app .buy-modal .purchase-bet-row>strong {font-size:12px;}
+  .ashen-app .buy-modal .purchase-bet-row {gap:8px;}
+  .ashen-app .buy-modal .purchase-bet-row button {width:18px;height:18px;}
+  .ashen-app .buy-modal>p.purchase-disclosure {font-size:5px!important;margin-top:4px;}
+}
+
+/* Full-screen ceremonies use the same centered composition in every tier.
+   The background, segmented seals and character remain original Spine art. */
+.ashen-app {--g-scene:min(.083333333vw,.148148148dvh,1.2px);}
+.ashen-app .modal.bonus-intro {
+  display:grid;grid-template-columns:repeat(2,calc(260 * var(--g-scene)));
+  grid-template-rows:auto auto calc(240 * var(--g-scene)) auto auto;
+  gap:calc(16 * var(--g-scene)) calc(32 * var(--g-scene));
+  justify-content:center;align-content:center;align-items:center;
+  padding:calc(24 * var(--g-scene));max-height:none;
+}
+.ashen-app .bonus-intro::before {display:none;}
+.ashen-app .bonus-intro>.eyebrow,.ashen-app .deal-modal>.eyebrow,.ashen-app .deal-wheel-modal>.eyebrow {grid-column:1/-1;font-size:calc(10 * var(--g-scene));line-height:1.2;margin:0;padding:0;}
+.ashen-app .bonus-intro>h2,.ashen-app .deal-modal>h2,.ashen-app .deal-wheel-modal>h2 {grid-column:1/-1;max-width:none;font-size:calc(44 * var(--g-scene));line-height:1.1;margin:0;padding:0;text-align:center;}
+.ashen-app .bonus-intro>.spine-view:not(.ceremony-environment) {grid-column:1;grid-row:3;width:100%;height:100%;margin:0;align-self:center;}
+.ashen-app .bonus-intro>.free-spin-count {grid-column:2;grid-row:3;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:calc(150 * var(--g-scene));line-height:.95;margin:0;}
+.ashen-app .bonus-intro>.free-spin-count span {font-size:calc(10 * var(--g-scene));line-height:1.25;margin:calc(16 * var(--g-scene)) 0 0;letter-spacing:.04em;}
+.ashen-app .bonus-intro>.bonus-rule {grid-column:1/-1;grid-row:4;font-size:calc(11 * var(--g-scene));line-height:1.3;margin:0;letter-spacing:.04em;}
+.ashen-app .bonus-intro>.primary {grid-column:1/-1;grid-row:5;justify-self:center;width:calc(280 * var(--g-scene));min-width:0;min-height:calc(48 * var(--g-scene));padding:calc(12 * var(--g-scene));font-size:calc(12 * var(--g-scene));border-radius:calc(8 * var(--g-scene));}
+.ashen-app .modal.deal-modal {display:grid;grid-template-columns:calc(240 * var(--g-scene)) calc(360 * var(--g-scene));grid-template-rows:auto auto auto auto;gap:calc(16 * var(--g-scene)) calc(32 * var(--g-scene));justify-content:center;align-content:center;padding:calc(24 * var(--g-scene));max-height:none;}
+.ashen-app .deal-keeper {grid-column:1;grid-row:3/5;position:relative;width:100%;height:calc(300 * var(--g-scene));margin:0;align-self:center;overflow:hidden;mask-image:linear-gradient(#000 78%,transparent);}
+.ashen-app .deal-keeper>.spine-view {position:absolute;width:calc(460 * var(--g-scene));height:calc(620 * var(--g-scene));left:50%;top:calc(-40 * var(--g-scene));transform:translateX(-50%);}
+.ashen-app .deal-modal>p {grid-column:2;grid-row:3;align-self:end;width:100%;max-width:none;margin:0;font-size:calc(14 * var(--g-scene));line-height:1.65;text-align:center;}
+.ashen-app .deal-modal>.deal-actions {grid-column:2;grid-row:4;align-self:start;width:100%;max-width:none;min-width:0;display:flex;flex-direction:column;gap:calc(12 * var(--g-scene));margin:0;}
+.ashen-app .deal-actions button {width:100%;min-height:calc(48 * var(--g-scene));padding:calc(12 * var(--g-scene));font-size:calc(12 * var(--g-scene));border-radius:calc(8 * var(--g-scene));}
+.ashen-app .modal.deal-wheel-modal {display:flex;flex-direction:column;justify-content:center;gap:calc(12 * var(--g-scene));padding:calc(24 * var(--g-scene));max-height:none;}
+.ashen-app .deal-wheel-modal>h2 {font-size:calc(36 * var(--g-scene));}
+.ashen-app .deal-wheel-modal .wheel-dial.wheel-v4 {width:min(64dvh,72vw,560px);height:auto;max-width:100%;margin:0;overflow:visible;}
+.ashen-app .deal-wheel-modal>.deal-result-note {font-size:calc(12 * var(--g-scene));line-height:1.3;margin:0;}
+.ashen-app .celebration-screen>.spine-view {position:absolute;inset:0;left:0;top:0;width:100%;height:100%;}
+.ashen-app .celebration-copy {position:absolute;inset:0;width:100%;height:100%;padding:0;display:block;}
+.ashen-app .celebration-copy h2 {position:absolute;left:0;right:0;bottom:calc(50% + 20 * var(--g-scene));font-size:calc(52 * var(--g-scene));line-height:1;margin:0;text-align:center;}
+.ashen-app .celebration-copy>strong {position:absolute;left:5%;right:5%;top:calc(50% + 45 * var(--g-scene));transform:translateY(-50%);width:90%;font-size:calc(64 * var(--g-scene));line-height:1.1;margin:0;max-width:100%;font-variant-numeric:tabular-nums;text-align:center;}
+.ashen-app .celebration-copy button.primary {position:absolute;left:50%;top:calc(50% + 230 * var(--g-scene));bottom:auto;transform:translateX(-50%);min-width:calc(260 * var(--g-scene));min-height:calc(48 * var(--g-scene));padding:calc(12 * var(--g-scene));font-size:calc(12 * var(--g-scene));}
+@media(orientation:portrait) {
+  .ashen-app .modal.bonus-intro,.ashen-app .modal.deal-modal {grid-template-columns:minmax(0,340px);grid-template-rows:auto;gap:clamp(12px,2dvh,18px);padding:24px 16px;}
+  .ashen-app .bonus-intro>.eyebrow,.ashen-app .deal-modal>.eyebrow,.ashen-app .deal-wheel-modal>.eyebrow {font-size:9px;}
+  .ashen-app .bonus-intro>h2,.ashen-app .deal-modal>h2,.ashen-app .deal-wheel-modal>h2 {font-size:clamp(26px,7.5vw,34px);line-height:1.1;}
+  .ashen-app .bonus-intro>.spine-view:not(.ceremony-environment) {grid-column:1;grid-row:3;height:clamp(136px,25dvh,220px);width:100%;}
+  .ashen-app .bonus-intro>.free-spin-count {grid-column:1;grid-row:4;font-size:clamp(84px,24vw,108px);}
+  .ashen-app .bonus-intro>.free-spin-count span {font-size:9px;margin-top:12px;}
+  .ashen-app .bonus-intro>.bonus-rule {grid-row:5;font-size:9px;}
+  .ashen-app .bonus-intro>.primary {grid-row:6;width:min(100%,280px);min-height:44px;padding:12px;font-size:12px;border-radius:8px;}
+  .ashen-app .deal-keeper {grid-column:1;grid-row:3;height:clamp(128px,25dvh,210px);}
+  .ashen-app .deal-keeper>.spine-view {width:400px;height:530px;top:-70px;}
+  .ashen-app .deal-modal>p {grid-column:1;grid-row:4;font-size:11px;line-height:1.6;}
+  .ashen-app .deal-modal>.deal-actions {grid-column:1;grid-row:5;gap:10px;width:min(100%,320px);justify-self:center;}
+  .ashen-app .deal-actions button {min-height:44px;padding:12px;font-size:11px;border-radius:8px;}
+  .ashen-app .modal.deal-wheel-modal {padding:24px 16px;gap:12px;}
+  .ashen-app .deal-wheel-modal .wheel-dial.wheel-v4 {width:min(92vw,440px);max-width:none;}
+  .ashen-app .deal-wheel-modal>.deal-result-note {font-size:10px;line-height:1.4;}
+  .ashen-app .celebration-screen>.spine-view {left:1%;width:98%;}
+  .ashen-app .celebration-copy h2 {bottom:calc(50% + 30vw + 16px);font-size:clamp(42px,13vw,56px);}
+  .ashen-app .celebration-copy>strong {top:50%;font-size:clamp(32px,10vw,44px);}
+  .ashen-app .celebration-copy button.primary {top:calc(50% + 30vw + 24px);min-width:240px;min-height:44px;padding:12px;font-size:12px;}
+}

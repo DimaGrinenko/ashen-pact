@@ -1,0 +1,201 @@
+{
+  "source": "art-source/ashen/ui-controls-v5.png",
+  "width": 1254,
+  "height": 1254,
+  "trueAlpha": true,
+  "extraction": "Crop observed cells; clear alpha below16; trim; scale to224px maximum; center in256px PNG. Preserve generated shapes and retained alpha.",
+  "icons": [
+    {
+      "name": "spin",
+      "path": "public/ashen/ui/v5/spin.png",
+      "cell": {
+        "left": 0,
+        "top": 0,
+        "width": 335,
+        "height": 375
+      },
+      "visible": 18128,
+      "clearedPixels": 107497
+    },
+    {
+      "name": "auto",
+      "path": "public/ashen/ui/v5/auto.png",
+      "cell": {
+        "left": 335,
+        "top": 0,
+        "width": 298,
+        "height": 375
+      },
+      "visible": 21803,
+      "clearedPixels": 89947
+    },
+    {
+      "name": "turbo",
+      "path": "public/ashen/ui/v5/turbo.png",
+      "cell": {
+        "left": 633,
+        "top": 0,
+        "width": 299,
+        "height": 375
+      },
+      "visible": 11955,
+      "clearedPixels": 100170
+    },
+    {
+      "name": "menu",
+      "path": "public/ashen/ui/v5/menu.png",
+      "cell": {
+        "left": 932,
+        "top": 0,
+        "width": 322,
+        "height": 375
+      },
+      "visible": 19539,
+      "clearedPixels": 101211
+    },
+    {
+      "name": "up",
+      "path": "public/ashen/ui/v5/up.png",
+      "cell": {
+        "left": 0,
+        "top": 375,
+        "width": 335,
+        "height": 270
+      },
+      "visible": 11271,
+      "clearedPixels": 79179
+    },
+    {
+      "name": "down",
+      "path": "public/ashen/ui/v5/down.png",
+      "cell": {
+        "left": 335,
+        "top": 375,
+        "width": 298,
+        "height": 270
+      },
+      "visible": 10563,
+      "clearedPixels": 69897
+    },
+    {
+      "name": "close",
+      "path": "public/ashen/ui/v5/close.png",
+      "cell": {
+        "left": 633,
+        "top": 375,
+        "width": 299,
+        "height": 270
+      },
+      "visible": 17698,
+      "clearedPixels": 63032
+    },
+    {
+      "name": "sound",
+      "path": "public/ashen/ui/v5/sound.png",
+      "cell": {
+        "left": 932,
+        "top": 375,
+        "width": 322,
+        "height": 270
+      },
+      "visible": 18652,
+      "clearedPixels": 68288
+    },
+    {
+      "name": "mute",
+      "path": "public/ashen/ui/v5/mute.png",
+      "cell": {
+        "left": 0,
+        "top": 645,
+        "width": 335,
+        "height": 295
+      },
+      "visible": 18114,
+      "clearedPixels": 80711
+    },
+    {
+      "name": "settings",
+      "path": "public/ashen/ui/v5/settings.png",
+      "cell": {
+        "left": 335,
+        "top": 645,
+        "width": 298,
+        "height": 295
+      },
+      "visible": 22666,
+      "clearedPixels": 65244
+    },
+    {
+      "name": "info",
+      "path": "public/ashen/ui/v5/info.png",
+      "cell": {
+        "left": 633,
+        "top": 645,
+        "width": 299,
+        "height": 295
+      },
+      "visible": 8821,
+      "clearedPixels": 79384
+    },
+    {
+      "name": "back",
+      "path": "public/ashen/ui/v5/back.png",
+      "cell": {
+        "left": 932,
+        "top": 645,
+        "width": 322,
+        "height": 295
+      },
+      "visible": 11624,
+      "clearedPixels": 83366
+    },
+    {
+      "name": "stop",
+      "path": "public/ashen/ui/v5/stop.png",
+      "cell": {
+        "left": 0,
+        "top": 940,
+        "width": 335,
+        "height": 314
+      },
+      "visible": 29716,
+      "clearedPixels": 75474
+    },
+    {
+      "name": "check",
+      "path": "public/ashen/ui/v5/check.png",
+      "cell": {
+        "left": 335,
+        "top": 940,
+        "width": 298,
+        "height": 314
+      },
+      "visible": 10902,
+      "clearedPixels": 82670
+    },
+    {
+      "name": "play",
+      "path": "public/ashen/ui/v5/play.png",
+      "cell": {
+        "left": 633,
+        "top": 940,
+        "width": 299,
+        "height": 314
+      },
+      "visible": 17216,
+      "clearedPixels": 76670
+    },
+    {
+      "name": "bonus",
+      "path": "public/ashen/ui/v5/bonus.png",
+      "cell": {
+        "left": 932,
+        "top": 940,
+        "width": 322,
+        "height": 314
+      },
+      "visible": 21586,
+      "clearedPixels": 79522
+    }
+  ]
+}

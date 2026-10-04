@@ -1,0 +1,6 @@
+/* Short landscape keeps every result/error message and bonus progress visible.
+   The wager and active cost multiplier already appear in the shared HUD. */
+@media (orientation:landscape) and (max-width:699px) {
+ .ashen-app {--g-feature:0px;}
+ .ashen-app .feature-status {display:none;}
+}

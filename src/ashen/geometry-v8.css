@@ -1,0 +1,118 @@
+/* A single, centred instrument panel. The two action zones are identical;
+   finance uses three equal columns, with WIN on the reel field's centre line.
+   V6 painted PNG rims are contained by the same button box, without overhang. */
+.ashen-app {
+  --hud-panel-width:calc(920 * var(--g-unit));
+  --hud-panel-height:calc(104 * var(--g-unit));
+  --hud-action:calc(80 * var(--g-unit));
+  --hud-inset:calc(12 * var(--g-unit));
+  --hud-gap:calc(20 * var(--g-unit));
+  --hud-label-size:calc(9 * var(--g-unit));
+  --hud-amount-size:calc(23 * var(--g-unit));
+  --hud-utility:calc(28 * var(--g-unit));
+  --hud-utility-gap:calc(8 * var(--g-unit));
+  --hud-arrow:calc(22 * var(--g-unit));
+  --g-controls:calc(120 * var(--g-unit));
+}
+.ashen-app .hud-v8.hud-dock {
+  width:min(100%,var(--hud-panel-width));height:100%;
+  display:grid;place-items:center;gap:0;position:relative;align-self:center;
+}
+.ashen-app .hud-v8 .control-bar {
+  display:grid;grid-template-columns:var(--hud-action) minmax(0,1fr) var(--hud-action);
+  grid-template-rows:minmax(0,1fr);align-items:center;justify-content:initial;
+  width:100%;height:var(--hud-panel-height);padding:var(--hud-inset);
+  gap:var(--hud-gap);margin:0;border:0;border-radius:calc(12 * var(--g-unit));
+  background:#0a111ae8;overflow:visible;
+}
+.ashen-app .hud-v8 .control-bar::before {inset:0;border-width:0;border-image-width:calc(10 * var(--g-unit));}
+.ashen-app .hud-action-zone {display:grid;place-items:center;min-width:0;min-height:0;align-self:center;}
+.ashen-app .hud-action-left {grid-column:1;grid-row:1;}
+.ashen-app .hud-action-right {grid-column:3;grid-row:1;}
+.ashen-app .hud-center {grid-column:2;grid-row:1;display:grid;grid-template-rows:auto var(--hud-utility);gap:calc(6 * var(--g-unit));min-width:0;align-self:center;}
+.ashen-app .hud-money-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--hud-utility-gap);min-width:0;align-items:start;}
+.ashen-app .hud-v8 .balance-block,.ashen-app .hud-v8 .win-block,.ashen-app .hud-v8 .bet-controls {
+  position:static;grid-row:1;grid-column:auto;width:100%;height:auto;min-width:0;margin:0;padding:0;
+  transform:none;text-align:center;align-self:start;justify-self:stretch;
+}
+.ashen-app .hud-v8 .balance-block>span,.ashen-app .hud-v8 .win-block>span,.ashen-app .hud-v8 .bet-value>span {
+  display:block;height:calc(var(--hud-label-size) * 1.25);font-size:var(--hud-label-size);line-height:1.25;letter-spacing:.055em;
+  margin:0 0 calc(3 * var(--g-unit));white-space:nowrap;text-align:center;
+}
+.ashen-app .hud-v8 .balance-block em {font-size:.75em;letter-spacing:0;}
+.ashen-app .hud-v8 .balance-block strong,.ashen-app .hud-v8 .bet-controls strong,.ashen-app .hud-v8 .win-block strong {
+  display:block;width:100%;min-width:0;margin:0;font-family:var(--ritual-number-font,AshenSerif,Georgia,serif);
+  font-size:var(--hud-amount-size);font-weight:700;line-height:1.2;letter-spacing:0;
+  white-space:nowrap;text-align:center;font-variant-numeric:tabular-nums;
+}
+.ashen-app .hud-v8 .bet-controls {
+  display:grid;grid-template-columns:var(--hud-arrow) minmax(0,1fr) var(--hud-arrow);grid-template-rows:auto;gap:0;
+}
+.ashen-app .hud-v8 .bet-controls>.bet-value {grid-column:2;grid-row:1;width:100%;min-width:0;padding:0;background:none;}
+.ashen-app .hud-v8 .bet-controls>.bet-arrows {display:contents;}
+.ashen-app .hud-v8 .bet-arrows button {
+  grid-row:1;position:static;align-self:end;width:var(--hud-arrow);height:calc(var(--hud-amount-size) * 1.2);
+  padding:calc(4 * var(--g-unit));margin:0;border:0;background:none;display:grid;place-items:center;
+}
+.ashen-app .hud-v8 .bet-arrows button:first-child {grid-column:3;}
+.ashen-app .hud-v8 .bet-arrows button:last-child {grid-column:1;}
+.ashen-app .hud-v8 .bet-arrows .pc-icon {width:100%;height:100%;object-fit:contain;}
+.ashen-app .hud-utilities {display:flex;align-items:center;justify-content:center;gap:var(--hud-utility-gap);height:var(--hud-utility);}
+.ashen-app .hud-v8 .spin-options {display:contents;}
+.ashen-app .hud-v8 .menu-button,.ashen-app .hud-v8 .auto-button,.ashen-app .hud-v8 .turbo-button {
+  position:relative;inset:auto;width:var(--hud-utility);height:var(--hud-utility);padding:calc(6 * var(--g-unit));
+  border:1px solid #849ba54a!important;border-radius:50%!important;background:#182b36!important;
+  box-shadow:inset 0 1px 1px #d0e8ea16,0 2px 4px #0006;filter:none;transform:none;
+}
+.ashen-app .hud-v8 .menu-button .pc-icon,.ashen-app .hud-v8 .auto-button .pc-icon,.ashen-app .hud-v8 .turbo-button .pc-icon {width:100%;height:100%;object-fit:contain;filter:none;}
+.ashen-app .hud-v8 .menu-button:hover:not(:disabled),.ashen-app .hud-v8 .auto-button:hover:not(:disabled),.ashen-app .hud-v8 .turbo-button:hover:not(:disabled) {background:#294553!important;border-color:#abd9dda8!important;}
+.ashen-app .hud-v8 .auto-button.active,.ashen-app .hud-v8 .turbo-button.active {background:#285c69!important;border-color:#7ed3d6!important;box-shadow:inset 0 0 9px #65d7e429,0 0 8px #66c6d321;}
+.ashen-app .hud-v8 .spin-controls {display:grid;place-items:center;position:static;inset:auto;width:100%;height:100%;gap:0;padding:0;margin:0;}
+.ashen-app .hud-v8 .buy-button,.ashen-app .hud-v8 .buy-button:hover:not(:disabled),
+.ashen-app .hud-v8 .spin-button,.ashen-app .hud-v8 .spin-button:hover:not(:disabled) {
+  position:relative;inset:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  width:var(--hud-action);height:var(--hud-action);padding:0;margin:0;border:0!important;
+  background:none!important;box-shadow:none;transform:none;gap:0;overflow:visible;isolation:isolate;
+}
+.ashen-app .hud-v8 .buy-button::before,.ashen-app .hud-v8 .spin-button::before {inset:0;}
+.ashen-app .hud-v8 .buy-button .pc-icon {width:48%;height:42%;object-fit:contain;filter:none;}
+.ashen-app .hud-v8 .buy-button b {font-size:calc(var(--hud-action) * .105);line-height:1.25;letter-spacing:.055em;margin:0;}
+.ashen-app .hud-v8 .spin-button .pc-icon {width:52%;height:52%;object-fit:contain;filter:none;}
+.ashen-app .hud-v8 .spin-button.auto-running {padding:0;}
+.ashen-app .hud-v8 .spin-button.auto-running .pc-icon {width:34%;height:34%;}
+.ashen-app .hud-v8 .spin-count {font-family:AshenSans,sans-serif;color:#11252f;font-size:calc(var(--hud-action) * .16);font-weight:800;line-height:1;}
+.ashen-app .footer-notes {width:min(100%,var(--hud-panel-width));display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:center;gap:8px;}
+.ashen-app .footer-notes>span:first-child {text-align:left;}
+.ashen-app .footer-notes>span:nth-child(2) {text-align:center;}
+.ashen-app .footer-notes>span:last-child {text-align:right;}
+
+@media(orientation:landscape) and (min-width:700px) {
+  .ashen-app {--hud-label-size:9px;--hud-amount-size:max(17px,calc(23 * var(--g-unit)));}
+}
+@media(orientation:portrait) {
+  .ashen-app {
+    --hud-panel-width:100%;--hud-panel-height:132px;--hud-action:68px;
+    --hud-inset:12px;--hud-gap:8px;--hud-label-size:7px;
+    --hud-amount-size:clamp(16px,4.4vw,19px);--hud-utility:28px;--hud-utility-gap:8px;
+    --hud-arrow:18px;--g-controls:144px;
+  }
+  .ashen-app .hud-v8.hud-dock {height:100%;align-self:center;}
+  .ashen-app .hud-v8 .control-bar {
+    grid-template-columns:var(--hud-action) minmax(0,1fr) var(--hud-action);
+    grid-template-rows:minmax(0,1fr) var(--hud-action);gap:4px var(--hud-gap);border-radius:12px;
+  }
+  .ashen-app .hud-v8 .control-bar::before {border-image-width:10px;}
+  .ashen-app .hud-center {display:contents;}
+  .ashen-app .hud-money-grid {grid-column:1/-1;grid-row:1;align-self:start;}
+  .ashen-app .hud-action-left,.ashen-app .hud-action-right {grid-row:2;}
+  .ashen-app .hud-utilities {grid-column:2;grid-row:2;align-self:center;}
+  .ashen-app .hud-v8 .balance-block>span,.ashen-app .hud-v8 .win-block>span,.ashen-app .hud-v8 .bet-value>span {margin-bottom:3px;}
+  .ashen-app .hud-v8 .bet-arrows button {padding:3px;}
+  .ashen-app .hud-v8 .menu-button,.ashen-app .hud-v8 .auto-button,.ashen-app .hud-v8 .turbo-button {padding:6px;}
+}
+@media(orientation:portrait) and (max-height:690px) {
+  .ashen-app {--hud-panel-height:128px;--hud-action:64px;--g-controls:140px;}
+}
+@media(orientation:portrait) and (max-height:590px) {
+  .ashen-app {--hud-panel-height:124px;--hud-action:60px;--hud-inset:10px;--hud-utility:26px;--hud-utility-gap:6px;--hud-arrow:16px;--g-controls:136px;}
+}

@@ -1,0 +1,6 @@
+.ashen-app .reel-column.rolling .symbol-cell { animation:none; transform:none; filter:none; opacity:0; }
+.ashen-app .reel-column[data-reel-settling="true"] .symbol-cell { opacity:0; }
+.ashen-app .reel-motion-strip { position:absolute; inset:0; width:100%; height:100%; z-index:2; pointer-events:none; opacity:1; }
+.ashen-app .reel-column.rolling:after { content:''; position:absolute; inset:0; pointer-events:none; z-index:3; background:linear-gradient(#0710199c,transparent 20%,transparent 80%,#0710199c); }
+.ashen-app.reduced-motion .reel-column.rolling .symbol-cell { opacity:1; }
+.ashen-app .reel-board .symbol-cell .spine-view{filter:none}

@@ -1,0 +1,28 @@
+/* V9 stone, cloth and fire are generated rasters animated in the Spine rig.
+   These rules position text; they do not draw decorative vector artwork. */
+.ashen-app>.wheel-reveal.wheel-ceremony-v9{background:#09090deb;backdrop-filter:blur(5px)}
+.ashen-app>.wheel-reveal.wheel-ceremony-v9.red{background:#10090bec}
+.wheel-ceremony-v9>.spine-view.ceremony-environment{opacity:.34;filter:none}
+.ashen-app>.wheel-ceremony-v9 h2{font-family:AshenSans,Arial,sans-serif;font-weight:850;letter-spacing:.045em;color:#ede8d7;text-shadow:0 3px 14px #000}
+.ashen-app>.wheel-ceremony-v9>.eyebrow{color:#b8dbdd;letter-spacing:.16em}
+.ashen-app>.wheel-ceremony-v9.red>.eyebrow{color:#ee6676}
+.ashen-app .wheel-dial.wheel-v4.wheel-v9>.spine-view.ritual-disc{filter:drop-shadow(0 8px 12px #0008)}
+.ashen-app .wheel-dial.wheel-v4.wheel-v9 .dial-numbers.synced span{font-family:AshenSans,Arial,sans-serif;font-size:clamp(10px,1.85vh,17px);font-weight:800;letter-spacing:0;line-height:1.15;color:#e8e3d3;background:#0b0b0ddd;box-shadow:none;border-radius:2px;padding:2px 4px;text-shadow:0 1px 2px #000}
+.ashen-app .wheel-dial.wheel-v4.wheel-v9 .dial-numbers.synced .special-value{color:#ef7a82}
+.ashen-app .wheel-dial.wheel-v4.wheel-v9 .dial-numbers.synced .selected-value{color:#fff9e9;background:#224147;box-shadow:0 0 0 1px #769e9e;text-shadow:none}
+.ashen-app .red .wheel-dial.wheel-v4.wheel-v9 .dial-numbers.synced .selected-value{background:#771d2c;box-shadow:0 0 0 1px #d26472}
+.ashen-app .wheel-dial.wheel-v4.wheel-v9 .dial-result{inset:0;background:none;animation:none;pointer-events:none}
+.ashen-app .wheel-dial.wheel-v4.wheel-v9 .dial-result strong{color:#f0ecde;filter:drop-shadow(0 3px 3px #000b);text-shadow:none}
+.ashen-app .wheel-dial.wheel-v4.wheel-v9 .dial-result small{color:#c5c6bf;letter-spacing:.16em}
+.ashen-app .red .wheel-dial.wheel-v4.wheel-v9 .dial-result small{color:#e99ca5}
+.ashen-app .wheel-dial.wheel-v4.wheel-v9 .dial-motion-caption{color:#d7d2c5;font-size:8px;letter-spacing:.16em}
+.ashen-app>.wheel-ceremony-v9 .wheel-tally{color:#aeb0ab;letter-spacing:.15em}
+.ashen-app>.wheel-ceremony-v9 .wheel-tally b{color:#f0ecde;text-shadow:none}
+@media(orientation:portrait){
+  .ashen-app .wheel-dial.wheel-v4.wheel-v9 .dial-numbers.synced span{font-size:clamp(10px,2.65vw,14px);padding:2px 3px}
+  .ashen-app .wheel-dial.wheel-v4.wheel-v9 .dial-motion-caption{font-size:7px}
+}
+@media(max-height:480px) and (orientation:landscape){
+  .ashen-app .wheel-dial.wheel-v4.wheel-v9 .dial-numbers.synced span{font-size:2vh;padding:1px 2px}
+  .ashen-app .wheel-dial.wheel-v4.wheel-v9 .dial-motion-caption{font-size:1.4vh}
+}

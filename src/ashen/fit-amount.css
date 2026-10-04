@@ -1,0 +1,24 @@
+.fit-amount {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.25;
+}
+.ashen-app .fit-amount > span {
+  display: inline-block;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-transform: none;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+.ashen-app .fit-amount[data-compact=true] .raster-number-text {
+  position:static;display:block;width:auto;height:auto;margin:0;padding:0;clip-path:none;
+  overflow:visible;line-height:1;font-family:AshenSerif,Georgia,serif;font-weight:600;
+  font-variant-numeric:lining-nums tabular-nums;color:#f0e3c7;text-shadow:0 1px 2px #000;
+}
+.ashen-app .fit-amount[data-compact=true] .raster-number-visual {display:none;}
+.ashen-app .purchase-body .fit-amount[data-compact=true] .raster-number-text {color:#14212a;text-shadow:none;}

@@ -1,0 +1,8 @@
+/* Motion belongs to the registered raster Spine layer. Fixed architecture must
+   not drift separately from its celestial opening, shafts or floor reflections. */
+.ashen-app .world-scene .world-plate{animation:none;transform:none;transition:none;will-change:auto}
+.ashen-app .spine-view.environment-layer{opacity:1;filter:none;contain:layout paint;isolation:isolate}
+/* The scene controller pauses the Spine clock for menus and hidden pages.
+   Keep CSS from introducing a second clock when motion is disabled. */
+.ashen-app.reduced-motion .world-scene .world-plate{animation:none!important;transition:none!important}
+@media(prefers-reduced-motion:reduce){.ashen-app .world-scene .world-plate{animation:none!important;transition:none!important}}

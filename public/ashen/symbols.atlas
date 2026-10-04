@@ -1,0 +1,481 @@
+symbols.webp
+size: 2048, 1600
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+seal-v14-blue-fire-left
+  rotate: false
+  xy: 1062, 459
+  size: 148, 321
+  orig: 148, 321
+  offset: 0, 0
+  index: -1
+seal-v14-blue-fire-right
+  rotate: false
+  xy: 1896, 459
+  size: 148, 294
+  orig: 148, 294
+  offset: 0, 0
+  index: -1
+seal-v14-blue-wing-left
+  rotate: false
+  xy: 1332, 1342
+  size: 92, 98
+  orig: 92, 98
+  offset: 0, 0
+  index: -1
+seal-v14-blue-wing-right
+  rotate: false
+  xy: 1236, 1342
+  size: 92, 100
+  orig: 92, 100
+  offset: 0, 0
+  index: -1
+seal-v14-blue-housing
+  rotate: false
+  xy: 482, 4
+  size: 474, 434
+  orig: 474, 434
+  offset: 0, 0
+  index: -1
+seal-v14-blue-six
+  rotate: false
+  xy: 1230, 824
+  size: 164, 252
+  orig: 164, 252
+  offset: 0, 0
+  index: -1
+seal-v14-blue-seven
+  rotate: false
+  xy: 1398, 824
+  size: 164, 244
+  orig: 164, 244
+  offset: 0, 0
+  index: -1
+seal-v14-blue-charm
+  rotate: false
+  xy: 1660, 1342
+  size: 42, 86
+  orig: 42, 86
+  offset: 0, 0
+  index: -1
+seal-v14-blue-shard
+  rotate: false
+  xy: 990, 1521
+  size: 14, 26
+  orig: 14, 26
+  offset: 0, 0
+  index: -1
+seal-v14-red-fire-left
+  rotate: false
+  xy: 183, 824
+  size: 148, 272
+  orig: 148, 272
+  offset: 0, 0
+  index: -1
+seal-v14-red-fire-right
+  rotate: false
+  xy: 595, 824
+  size: 148, 265
+  orig: 148, 265
+  offset: 0, 0
+  index: -1
+seal-v14-red-wing-left
+  rotate: false
+  xy: 1140, 1342
+  size: 92, 102
+  orig: 92, 102
+  offset: 0, 0
+  index: -1
+seal-v14-red-wing-right
+  rotate: false
+  xy: 1044, 1342
+  size: 92, 103
+  orig: 92, 103
+  offset: 0, 0
+  index: -1
+seal-v14-red-housing
+  rotate: false
+  xy: 4, 4
+  size: 474, 451
+  orig: 474, 451
+  offset: 0, 0
+  index: -1
+seal-v14-red-six
+  rotate: false
+  xy: 341, 1119
+  size: 164, 208
+  orig: 164, 208
+  offset: 0, 0
+  index: -1
+seal-v14-red-seven
+  rotate: false
+  xy: 509, 1119
+  size: 164, 205
+  orig: 164, 205
+  offset: 0, 0
+  index: -1
+seal-v14-red-charm
+  rotate: false
+  xy: 1706, 1342
+  size: 39, 86
+  orig: 39, 86
+  offset: 0, 0
+  index: -1
+seal-v14-red-shard
+  rotate: false
+  xy: 972, 1521
+  size: 14, 27
+  orig: 14, 27
+  offset: 0, 0
+  index: -1
+chalk-v14-ten-one
+  rotate: false
+  xy: 384, 459
+  size: 141, 359
+  orig: 141, 359
+  offset: 0, 0
+  index: -1
+chalk-v14-ten-zero
+  rotate: false
+  xy: 151, 459
+  size: 229, 360
+  orig: 229, 360
+  offset: 0, 0
+  index: -1
+chalk-v14-j-stem
+  rotate: false
+  xy: 4, 824
+  size: 175, 291
+  orig: 175, 291
+  offset: 0, 0
+  index: -1
+chalk-v14-j-hook
+  rotate: false
+  xy: 160, 1342
+  size: 235, 165
+  orig: 235, 165
+  offset: 0, 0
+  index: -1
+chalk-v14-q-loop
+  rotate: false
+  xy: 529, 459
+  size: 281, 349
+  orig: 281, 349
+  offset: 0, 0
+  index: -1
+chalk-v14-q-tail
+  rotate: false
+  xy: 747, 824
+  size: 222, 264
+  orig: 222, 264
+  offset: 0, 0
+  index: -1
+chalk-v14-k-upright
+  rotate: false
+  xy: 4, 459
+  size: 143, 361
+  orig: 143, 361
+  offset: 0, 0
+  index: -1
+chalk-v14-k-upper-arm
+  rotate: false
+  xy: 1412, 1119
+  size: 302, 191
+  orig: 302, 191
+  offset: 0, 0
+  index: -1
+chalk-v14-k-lower-arm
+  rotate: false
+  xy: 4, 1119
+  size: 333, 219
+  orig: 333, 219
+  offset: 0, 0
+  index: -1
+chalk-v14-a-left-leg
+  rotate: false
+  xy: 1214, 459
+  size: 209, 321
+  orig: 209, 321
+  offset: 0, 0
+  index: -1
+chalk-v14-a-right-leg
+  rotate: false
+  xy: 1427, 459
+  size: 205, 321
+  orig: 205, 321
+  offset: 0, 0
+  index: -1
+chalk-v14-a-crossbar
+  rotate: false
+  xy: 871, 1119
+  size: 313, 203
+  orig: 313, 203
+  offset: 0, 0
+  index: -1
+premium-v14-poison-glass
+  rotate: false
+  xy: 1374, 4
+  size: 344, 388
+  orig: 344, 388
+  offset: 0, 0
+  index: -1
+premium-v14-poison-liquid
+  rotate: false
+  xy: 399, 1342
+  size: 219, 148
+  orig: 219, 148
+  offset: 0, 0
+  index: -1
+premium-v14-poison-chain
+  rotate: false
+  xy: 622, 1342
+  size: 134, 148
+  orig: 134, 148
+  offset: 0, 0
+  index: -1
+premium-v14-poison-vapor
+  rotate: false
+  xy: 948, 1342
+  size: 92, 115
+  orig: 92, 115
+  offset: 0, 0
+  index: -1
+premium-v14-poison-stopper
+  rotate: false
+  xy: 1930, 1119
+  size: 108, 180
+  orig: 108, 180
+  offset: 0, 0
+  index: -1
+premium-v14-poison-droplet
+  rotate: false
+  xy: 663, 1521
+  size: 26, 40
+  orig: 26, 40
+  offset: 0, 0
+  index: -1
+premium-v14-skull-vapor
+  rotate: false
+  xy: 677, 1119
+  size: 190, 204
+  orig: 190, 204
+  offset: 0, 0
+  index: -1
+premium-v14-skull-jaw
+  rotate: false
+  xy: 1566, 824
+  size: 284, 233
+  orig: 284, 233
+  offset: 0, 0
+  index: -1
+premium-v14-skull-cranium
+  rotate: false
+  xy: 1722, 4
+  size: 318, 368
+  orig: 318, 368
+  offset: 0, 0
+  index: -1
+premium-v14-skull-eye-left
+  rotate: false
+  xy: 560, 1521
+  size: 48, 47
+  orig: 48, 47
+  offset: 0, 0
+  index: -1
+premium-v14-skull-eye-right
+  rotate: false
+  xy: 508, 1521
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+premium-v14-raven-tail
+  rotate: false
+  xy: 4, 1342
+  size: 152, 175
+  orig: 152, 175
+  offset: 0, 0
+  index: -1
+premium-v14-raven-wing-left
+  rotate: false
+  xy: 1718, 1119
+  size: 208, 189
+  orig: 208, 189
+  offset: 0, 0
+  index: -1
+premium-v14-raven-body
+  rotate: false
+  xy: 814, 459
+  size: 244, 324
+  orig: 244, 324
+  offset: 0, 0
+  index: -1
+premium-v14-raven-wing-right
+  rotate: false
+  xy: 1188, 1119
+  size: 220, 194
+  orig: 220, 194
+  offset: 0, 0
+  index: -1
+premium-v14-raven-head
+  rotate: false
+  xy: 973, 824
+  size: 253, 258
+  orig: 253, 258
+  offset: 0, 0
+  index: -1
+premium-v14-raven-feather
+  rotate: false
+  xy: 334, 1521
+  size: 48, 50
+  orig: 48, 50
+  offset: 0, 0
+  index: -1
+premium-v14-heart-tendril
+  rotate: false
+  xy: 1428, 1342
+  size: 44, 93
+  orig: 44, 93
+  offset: 0, 0
+  index: -1
+premium-v14-heart-frame
+  rotate: false
+  xy: 960, 4
+  size: 410, 409
+  orig: 410, 409
+  offset: 0, 0
+  index: -1
+premium-v14-heart-heart
+  rotate: false
+  xy: 335, 824
+  size: 256, 267
+  orig: 256, 267
+  offset: 0, 0
+  index: -1
+premium-v14-heart-flourish-left
+  rotate: false
+  xy: 760, 1342
+  size: 90, 134
+  orig: 90, 134
+  offset: 0, 0
+  index: -1
+premium-v14-heart-flourish-right
+  rotate: false
+  xy: 854, 1342
+  size: 90, 133
+  orig: 90, 133
+  offset: 0, 0
+  index: -1
+premium-v14-heart-jewel
+  rotate: false
+  xy: 1966, 1342
+  size: 60, 73
+  orig: 60, 73
+  offset: 0, 0
+  index: -1
+premium-v14-hand-palm
+  rotate: false
+  xy: 1636, 459
+  size: 256, 308
+  orig: 256, 308
+  offset: 0, 0
+  index: -1
+premium-v14-hand-index-proximal
+  rotate: false
+  xy: 1749, 1342
+  size: 150, 80
+  orig: 150, 80
+  offset: 0, 0
+  index: -1
+premium-v14-hand-index-intermediate
+  rotate: false
+  xy: 117, 1521
+  size: 150, 53
+  orig: 150, 53
+  offset: 0, 0
+  index: -1
+premium-v14-hand-index-distal
+  rotate: false
+  xy: 818, 1521
+  size: 150, 30
+  orig: 150, 30
+  offset: 0, 0
+  index: -1
+premium-v14-hand-middle-proximal
+  rotate: false
+  xy: 1476, 1342
+  size: 58, 89
+  orig: 58, 89
+  offset: 0, 0
+  index: -1
+premium-v14-hand-middle-intermediate
+  rotate: false
+  xy: 55, 1521
+  size: 58, 60
+  orig: 58, 60
+  offset: 0, 0
+  index: -1
+premium-v14-hand-middle-distal
+  rotate: false
+  xy: 693, 1521
+  size: 58, 36
+  orig: 58, 36
+  offset: 0, 0
+  index: -1
+premium-v14-hand-ring-proximal
+  rotate: false
+  xy: 1903, 1342
+  size: 59, 80
+  orig: 59, 80
+  offset: 0, 0
+  index: -1
+premium-v14-hand-ring-intermediate
+  rotate: false
+  xy: 271, 1521
+  size: 59, 51
+  orig: 59, 51
+  offset: 0, 0
+  index: -1
+premium-v14-hand-ring-distal
+  rotate: false
+  xy: 755, 1521
+  size: 59, 32
+  orig: 59, 32
+  offset: 0, 0
+  index: -1
+premium-v14-hand-pinky-proximal
+  rotate: false
+  xy: 4, 1521
+  size: 47, 63
+  orig: 47, 63
+  offset: 0, 0
+  index: -1
+premium-v14-hand-pinky-intermediate
+  rotate: false
+  xy: 612, 1521
+  size: 47, 42
+  orig: 47, 42
+  offset: 0, 0
+  index: -1
+premium-v14-hand-pinky-distal
+  rotate: false
+  xy: 1008, 1521
+  size: 47, 24
+  orig: 47, 24
+  offset: 0, 0
+  index: -1
+premium-v14-hand-thumb-proximal
+  rotate: false
+  xy: 1538, 1342
+  size: 118, 87
+  orig: 118, 87
+  offset: 0, 0
+  index: -1
+premium-v14-hand-thumb-distal
+  rotate: false
+  xy: 386, 1521
+  size: 118, 50
+  orig: 118, 50
+  offset: 0, 0
+  index: -1

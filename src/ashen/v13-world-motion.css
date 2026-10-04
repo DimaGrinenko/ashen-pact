@@ -1,0 +1,3 @@
+/* The living world is animated by separate registered raster Spine layers.
+   Stop moving its static plate independently from windows and celestial anchors. */
+.ashen-app .world-scene .world-plate{inset:0;animation:none;transform:none;will-change:opacity}

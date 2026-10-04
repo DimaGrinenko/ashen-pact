@@ -1,0 +1,129 @@
+/* Original painted slate/ivory surfaces. Border-image slices only stretch the
+   quiet center and straight edge sections; all four corners keep their shape.
+   V9 geometry is intentionally inherited so the field and mirrored HUD do not
+   move when the material system changes. */
+.ashen-app {
+  --v10-panel:url('/ashen/ui/v10/panel.webp');
+  --v10-action:url('/ashen/ui/v10/action.webp');
+  --v10-spin:url('/ashen/ui/v10/spin.webp');
+  --v10-ivory:#f4e8d3;
+  --v10-muted:#b9afa0;
+}
+.ashen-app .hud-v9 .control-bar {
+  background:none;border:1px solid transparent;border-radius:0;
+  border-image:var(--v10-panel) 104 fill / calc(14 * var(--g-unit)) / 0 stretch;
+  box-shadow:0 10px 22px #0006;backdrop-filter:none;
+}
+.ashen-app .hud-v9 .control-bar::before {display:none;}
+.ashen-app .hud-v9 .balance-block>span,.ashen-app .hud-v9 .win-block>span,.ashen-app .hud-v9 .bet-value>span {
+  color:var(--v10-muted);letter-spacing:.075em;
+}
+.ashen-app .hud-v9 .balance-block strong,.ashen-app .hud-v9 .win-block strong,.ashen-app .hud-v9 .bet-controls strong {color:var(--v10-ivory);}
+.ashen-app .hud-v9 .buy-button,.ashen-app .hud-v9 .buy-button:hover:not(:disabled) {
+  background:none!important;border:1px solid transparent!important;border-radius:0;
+  border-image:var(--v10-panel) 104 fill / calc(9 * var(--g-unit)) / 0 stretch!important;
+  box-shadow:none;transition:filter 160ms ease,transform 160ms ease;
+}
+.ashen-app .hud-v9 .buy-button .pc-icon {width:43%;height:40%;}
+.ashen-app .hud-v9 .buy-button b {color:var(--v10-ivory);letter-spacing:.08em;}
+.ashen-app .hud-v9 .spin-button,.ashen-app .hud-v9 .spin-button:hover:not(:disabled) {
+  background:var(--v10-spin) center / 100% 100% no-repeat!important;
+  border:0!important;border-radius:50%;box-shadow:none;
+  filter:drop-shadow(0 3px 4px #0007);transition:filter 160ms ease,transform 160ms ease;
+}
+.ashen-app .hud-v9 .spin-button .pc-icon {width:42%;height:42%;}
+.ashen-app .hud-v9 .spin-caption {color:#fff1d6;letter-spacing:.09em;}
+.ashen-app .hud-v9 .spin-count {color:#fff1d6;}
+.ashen-app .hud-v9 .buy-button:hover:not(:disabled),.ashen-app .hud-v9 .spin-button:hover:not(:disabled) {filter:brightness(1.18) drop-shadow(0 2px 5px #0008);}
+.ashen-app .hud-v9 .buy-button:active:not(:disabled),.ashen-app .hud-v9 .spin-button:active:not(:disabled) {transform:scale(.96);filter:brightness(.92);}
+.ashen-app .hud-v9 .menu-button,.ashen-app .hud-v9 .auto-button,.ashen-app .hud-v9 .turbo-button {
+  background:none!important;border:0 solid transparent!important;border-radius:0!important;
+  border-image:var(--v10-panel) 104 fill / calc(3 * var(--g-unit)) / 0 stretch!important;
+  opacity:.9;transition:filter 150ms ease;
+}
+.ashen-app .hud-v9 .menu-button:hover:not(:disabled),.ashen-app .hud-v9 .auto-button:hover:not(:disabled),.ashen-app .hud-v9 .turbo-button:hover:not(:disabled) {background:none!important;filter:brightness(1.35);}
+.ashen-app .hud-v9 .auto-button.active,.ashen-app .hud-v9 .turbo-button.active {background:none!important;border-image-source:var(--v10-action)!important;border-image-slice:56!important;box-shadow:none;opacity:1;}
+.ashen-app .hud-v9 .bet-arrows button:not(:disabled) {opacity:1;}
+.ashen-app .message-bar {color:var(--v10-ivory);text-shadow:0 2px 4px #000;}
+.ashen-app .feature-status {color:#c2b5a2;}
+
+/* The same painted material connects the entry, HUD and all ordinary dialogs. */
+.ashen-app .fact-cards article,.ashen-app .fact-cards article:nth-child(2) {
+  border:1px solid transparent;border-radius:0;background:none;
+  border-image:var(--v10-panel) 104 fill / 9px / 0 stretch;box-shadow:0 5px 20px #0006;
+}
+.ashen-app .fact-cards h3 {color:var(--v10-ivory);}
+.ashen-app .fact-cards p {color:#c9bdae;}
+.ashen-app .welcome button.enter-button.primary {width:100%;max-width:100%;margin:0;}
+.ashen-app .modal:not(.buy-modal):not(.bonus-intro):not(.deal-modal):not(.deal-wheel-modal) {
+  background:none;border:1px solid transparent;border-radius:0;
+  border-image:var(--v10-panel) 104 fill / 18px / 0 stretch;
+  box-shadow:0 20px 70px #0009;
+}
+.ashen-app .modal h2,.ashen-app .modal h3 {color:var(--v10-ivory);}
+.ashen-app .modal p {color:#c9bdae;}
+.ashen-app button.primary,.ashen-app button.primary:hover:not(:disabled),.ashen-app .celebration-copy button.primary,.ashen-app .celebration-copy button.primary:hover:not(:disabled),
+.ashen-app .modal button.primary,.ashen-app .modal button.primary:hover:not(:disabled),.ashen-app .welcome button.enter-button.primary,.ashen-app .welcome button.enter-button.primary:hover:not(:disabled),
+.ashen-app button.secondary,.ashen-app button.secondary:hover:not(:disabled),.ashen-app .modal button.secondary,.ashen-app .modal button.secondary:hover:not(:disabled) {
+  background:none;border:1px solid transparent;border-radius:0;box-shadow:none;
+  border-image:var(--v10-action) 56 fill / 8px / 0 stretch;
+  color:#fff1d8;letter-spacing:.065em;transition:filter 150ms ease;
+}
+.ashen-app button.secondary,.ashen-app button.secondary:hover:not(:disabled),.ashen-app .modal button.secondary,.ashen-app .modal button.secondary:hover:not(:disabled) {border-image-source:var(--v10-panel);border-image-slice:104;}
+.ashen-app button.primary,.ashen-app button.secondary {background:none!important;border-color:transparent!important;border-radius:0!important;box-shadow:none!important;}
+.ashen-app button.primary:hover:not(:disabled),.ashen-app button.secondary:hover:not(:disabled),.ashen-app .celebration-copy button.primary:hover:not(:disabled) {filter:brightness(1.2);}
+.ashen-app .menu-options button,.ashen-app .autoplay-options button,.ashen-app .language-options button {
+  background:#211c1a;border-color:#685a47;border-radius:3px;color:var(--v10-ivory);
+}
+.ashen-app .menu-options button:hover,.ashen-app .autoplay-options button:hover,.ashen-app .language-options button:hover {background:#332822;border-color:#9d8260;}
+.ashen-app .autoplay-options button.selected,.ashen-app .language-options button.selected {background:#651b23;border-color:#d4bda0;color:#fff1d8;}
+.ashen-app .confirm-cost {background:#110f0ed9;border:1px solid #8c78584d;border-radius:2px;}
+.ashen-app .confirm-description,.ashen-app .confirm-balance {color:#c9bdae;}
+.ashen-app .confirm-balance {border-color:#8c785838;}
+
+/* The shop reads as four ritual tablets, not light web pricing cards. */
+.ashen-app .buy-modal .purchase-cards article.purchase-card {
+  background:none;border:1px solid transparent;border-radius:0;overflow:visible;
+  border-image:var(--v10-panel) 104 fill / 12px / 0 stretch;
+  box-shadow:0 12px 28px #0008;color:var(--v10-ivory);
+}
+.ashen-app .buy-modal .purchase-art,.ashen-app .buy-modal .mode-red .purchase-art,.ashen-app .buy-modal .tier-2 .purchase-art {background:none;}
+.ashen-app .buy-modal .purchase-art>.spine-view {filter:drop-shadow(0 4px 7px #000b);}
+.ashen-app .buy-modal .purchase-body {background:none;color:var(--v10-ivory);border-radius:0;}
+.ashen-app .buy-modal .purchase-body h3 {color:var(--v10-ivory);letter-spacing:.035em;}
+.ashen-app .buy-modal .purchase-body p {color:#c6b9a7;}
+.ashen-app .buy-modal .purchase-kind {color:#9ec8c7;letter-spacing:.1em;}
+.ashen-app .buy-modal .mode-red .purchase-kind,.ashen-app .buy-modal .tier-2 .purchase-kind {color:#ef9c98;}
+.ashen-app .buy-modal .purchase-price {color:var(--v10-ivory);filter:drop-shadow(0 2px 2px #0009);}
+.ashen-app .buy-modal .purchase-body .fit-amount[data-compact=true] .raster-number-text {color:var(--v10-ivory);font-weight:700;text-shadow:none;}
+.ashen-app .buy-modal button.purchase-action,.ashen-app .buy-modal button.purchase-action:hover:not(:disabled),
+.ashen-app .buy-modal .mode-red button.purchase-action,.ashen-app .buy-modal .mode-red button.purchase-action:hover:not(:disabled),
+.ashen-app .buy-modal .tier-2 button.purchase-action,.ashen-app .buy-modal .tier-2 button.purchase-action:hover:not(:disabled) {
+  background:none;border:1px solid transparent;border-radius:0;
+  border-image:var(--v10-action) 56 fill / 7px / 0 stretch;
+  color:#fff1d8;box-shadow:none;letter-spacing:.065em;transition:filter 150ms ease;
+}
+.ashen-app .buy-modal button.purchase-action:hover:not(:disabled) {filter:brightness(1.2);}
+.ashen-app .buy-modal button.purchase-action:disabled {background:none;color:#e5d7c1;filter:saturate(.25);opacity:.52;}
+.ashen-app .buy-modal .purchase-footer {background:#100e0bd9;border-color:#77644e44;}
+
+@media(orientation:portrait) {
+ /* Leave room for the welcome gesture's raised palm and open right glove.
+    The narrower canvas stays wholly on screen; lowering the performance
+    puts its fire below the title without moving the three fact tablets. */
+ .ashen-app .startup-character {left:30%;top:10%;width:calc(70% - 2px);}
+ .ashen-app .hud-v9 .control-bar {border-image-width:12px;}
+ .ashen-app .hud-v9 .buy-button,.ashen-app .hud-v9 .buy-button:hover:not(:disabled) {border-image-width:8px!important;}
+ .ashen-app .hud-v9 .menu-button,.ashen-app .hud-v9 .auto-button,.ashen-app .hud-v9 .turbo-button {border-image-width:4px!important;}
+ .ashen-app .buy-modal .purchase-cards article.purchase-card {border-image-width:10px;}
+ .ashen-app .modal:not(.buy-modal):not(.bonus-intro):not(.deal-modal):not(.deal-wheel-modal) {border-image-width:14px;}
+}
+@media(max-height:480px) and (orientation:landscape) {
+ .ashen-app .fact-cards article,.ashen-app .fact-cards article:nth-child(2) {border-image-width:5px;}
+ .ashen-app .buy-modal .purchase-cards article.purchase-card {border-image-width:7px;}
+ .ashen-app .buy-modal button.purchase-action,.ashen-app .buy-modal .mode-red button.purchase-action,.ashen-app .buy-modal .tier-2 button.purchase-action {border-image-width:5px;}
+ .ashen-app button.primary,.ashen-app button.secondary {border-image-width:5px;}
+}
+@media(prefers-reduced-motion:reduce) {
+ .ashen-app .hud-v9 button,.ashen-app button.primary,.ashen-app button.secondary,.ashen-app .buy-modal button.purchase-action {transition:none;}
+}

@@ -1,0 +1,103 @@
+environment.webp
+size: 2048, 960
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+world-v14-cloud-blue
+  rotate: false
+  xy: 1154, 4
+  size: 444, 306
+  orig: 444, 306
+  offset: 0, 0
+  index: -1
+world-v14-cloud-red
+  rotate: false
+  xy: 622, 4
+  size: 528, 404
+  orig: 528, 404
+  offset: 0, 0
+  index: -1
+world-v14-shaft-blue
+  rotate: false
+  xy: 300, 4
+  size: 318, 467
+  orig: 318, 467
+  offset: 0, 0
+  index: -1
+world-v14-shaft-red
+  rotate: false
+  xy: 4, 4
+  size: 292, 469
+  orig: 292, 469
+  offset: 0, 0
+  index: -1
+world-v14-mist
+  rotate: false
+  xy: 4, 773
+  size: 548, 178
+  orig: 548, 178
+  offset: 0, 0
+  index: -1
+world-v14-dust
+  rotate: false
+  xy: 4, 477
+  size: 255, 292
+  orig: 255, 292
+  offset: 0, 0
+  index: -1
+world-v14-embers
+  rotate: false
+  xy: 1602, 4
+  size: 288, 294
+  orig: 288, 294
+  offset: 0, 0
+  index: -1
+world-v14-reflection
+  rotate: false
+  xy: 1022, 477
+  size: 477, 191
+  orig: 477, 191
+  offset: 0, 0
+  index: -1
+world-v14-crystal-blue
+  rotate: false
+  xy: 819, 477
+  size: 97, 250
+  orig: 97, 250
+  offset: 0, 0
+  index: -1
+world-v14-crystal-red
+  rotate: false
+  xy: 920, 477
+  size: 98, 250
+  orig: 98, 250
+  offset: 0, 0
+  index: -1
+world-v14-wisp-blue
+  rotate: false
+  xy: 263, 477
+  size: 270, 280
+  orig: 270, 280
+  offset: 0, 0
+  index: -1
+world-v14-wisp-red
+  rotate: false
+  xy: 537, 477
+  size: 278, 280
+  orig: 278, 280
+  offset: 0, 0
+  index: -1
+world-v14-rift-stone
+  rotate: false
+  xy: 556, 773
+  size: 91, 130
+  orig: 91, 130
+  offset: 0, 0
+  index: -1
+world-v14-ripple
+  rotate: false
+  xy: 651, 773
+  size: 280, 96
+  orig: 280, 96
+  offset: 0, 0
+  index: -1

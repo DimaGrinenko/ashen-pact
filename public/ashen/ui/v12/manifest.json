@@ -1,0 +1,105 @@
+{
+  "version": 12,
+  "generatedAt": "2026-09-27T18:53:43.198Z",
+  "sourceDimensions": [
+    1536,
+    1024
+  ],
+  "prompt": "art-source/ashen/ui-v12/surfaces.prompt.md",
+  "method": "Original imagegen raster art; transparent sprite isolation and lossless native-size WebP. No redraw, no vector art.",
+  "assets": [
+    {
+      "name": "reel-bed",
+      "source": "art-source/ashen/ui-v12/surfaces-toon.png",
+      "sourceSha256": "963da41aefefa9209a954a8306ffd24b3f279c986241bef075713d9fce27627b",
+      "sourceCrop": {
+        "left": 245,
+        "top": 160,
+        "width": 1040,
+        "height": 140
+      },
+      "runtime": "public/ashen/ui/v12/reel-bed.webp",
+      "dimensions": [
+        1040,
+        140
+      ]
+    },
+    {
+      "name": "bonus",
+      "source": "art-source/ashen/ui-v12/surfaces-toon.png",
+      "sourceSha256": "963da41aefefa9209a954a8306ffd24b3f279c986241bef075713d9fce27627b",
+      "sourceCrop": {
+        "left": 0,
+        "top": 410,
+        "width": 495,
+        "height": 614
+      },
+      "runtime": "public/ashen/ui/v12/bonus.webp",
+      "dimensions": [
+        474,
+        445
+      ],
+      "nineSlice": null
+    },
+    {
+      "name": "action",
+      "source": "art-source/ashen/ui-v12/surfaces-toon.png",
+      "sourceSha256": "963da41aefefa9209a954a8306ffd24b3f279c986241bef075713d9fce27627b",
+      "sourceCrop": {
+        "left": 495,
+        "top": 410,
+        "width": 552,
+        "height": 614
+      },
+      "runtime": "public/ashen/ui/v12/action.webp",
+      "dimensions": [
+        544,
+        229
+      ],
+      "nineSlice": 90
+    },
+    {
+      "name": "spin",
+      "source": "art-source/ashen/ui-v12/surfaces-toon.png",
+      "sourceSha256": "963da41aefefa9209a954a8306ffd24b3f279c986241bef075713d9fce27627b",
+      "sourceCrop": {
+        "left": 1047,
+        "top": 410,
+        "width": 489,
+        "height": 614
+      },
+      "runtime": "public/ashen/ui/v12/spin.webp",
+      "dimensions": [
+        450,
+        444
+      ],
+      "nineSlice": null
+    },
+    {
+      "name": "panel",
+      "source": "art-source/ashen/ui-v12/panel-toon.png",
+      "prompt": "art-source/ashen/ui-v12/panel.prompt.md",
+      "sourceSha256": "6b1b91f299dc251604d06ad83735a6129c5e2a00013cdba4d340b94c77c999a3",
+      "runtime": "public/ashen/ui/v12/panel.webp",
+      "dimensions": [
+        1906,
+        315
+      ],
+      "nineSlice": [
+        110,
+        205
+      ]
+    },
+    {
+      "name": "logo",
+      "source": "art-source/ashen/ui-v12/logo-toon.png",
+      "prompt": "art-source/ashen/ui-v12/logo.prompt.md",
+      "sourceSha256": "f4f60afa5926e5ad5118f9580ee10ee6506df851884db882898aee1d991d28c6",
+      "runtime": "public/ashen/ui/v12/logo.webp",
+      "dimensions": [
+        1100,
+        538
+      ]
+    }
+  ]
+}

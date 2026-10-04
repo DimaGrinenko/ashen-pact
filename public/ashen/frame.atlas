@@ -1,0 +1,103 @@
+frame.webp
+size: 2048, 2112
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+stone-horizontal
+  rotate: false
+  xy: 4, 1892
+  size: 2000, 100
+  orig: 2000, 100
+  offset: 0, 0
+  index: -1
+stone-vertical
+  rotate: false
+  xy: 4, 4
+  size: 100, 1600
+  orig: 100, 1600
+  offset: 0, 0
+  index: -1
+light-horizontal
+  rotate: false
+  xy: 4, 1996
+  size: 2000, 100
+  orig: 2000, 100
+  offset: 0, 0
+  index: -1
+light-vertical
+  rotate: false
+  xy: 108, 4
+  size: 100, 1600
+  orig: 100, 1600
+  offset: 0, 0
+  index: -1
+stone-corner-tl
+  rotate: false
+  xy: 212, 4
+  size: 280, 280
+  orig: 280, 280
+  offset: 0, 0
+  index: -1
+light-corner-tl
+  rotate: false
+  xy: 496, 4
+  size: 280, 280
+  orig: 280, 280
+  offset: 0, 0
+  index: -1
+stone-corner-tr
+  rotate: false
+  xy: 780, 4
+  size: 280, 280
+  orig: 280, 280
+  offset: 0, 0
+  index: -1
+light-corner-tr
+  rotate: false
+  xy: 1064, 4
+  size: 280, 280
+  orig: 280, 280
+  offset: 0, 0
+  index: -1
+stone-corner-bl
+  rotate: false
+  xy: 1348, 4
+  size: 280, 280
+  orig: 280, 280
+  offset: 0, 0
+  index: -1
+light-corner-bl
+  rotate: false
+  xy: 1632, 4
+  size: 280, 280
+  orig: 280, 280
+  offset: 0, 0
+  index: -1
+stone-corner-br
+  rotate: false
+  xy: 4, 1608
+  size: 280, 280
+  orig: 280, 280
+  offset: 0, 0
+  index: -1
+light-corner-br
+  rotate: false
+  xy: 288, 1608
+  size: 280, 280
+  orig: 280, 280
+  offset: 0, 0
+  index: -1
+crimson-crest
+  rotate: false
+  xy: 572, 1608
+  size: 240, 136
+  orig: 240, 136
+  offset: 0, 0
+  index: -1
+crimson-crest-light
+  rotate: false
+  xy: 816, 1608
+  size: 240, 136
+  orig: 240, 136
+  offset: 0, 0
+  index: -1

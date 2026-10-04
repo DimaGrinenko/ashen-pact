@@ -1,0 +1,14 @@
+/* One opaque raster chamber behind the weighted cloth. No symbol can leak
+   through the fire during a reveal; fire itself keeps its transparent edge. */
+.ashen-app .reel-column>.ritual-curtain{position:absolute;inset:-1px;z-index:5;overflow:hidden;isolation:isolate;pointer-events:none}
+.ashen-app .ritual-curtain .ritual-chamber-back{position:absolute;inset:0;background:#06080c url('/ashen/curtain-chamber-v17.webp') center / 100% 100% no-repeat;opacity:var(--chamber-opacity,0);transform:scale(var(--chamber-scale,1));transform-origin:50% 45%}
+.ashen-app .ritual-curtain .reel-curtain-renderer{position:absolute;inset:0;width:100%;height:100%;filter:none}
+.ashen-app .ritual-curtain[data-phase=open] .ritual-chamber-back{opacity:1}
+.ashen-app .game-stage[data-bonus-stage=impact] .reel-column,
+.ashen-app .game-stage[data-bonus-stage=ashes] .reel-column{border-color:transparent}
+.ashen-app .game-stage[data-bonus-stage=impact] .reel-board,
+.ashen-app .game-stage[data-bonus-stage=ashes] .reel-board{background:none;border-color:transparent;box-shadow:none}
+/* The modal already enters as a whole. Its CTA must be visible when the
+   controller enables it, without the legacy 700ms independent fade delay. */
+.ashen-app .bonus-intro.modal>.primary{animation:none;opacity:1;translate:none}
+@media(prefers-reduced-motion:reduce){.ashen-app .ritual-curtain .ritual-chamber-back{opacity:1}}

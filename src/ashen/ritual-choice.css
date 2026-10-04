@@ -1,0 +1,115 @@
+/* The portal plates and animated seals are raster assets; these rules lay them out. */
+.ashen-app .ritual-choice {width:100%;max-width:1056px;margin:0 auto;text-align:center;}
+.ashen-app .ritual-choice-intro {max-width:600px;margin:0 auto 22px!important;font-size:13px!important;line-height:1.6!important;color:#b7c3c8!important;}
+.ashen-app .ritual-choice-cards {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch;}
+.ashen-app .ritual-choice-card {--ritual-color:#89cadd;min-width:0;display:grid;grid-template-rows:180px 1fr;position:relative;isolation:isolate;overflow:hidden;border:0 solid transparent;border-image:var(--v12-panel) 55 60 fill / 10px 12px / 0 stretch;box-shadow:0 12px 28px #0008;}
+.ashen-app .ritual-choice-tier-2 {--ritual-color:#e4a398;}
+.ashen-app .ritual-choice-tier-3 {--ritual-color:#dfc89c;}
+.ashen-app .ritual-choice[data-motion=true] .ritual-choice-card {animation:ritual-card-arrive .48s cubic-bezier(.2,.65,.2,1) both;}
+.ashen-app .ritual-choice[data-motion=true] .ritual-choice-tier-2 {animation-delay:.08s;}
+.ashen-app .ritual-choice[data-motion=true] .ritual-choice-tier-3 {animation-delay:.16s;}
+.ashen-app .ritual-choice-art {position:relative;overflow:hidden;margin:7px 8px 0;isolation:isolate;background:#0d1319;}
+.ashen-app .ritual-choice-art::after {content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,#0b1119 0%,#0b111900 68%);pointer-events:none;}
+.ashen-app .ritual-choice-plate {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.82;transform:scale(1.025);transition:transform .65s cubic-bezier(.2,.6,.2,1),opacity .65s;}
+.ashen-app .ritual-choice-plate-window {position:absolute;inset:0;overflow:hidden;}
+.ashen-app .ritual-choice-triptych .ritual-choice-plate {width:300%;max-width:none;height:auto;min-height:100%;object-fit:fill;opacity:1;transform:none;top:-22%;left:0;}
+.ashen-app .ritual-choice-tier-2 .ritual-choice-triptych .ritual-choice-plate {left:-100%;}
+.ashen-app .ritual-choice-tier-3 .ritual-choice-triptych .ritual-choice-plate {left:-200%;}
+.ashen-app .ritual-choice-card:hover .ritual-choice-plate,.ashen-app .ritual-choice-card:focus-within .ritual-choice-plate {transform:scale(1.055);opacity:1;}
+.ashen-app .ritual-choice-card:hover .ritual-choice-triptych .ritual-choice-plate,.ashen-app .ritual-choice-card:focus-within .ritual-choice-triptych .ritual-choice-plate {transform:none;}
+.ashen-app .ritual-choice[data-motion=true] .ritual-choice-plate-window {animation:ritual-portal-breathe 8s ease-in-out infinite alternate;transform-origin:50% 45%;}
+.ashen-app .ritual-choice[data-motion=true] .ritual-choice-tier-2 .ritual-choice-plate-window {animation-delay:-3s;}
+.ashen-app .ritual-choice[data-motion=true] .ritual-choice-tier-3 .ritual-choice-plate-window {animation-delay:-5s;}
+.ashen-app .ritual-choice-order {position:absolute;z-index:3;top:10px;left:12px;color:var(--ritual-color);font:600 12px AshenSerif,Georgia,serif;letter-spacing:.12em;text-shadow:0 2px 6px #000;}
+.ashen-app .ritual-choice-seal {position:absolute;z-index:2;inset:auto 10px 2px auto;display:flex;align-items:center;justify-content:center;pointer-events:none;}
+.ashen-app .ritual-choice-seal>.spine-view {position:relative;width:66px;height:66px;flex:none;filter:drop-shadow(0 4px 9px #000b);}
+.ashen-app .ritual-choice-tier-3 .ritual-choice-seal>.spine-view {width:54px;height:54px;}
+.ashen-app .ritual-choice-tier-3 .ritual-choice-seal>.spine-view+ .spine-view {margin-left:-10px;translate:0 7px;}
+.ashen-app .ritual-choice-copy {position:relative;z-index:3;display:grid;grid-template-rows:auto 48px 62px auto 46px 18px;align-items:center;gap:8px;min-width:0;padding:0 22px 18px;margin-top:-5px;}
+.ashen-app .ritual-choice-spins {font:600 10px/1.3 AshenSans,Arial,sans-serif;letter-spacing:.13em;color:var(--ritual-color);}
+.ashen-app .ritual-choice-copy h3 {margin:0!important;min-height:0!important;max-width:100%;color:#eee3ce!important;font:600 clamp(17px,1.7vw,23px)/1.15 AshenSerif,Georgia,serif!important;letter-spacing:.035em;}
+.ashen-app .ritual-choice-copy ul {margin:0;padding:0;list-style:none;display:grid;gap:5px;font:400 12px/1.4 AshenSans,Arial,sans-serif;color:#b6c2c8;}
+.ashen-app .ritual-choice-copy li {margin:0;}
+.ashen-app .ritual-choice-cost {display:grid;gap:4px;min-width:0;margin:6px 0;}
+.ashen-app .ritual-choice-cost>span {font:600 9px/1.3 AshenSans,Arial,sans-serif;color:#a8b4bb;letter-spacing:.075em;}
+.ashen-app .ritual-choice-cost>.fit-amount {font-size:27px;line-height:1.2;min-width:0;color:#e8e0cf;}
+.ashen-app button.ritual-choice-select.primary {width:100%;min-width:0;height:46px;min-height:44px;margin:0;padding:8px 16px;display:flex;align-items:center;justify-content:center;gap:12px;font:700 11px/1.25 AshenSans,Arial,sans-serif;letter-spacing:.035em;white-space:normal;}
+.ashen-app .ritual-choice-select:focus-visible {outline:2px solid var(--ritual-color);outline-offset:3px;}
+.ashen-app .ritual-choice-status {font:400 10px/1.25 AshenSans,Arial,sans-serif;color:#9eafb7;min-height:13px;}
+.ashen-app .ritual-choice-card:has(button:disabled) .ritual-choice-art {opacity:.62;}
+.ashen-app .ritual-choice-card:has(button:disabled) .ritual-choice-status {color:#d8aaa0;}
+.ashen-app .ritual-choice-meta {display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 30px;margin:22px auto 0;font:600 10px/1.4 AshenSans,Arial,sans-serif;letter-spacing:.06em;color:#c2c6bd;}
+.ashen-app .ritual-choice-disclosure {margin:9px auto 0!important;max-width:620px;font-size:11px!important;line-height:1.5!important;color:#94a8b3!important;}
+.ashen-app .modal.buy-modal.ritual-choice-modal {display:block;min-height:0;width:min(1160px,100%);height:auto;max-height:calc(100dvh - 32px);padding:30px 28px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;}
+.ashen-app .modal.ritual-choice-modal>h2 {margin:0 auto 12px;max-width:calc(100% - 66px);padding:0;font:600 clamp(22px,3vw,32px)/1.15 AshenSerif,Georgia,serif;letter-spacing:.065em;}
+.ashen-app .modal.ritual-choice-modal>.close-button {position:fixed;top:20px;right:max(20px,calc((100vw - 1160px) / 2 + 14px));width:44px;height:44px;padding:10px;background:#091015e8;border:1px solid #b6b29b42;border-radius:4px;}
+.ashen-app .ritual-boosts {width:100%;max-width:1056px;margin:22px auto 0;border-top:1px solid #8faaa82c;text-align:left;}
+.ashen-app .ritual-boosts>summary {min-height:48px;padding:15px 6px;color:#bac9cc;font:600 12px/1.4 AshenSans,Arial,sans-serif;cursor:pointer;list-style-position:inside;touch-action:manipulation;}
+.ashen-app .ritual-boosts>summary:focus-visible {outline:2px solid #a8d2de;outline-offset:2px;}
+.ashen-app .ritual-choice-modal .ritual-boosts .purchase-cards {grid-template-columns:repeat(2,minmax(0,1fr));max-width:720px;gap:14px;margin:6px auto 20px;}
+.ashen-app .ritual-choice-modal .ritual-boosts .purchase-art {height:90px;}
+.ashen-app .ritual-choice-modal .ritual-boosts .purchase-body {grid-template-rows:auto 42px 34px 32px 18px 44px;gap:4px;padding:12px 18px;}
+.ashen-app .ritual-choice-modal .ritual-boosts .purchase-body h3 {font-size:17px;}
+.ashen-app .ritual-choice-modal .ritual-boosts .purchase-body p {font-size:11px;}
+.ashen-app .ritual-choice-modal .ritual-boosts button.purchase-action {min-height:44px;font-size:11px;}
+.ashen-app .ritual-choice-modal .purchase-footer {max-width:720px;min-height:64px;margin:18px auto 0!important;padding:12px 18px!important;gap:18px;}
+.ashen-app .ritual-choice-modal .purchase-footer .purchase-bet-row>button {width:44px;height:44px;min-width:44px;padding:12px;}
+.ashen-app .ritual-choice-modal .purchase-footer .feature-reset {min-height:44px;font-size:10px;}
+@media(max-width:760px) and (orientation:landscape) {
+ .ashen-app .ritual-choice-cards {gap:10px;}
+ .ashen-app .ritual-choice-card {grid-template-rows:120px 1fr;}
+ .ashen-app .ritual-choice-copy {padding:0 12px 14px;grid-template-rows:auto 43px 68px auto 44px 24px;gap:5px;}
+ .ashen-app .ritual-choice-copy h3 {font-size:17px!important;}
+ .ashen-app .ritual-choice-seal>.spine-view {width:58px;height:58px;}
+ .ashen-app .ritual-choice-tier-3 .ritual-choice-seal>.spine-view {width:46px;height:46px;}
+}
+@media(orientation:portrait), (max-width:520px) {
+ .ashen-app .modal.buy-modal.ritual-choice-modal {width:100%;max-height:calc(100dvh - 16px);padding:20px 12px 18px;}
+ .ashen-app .modal.ritual-choice-modal>h2 {font-size:23px;max-width:calc(100% - 54px);}
+ .ashen-app .modal.ritual-choice-modal>.close-button {top:9px;right:8px;}
+ .ashen-app .ritual-choice-intro {font-size:11px!important;max-width:290px;margin-bottom:14px!important;padding:0 6px;}
+ .ashen-app .ritual-choice-cards {grid-template-columns:minmax(0,1fr);gap:12px;}
+ .ashen-app .ritual-choice-card {grid-template-columns:88px minmax(0,1fr);grid-template-rows:auto;min-height:204px;border-image-width:8px 10px;}
+ .ashen-app .ritual-choice-art {margin:6px 0 6px 7px;grid-row:1;height:calc(100% - 12px);}
+ .ashen-app .ritual-choice-art::after {background:linear-gradient(90deg,#0b111900 0%,#0b1119aa 100%);}
+ .ashen-app .ritual-choice-triptych .ritual-choice-plate {top:0;height:auto;min-height:0;}
+ .ashen-app .ritual-choice-order {top:8px;left:9px;font-size:11px;}
+ .ashen-app .ritual-choice-seal {inset:auto -3px 12px;flex-direction:row;}
+ .ashen-app .ritual-choice-seal>.spine-view {width:64px;height:64px;}
+ .ashen-app .ritual-choice-tier-3 .ritual-choice-seal>.spine-view {width:47px;height:47px;}
+ .ashen-app .ritual-choice-tier-3 .ritual-choice-seal>.spine-view+ .spine-view {margin:0 0 0 -10px;translate:0 8px;}
+ .ashen-app .ritual-choice-copy {margin:0;grid-template-rows:auto auto minmax(56px,auto) auto 44px 15px;gap:4px;padding:16px 13px 13px 9px;text-align:left;}
+ .ashen-app .ritual-choice-copy h3 {font-size:17px!important;line-height:1.15!important;min-height:39px!important;display:flex;align-items:center;}
+ .ashen-app .ritual-choice-spins {font-size:8px;letter-spacing:.06em;}
+ .ashen-app .ritual-choice-copy ul {font-size:10px;gap:2px;line-height:1.3;}
+ .ashen-app .ritual-choice-cost {margin:2px 0;gap:2px;}
+ .ashen-app .ritual-choice-cost>span {font-size:8px;letter-spacing:.02em;}
+ .ashen-app .ritual-choice-cost>.fit-amount {font-size:22px;text-align:left;}
+ .ashen-app button.ritual-choice-select.primary {height:44px;font-size:9px;padding:8px 12px;gap:6px;}
+ .ashen-app .ritual-choice-status {font-size:8px;text-align:center;}
+ .ashen-app .ritual-choice-meta {gap:7px 18px;margin-top:16px;font-size:9px;}
+ .ashen-app .ritual-choice-disclosure {font-size:10px!important;padding:0 5px;}
+ .ashen-app .ritual-choice-modal .ritual-boosts .purchase-cards {grid-template-columns:minmax(0,1fr);gap:10px;}
+ .ashen-app .ritual-choice-modal .ritual-boosts .purchase-art {height:72px;}
+ .ashen-app .ritual-choice-modal .ritual-boosts .purchase-body {grid-template-rows:auto 32px 28px 28px 12px 44px;gap:3px;padding:10px 16px;}
+ .ashen-app .ritual-choice-modal .purchase-footer {gap:12px;padding:12px!important;grid-template-columns:repeat(2,minmax(0,1fr));}
+ .ashen-app .ritual-choice-modal .purchase-footer .purchase-bet-row {gap:2px;}
+ .ashen-app .ritual-choice-modal .purchase-footer .purchase-bet-row>button {width:32px;height:44px;min-width:32px;padding:7px;}
+ .ashen-app .ritual-choice-modal .purchase-footer .purchase-bet-row>strong {font-size:17px;}
+}
+@media(orientation:landscape) and (max-height:360px) {
+ .ashen-app .modal.buy-modal.ritual-choice-modal {max-height:calc(100dvh - 12px);padding:14px;}
+ .ashen-app .modal.ritual-choice-modal>h2 {font-size:21px;}
+ .ashen-app .ritual-choice-cards {grid-template-columns:repeat(3,minmax(190px,1fr));overflow-x:auto;padding:0 0 10px;scroll-snap-type:x proximity;}
+ .ashen-app .ritual-choice-card {display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:108px 1fr;min-height:0;scroll-snap-align:center;}
+ .ashen-app .ritual-choice-art {height:auto;margin:6px 7px 0;}
+ .ashen-app .ritual-choice-seal {inset:auto 4px 0 auto;flex-direction:row;}
+ .ashen-app .ritual-choice-tier-3 .ritual-choice-seal>.spine-view+ .spine-view {margin:0 0 0 -10px;translate:0 8px;}
+ .ashen-app .ritual-choice-copy {text-align:center;padding:0 14px 14px;grid-template-rows:auto 43px 55px auto 44px 15px;}
+ .ashen-app .ritual-choice-copy h3 {display:block;min-height:0!important;}
+ .ashen-app .ritual-choice-cost>.fit-amount {text-align:center;}
+}
+@keyframes ritual-card-arrive {from{opacity:0;translate:0 7px;}to{opacity:1;translate:0 0;}}
+@keyframes ritual-portal-breathe {from{scale:1;opacity:.84;}to{scale:1.025;opacity:1;}}
+.ashen-app.presentation-paused .ritual-choice * {animation-play-state:paused!important;}
+@media(prefers-reduced-motion:reduce) {.ashen-app .ritual-choice-plate {transition:none;transform:none!important;}.ashen-app .ritual-choice * {animation:none!important;}}

@@ -1,0 +1,351 @@
+[
+  {
+    "id": "blue-six",
+    "bones": 29,
+    "attachments": 11,
+    "meshes": 2,
+    "animations": [
+      "static",
+      "idle",
+      "drop",
+      "win",
+      "land"
+    ]
+  },
+  {
+    "id": "red-six",
+    "bones": 29,
+    "attachments": 11,
+    "meshes": 2,
+    "animations": [
+      "static",
+      "idle",
+      "drop",
+      "win",
+      "land"
+    ]
+  },
+  {
+    "id": "ten",
+    "bones": 4,
+    "attachments": 2,
+    "meshes": 0,
+    "animations": [
+      "static",
+      "idle",
+      "drop",
+      "win",
+      "land"
+    ]
+  },
+  {
+    "id": "j",
+    "bones": 4,
+    "attachments": 2,
+    "meshes": 0,
+    "animations": [
+      "static",
+      "idle",
+      "drop",
+      "win",
+      "land"
+    ]
+  },
+  {
+    "id": "q",
+    "bones": 4,
+    "attachments": 2,
+    "meshes": 0,
+    "animations": [
+      "static",
+      "idle",
+      "drop",
+      "win",
+      "land"
+    ]
+  },
+  {
+    "id": "k",
+    "bones": 5,
+    "attachments": 3,
+    "meshes": 0,
+    "animations": [
+      "static",
+      "idle",
+      "drop",
+      "win",
+      "land"
+    ]
+  },
+  {
+    "id": "a",
+    "bones": 5,
+    "attachments": 3,
+    "meshes": 0,
+    "animations": [
+      "static",
+      "idle",
+      "drop",
+      "win",
+      "land"
+    ]
+  },
+  {
+    "id": "poison",
+    "bones": 27,
+    "attachments": 6,
+    "meshes": 3,
+    "animations": [
+      "static",
+      "idle",
+      "drop",
+      "land",
+      "win"
+    ]
+  },
+  {
+    "id": "skull",
+    "bones": 15,
+    "attachments": 5,
+    "meshes": 1,
+    "animations": [
+      "static",
+      "idle",
+      "drop",
+      "land",
+      "win"
+    ]
+  },
+  {
+    "id": "raven",
+    "bones": 29,
+    "attachments": 6,
+    "meshes": 3,
+    "animations": [
+      "static",
+      "idle",
+      "drop",
+      "land",
+      "win"
+    ]
+  },
+  {
+    "id": "heart",
+    "bones": 22,
+    "attachments": 6,
+    "meshes": 2,
+    "animations": [
+      "static",
+      "idle",
+      "drop",
+      "land",
+      "win"
+    ]
+  },
+  {
+    "id": "hand",
+    "bones": 18,
+    "attachments": 15,
+    "meshes": 0,
+    "animations": [
+      "static",
+      "idle",
+      "drop",
+      "land",
+      "win"
+    ]
+  },
+  {
+    "id": "character",
+    "bones": 59,
+    "attachments": 13,
+    "meshes": 6,
+    "animations": [
+      "static",
+      "idle",
+      "welcome",
+      "focus",
+      "guard",
+      "beckon",
+      "conjure",
+      "ritual-sway",
+      "bow",
+      "anticipation",
+      "win",
+      "loss",
+      "bonus",
+      "laugh",
+      "celebrate",
+      "duel-cast",
+      "cast"
+    ]
+  },
+  {
+    "id": "character-blue",
+    "bones": 59,
+    "attachments": 13,
+    "meshes": 6,
+    "animations": [
+      "static",
+      "idle",
+      "welcome",
+      "focus",
+      "guard",
+      "beckon",
+      "conjure",
+      "ritual-sway",
+      "bow",
+      "anticipation",
+      "win",
+      "loss",
+      "bonus",
+      "laugh",
+      "celebrate",
+      "duel-cast",
+      "cast"
+    ]
+  },
+  {
+    "id": "curtain",
+    "bones": 153,
+    "attachments": 23,
+    "meshes": 6,
+    "animations": [
+      "static",
+      "idle",
+      "close",
+      "open",
+      "win",
+      "close-blue",
+      "open-blue",
+      "idle-blue",
+      "win-blue",
+      "close-red",
+      "open-red",
+      "idle-red",
+      "win-red",
+      "hold-blue",
+      "hold-red"
+    ]
+  },
+  {
+    "id": "wheel",
+    "bones": 38,
+    "attachments": 36,
+    "meshes": 0,
+    "animations": [
+      "static",
+      "idle",
+      "spin",
+      "win",
+      "win-seal",
+      "drop"
+    ]
+  },
+  {
+    "id": "environment",
+    "bones": 74,
+    "attachments": 29,
+    "meshes": 6,
+    "animations": [
+      "static",
+      "idle",
+      "win",
+      "drop"
+    ]
+  },
+  {
+    "id": "environment-bonus",
+    "bones": 74,
+    "attachments": 29,
+    "meshes": 6,
+    "animations": [
+      "static",
+      "idle",
+      "win",
+      "drop"
+    ]
+  },
+  {
+    "id": "bigwin",
+    "bones": 106,
+    "attachments": 49,
+    "meshes": 6,
+    "animations": [
+      "static",
+      "idle",
+      "win",
+      "drop",
+      "open",
+      "big",
+      "idle-big",
+      "mega",
+      "idle-mega",
+      "epic",
+      "idle-epic",
+      "max",
+      "idle-max"
+    ]
+  },
+  {
+    "id": "ritual-fire-blue",
+    "bones": 43,
+    "attachments": 11,
+    "meshes": 2,
+    "animations": [
+      "static",
+      "idle",
+      "win"
+    ]
+  },
+  {
+    "id": "ritual-fire-red",
+    "bones": 43,
+    "attachments": 11,
+    "meshes": 2,
+    "animations": [
+      "static",
+      "idle",
+      "win"
+    ]
+  },
+  {
+    "id": "ritual-impact",
+    "bones": 84,
+    "attachments": 60,
+    "meshes": 2,
+    "animations": [
+      "static",
+      "idle",
+      "win",
+      "drop"
+    ]
+  },
+  {
+    "id": "ritual-portal",
+    "bones": 108,
+    "attachments": 49,
+    "meshes": 5,
+    "animations": [
+      "static",
+      "idle",
+      "open",
+      "win",
+      "drop"
+    ]
+  },
+  {
+    "id": "frame",
+    "bones": 5,
+    "attachments": 20,
+    "meshes": 0,
+    "animations": [
+      "static",
+      "idle",
+      "drop",
+      "anticipation",
+      "win",
+      "bonus"
+    ]
+  }
+]

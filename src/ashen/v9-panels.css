@@ -1,0 +1,139 @@
+@font-face{font-family:AshenDisplay;src:url('/alchemist/fonts/barlow-semicondensed-700.ttf') format('truetype');font-weight:700;font-display:swap}
+.ashen-app{--v9-ui-font:AshenDisplay,AshenSans,sans-serif;--pc-accent:#efe7db;--pc-paper:#eee6da;--pc-red:#d53449;--red:#e24454;--cyan:#75cbd3;color:#f0e9de}
+.ashen-app .cathedral-background{background-image:url('/ashen/background-v10.webp');filter:none;background-position:center 48%}
+.ashen-app .environment-layer{opacity:1;filter:none}
+.ashen-app .vignette{background:linear-gradient(180deg,#10090b30,transparent 25%,transparent 65%,#080609e8),linear-gradient(90deg,#08060920,transparent 40%,#08060920)}
+.ashen-app button.primary,.ashen-app button.secondary,.ashen-app .modal h2,.ashen-app .modal h3,.ashen-app .purchase-action,.ashen-app .celebration-copy h2,.ashen-app .wheel-ceremony-v4 h2{font-family:var(--v9-ui-font);font-weight:700;letter-spacing:.025em}
+.ashen-app button.primary,.ashen-app .celebration-copy button.primary{background:#c52e42;color:#fff5e9;border:1px solid #ef6978;box-shadow:inset 0 1px #ffffff20,0 5px 18px #0005;border-radius:8px}
+.ashen-app button.primary:hover:not(:disabled),.ashen-app .celebration-copy button.primary:hover:not(:disabled){background:#e13b51;border-color:#ff92a0}
+.ashen-app button.secondary{background:#211d23;color:#f0e8dc;border:1px solid #a49b91;border-radius:8px}
+.ashen-app .modal-backdrop{background:#09070ae8;backdrop-filter:blur(12px)}
+.ashen-app .modal{background:#19161d;border-color:#66545a;border-radius:16px;box-shadow:0 28px 90px #0008}
+.ashen-app .modal h2{color:#f0e8dc;text-shadow:none}
+.ashen-app .modal h3{color:#f0e8dc}
+.ashen-app .eyebrow{color:#d9b7b3;letter-spacing:.16em}
+.ashen-app .startup{display:block;position:relative;width:min(1200px,100%);height:100%;margin:auto;padding:0;overflow:hidden}
+.ashen-app .startup-title{position:absolute;top:8%;left:9%;width:45%;margin:0;padding:0;text-align:center;z-index:3}
+.ashen-app .startup-title>.eyebrow{font-family:var(--v9-ui-font);font-size:clamp(9px,1.2vw,14px);letter-spacing:.28em;color:#eedbcd}
+.ashen-app .startup h1{height:25dvh;width:100%;max-height:225px;margin:12px 0 0}
+.ashen-app .startup h1 img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 6px 12px #0008)}
+.ashen-app .startup-title>p{font-family:var(--v9-ui-font);font-size:clamp(10px,1.2vw,15px);letter-spacing:.2em;margin:10px 0;color:#e1888e}
+.ashen-app .startup-relic{display:none}
+.ashen-app .startup-character{position:absolute;left:51%;right:auto;top:0;bottom:0;width:51%;height:100%;opacity:1;mask-image:linear-gradient(#000 87%,transparent);pointer-events:none}
+.ashen-app .startup-character>.spine-view{width:100%;height:110%;top:-1%;left:0;filter:drop-shadow(0 10px 20px #0008)}
+.ashen-app .welcome,.ashen-app .loading-block{position:absolute;left:7%;bottom:6%;width:49%;margin:0;z-index:4}
+.ashen-app .fact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 18px}
+.ashen-app .fact-cards article:nth-child(n){display:grid;grid-template-rows:clamp(58px,12dvh,100px) 38px 34px;align-content:start;align-items:center;transform:none}
+.ashen-app .fact-cards article:nth-child(n)>h3{transform:none;min-height:0;height:38px;display:flex;align-items:center;justify-content:center;margin:0;grid-row:2}
+.ashen-app .fact-cards article:nth-child(n)>p{height:34px;grid-row:3;display:block;margin:0}
+.ashen-app .fact-cards article:nth-child(n)>b,.ashen-app .fact-cards article:nth-child(n)>.spine-view{grid-row:1}
+.ashen-app .fact-cards article,.ashen-app .fact-cards article:nth-child(2){background:#19151ddc;border:1px solid #a48e7940;border-radius:12px;min-height:0;padding:8px 8px 14px;box-shadow:0 8px 24px #0004}
+.ashen-app .fact-cards article>.spine-view{height:clamp(58px,12dvh,100px);margin:0;width:100%}
+.ashen-app .fact-cards article:nth-child(3)>.spine-view{display:none}
+.ashen-app .fact-cards article>b{display:flex;justify-content:center;align-items:center;height:clamp(58px,12dvh,100px);margin:0;font-family:var(--v9-ui-font);font-size:clamp(24px,3.2vw,44px);letter-spacing:-.02em;color:#f4e6d1}
+.ashen-app .fact-cards article>b span{font-size:.55em}
+.ashen-app .fact-cards h3{font-family:var(--v9-ui-font);font-size:clamp(11px,1.3vw,16px);letter-spacing:.04em;margin:6px 0 8px;color:#f5e9dc}
+.ashen-app .fact-cards p{font-size:clamp(8px,.9vw,11px);line-height:1.5;margin:0;color:#c7bab6}
+.ashen-app .enter-button{width:100%;min-height:48px;padding:14px 22px;font-size:16px;letter-spacing:.12em}
+.ashen-app .welcome-audio{font-size:10px;margin-top:12px;color:#d1c3bf;justify-content:center}
+.ashen-app .loading-block{bottom:21%;text-align:center;font-family:var(--v9-ui-font);letter-spacing:.12em}
+.ashen-app .loading-track{height:5px;background:#211c22;border-radius:4px;overflow:hidden;margin:18px 0}
+.ashen-app .loading-track i{background:#e64757;box-shadow:0 0 18px #fa3858}
+.ashen-app .buy-modal{background:transparent;border:0;box-shadow:none}
+.ashen-app .buy-modal>h2{font-family:var(--v9-ui-font);letter-spacing:.06em}
+.ashen-app .buy-modal .purchase-cards article.purchase-card{border:1px solid #8c747148;background:#1c1720;box-shadow:0 12px 30px #0005}
+.ashen-app .buy-modal .purchase-art{background:radial-gradient(ellipse at 50% 85%,#55949b50,transparent 70%),#15151e}
+.ashen-app .buy-modal .mode-red .purchase-art,.ashen-app .buy-modal .tier-2 .purchase-art{background:radial-gradient(ellipse at 50% 85%,#df294e60,transparent 70%),#24131b}
+.ashen-app .buy-modal .purchase-body{background:#e9e1d4;border-radius:0;margin-top:0;color:#231e22}
+.ashen-app .buy-modal .purchase-body h3{font-family:var(--v9-ui-font);font-size:20px;letter-spacing:.01em;color:#251b22}
+.ashen-app .buy-modal .purchase-kind{color:#416c71}
+.ashen-app .buy-modal .mode-red .purchase-kind,.ashen-app .buy-modal .tier-2 .purchase-kind{color:#a82a41}
+.ashen-app .buy-modal .purchase-action{font-family:var(--v9-ui-font);font-size:14px;letter-spacing:.04em;background:#29353a;color:#fff4e9;border-radius:6px}
+.ashen-app .buy-modal .mode-red .purchase-action,.ashen-app .buy-modal .tier-2 .purchase-action{background:#b72d43}
+.ashen-app .buy-modal button.purchase-action{background:#29353a;color:#fff4e9;border-color:#43545a}
+.ashen-app .buy-modal button.purchase-action:hover:not(:disabled){background:#3c5057;filter:none}
+.ashen-app .buy-modal .mode-red button.purchase-action,.ashen-app .buy-modal .tier-2 button.purchase-action{background:#b72d43;color:#fff4e9;border-color:#ce4a5b}
+.ashen-app .buy-modal .mode-red button.purchase-action:hover:not(:disabled),.ashen-app .buy-modal .tier-2 button.purchase-action:hover:not(:disabled){background:#d63a50;filter:none}
+.ashen-app .enter-button.primary{background:#c52e42;color:#fff5e9;border:1px solid #ef6978}
+.ashen-app .enter-button.primary:hover{background:#e13b51;border-color:#ff92a0}
+.ashen-app .buy-modal .purchase-art>.spine-view{filter:drop-shadow(0 4px 8px #0008)}
+.ashen-app .buy-modal .fit-amount[data-compact=true] .raster-number-text,.ashen-app .autoplay-options button{font-family:var(--v9-ui-font)}
+.ashen-app .modal.bonus-intro,.ashen-app .modal.deal-modal,.ashen-app .modal.deal-wheel-modal{background:transparent;box-shadow:none;border:0;border-radius:0}
+.ashen-app .bonus-intro>h2,.ashen-app .deal-modal>h2,.ashen-app .deal-wheel-modal>h2{font-family:var(--v9-ui-font);color:#f2e5d4;letter-spacing:.06em;text-shadow:0 4px 14px #0008}
+.ashen-app .bonus-intro>.free-spin-count{filter:drop-shadow(0 3px 3px #0008)}
+.ashen-app .bonus-intro>.free-spin-count>span{color:#ead9cc;font-family:var(--v9-ui-font);letter-spacing:.18em}
+.ashen-app .bonus-intro>.bonus-rule{font-family:var(--v9-ui-font);color:#e57885;letter-spacing:.08em}
+.ashen-app .celebration-screen{background:#0b060ae8;--v9-win-unit:min(calc(100vw / 1100),calc(100dvh / 760))}
+.ashen-app .celebration-copy h2{font-family:var(--v9-ui-font);color:#f4e4ce;letter-spacing:.08em;text-shadow:0 4px 0 #53202b,0 8px 20px #000;bottom:calc(50% + 42 * var(--g-scene));font-size:calc(62 * var(--g-scene))}
+.ashen-app .celebration-copy>strong{left:50%;right:auto;width:calc(780 * var(--v9-win-unit));padding-inline:4px;transform:translate(-50%,-50%);top:calc(50% + 42 * var(--g-scene));font-size:calc(78 * var(--g-scene));filter:drop-shadow(0 4px 5px #000b)}
+.ashen-app .celebration-copy button.primary{top:calc(50% + 200 * var(--g-scene));font-size:calc(15 * var(--g-scene))}
+.ashen-app .wheel-v4 .dial-numbers.synced>span{font-family:var(--v9-ui-font);color:#f3e5d5;font-weight:700}
+.ashen-app>.wheel-ceremony-v4 h2{font-family:var(--v9-ui-font);color:#f2e5d4;letter-spacing:.06em;text-shadow:0 3px 12px #000}
+.ashen-app .raster-number .type-glyph::after{font-family:var(--v9-ui-font);color:#f1e5d4}
+@media(max-aspect-ratio:1/1){
+ .ashen-app .startup-title{left:4%;top:5%;width:56%;text-align:center}
+ .ashen-app .startup h1{height:20dvh;margin:8px 0 0}
+ .ashen-app .startup-title>.eyebrow{font-size:8px;letter-spacing:.14em}
+ .ashen-app .startup-title>p{font-size:8px;letter-spacing:.12em}
+ .ashen-app .startup-character{left:35%;top:6%;width:78%;height:62%;mask-image:linear-gradient(#000 78%,transparent)}
+ .ashen-app .welcome,.ashen-app .loading-block{left:4%;width:92%;bottom:5%}
+ .ashen-app .fact-cards{gap:7px;margin-bottom:14px}
+ .ashen-app .fact-cards article:nth-child(n){padding:4px 4px 12px;grid-template-rows:76px 38px 34px}
+ .ashen-app .fact-cards article>.spine-view,.ashen-app .fact-cards article>b{height:76px}
+ .ashen-app .fact-cards article>b{font-size:27px}
+ .ashen-app .fact-cards h3{font-size:12px;margin:4px 0 7px}
+ .ashen-app .fact-cards p{font-size:8px}
+ .ashen-app .enter-button{min-height:48px;font-size:15px}
+ .ashen-app .buy-modal .purchase-body h3{font-size:18px}
+ .ashen-app .buy-modal .purchase-action{font-size:13px}
+ .ashen-app .celebration-screen{--v9-win-unit:min(calc(98vw / 1100),calc(100dvh / 760))}
+ .ashen-app .celebration-copy h2{font-size:clamp(40px,13vw,60px);bottom:calc(50% + 24.5vw + 12px)}
+ .ashen-app .celebration-copy>strong{top:50%;font-size:clamp(35px,11vw,52px)}
+ .ashen-app .celebration-copy button.primary{top:calc(50% + 30vw);font-size:15px}
+}
+@media(max-height:480px) and (orientation:landscape){
+ .ashen-app .startup-title{top:5%;left:10%;width:43%}
+ .ashen-app .startup-title>.eyebrow{font-size:7px}
+ .ashen-app .startup h1{height:24dvh;margin:4px 0 0}
+ .ashen-app .startup-title>p{font-size:7px;margin:4px 0}
+ .ashen-app .welcome{bottom:4%;left:8%;width:48%}
+ .ashen-app .fact-cards{gap:6px;margin-bottom:8px}
+ .ashen-app .fact-cards article:nth-child(n){padding:0 4px 6px;border-radius:7px;grid-template-rows:14dvh 5dvh 6dvh}
+ .ashen-app .fact-cards article:nth-child(n)>h3{height:5dvh}
+ .ashen-app .fact-cards article:nth-child(n)>p{height:6dvh}
+ .ashen-app .fact-cards article>.spine-view,.ashen-app .fact-cards article>b{height:14dvh}
+ .ashen-app .fact-cards article>b{font-size:5.5dvh}
+ .ashen-app .fact-cards h3{font-size:2.5dvh;margin:2px 0 3px}
+ .ashen-app .fact-cards p{font-size:1.8dvh}
+ .ashen-app .enter-button{min-height:0;padding:2.2dvh 10px;font-size:3dvh;border-radius:5px}
+ .ashen-app .welcome-audio{font-size:2dvh;margin-top:5px}
+ .ashen-app .buy-modal .purchase-body h3{font-size:calc(18 * var(--g-scene))}
+ .ashen-app .buy-modal .purchase-action{font-size:calc(13 * var(--g-scene))}
+}
+.ashen-app .purchase-confirm-modal{width:min(460px,calc(100vw - 24px));padding:28px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;max-height:calc(100dvh - 24px);overflow:auto}
+.ashen-app .purchase-confirm-modal>h2,.ashen-app .purchase-confirm-modal>h3{margin:0}
+.ashen-app .purchase-confirm-modal>h2{font-size:24px;padding:0 22px}
+.ashen-app .purchase-confirm-modal>h3{font-size:20px;letter-spacing:.06em}
+.ashen-app .confirm-emblem{width:100px;height:92px;flex:none}
+.ashen-app .confirm-emblem>.spine-view{width:100%;height:100%}
+.ashen-app .confirm-cost{width:100%;display:grid;gap:6px;padding:14px 10px;background:#0f0d12;border:1px solid #8c747148;border-radius:8px}
+.ashen-app .confirm-cost>span{font-size:10px;letter-spacing:.16em;color:#cab9ac}
+.ashen-app .confirm-cost>.fit-amount{font-size:36px;line-height:1.1;color:#f5e9dc}
+.ashen-app .confirm-description{font-size:13px;line-height:1.55;color:#cfc0ba;margin:0}
+.ashen-app .confirm-balance{display:flex;width:100%;justify-content:space-between;gap:16px;padding:10px 0;border-block:1px solid #8c747130;font-size:12px;align-items:center}
+.ashen-app .confirm-balance>span:last-child{overflow-wrap:anywhere;text-align:right;font-variant-numeric:tabular-nums}
+.ashen-app .confirm-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%}
+.ashen-app .confirm-actions>button{min-width:0;min-height:44px;padding:10px;font-size:13px}
+@media(max-height:480px) and (orientation:landscape){
+ .ashen-app .purchase-confirm-modal{width:min(640px,calc(100vw - 20px));padding:14px 22px;display:grid;grid-template-columns:80px minmax(0,1fr);gap:7px 16px;text-align:left}
+ .ashen-app .purchase-confirm-modal>.eyebrow{display:none}
+ .ashen-app .purchase-confirm-modal>h2{font-size:16px;grid-column:2;padding:0 22px 0 0}
+ .ashen-app .confirm-emblem{grid-column:1;grid-row:1 / 5;width:80px;height:100px}
+ .ashen-app .purchase-confirm-modal>h3{grid-column:2;font-size:14px}
+ .ashen-app .confirm-cost{grid-column:2;display:flex;justify-content:space-between;align-items:center;padding:6px 8px;gap:8px}
+ .ashen-app .confirm-cost>.fit-amount{font-size:24px}
+ .ashen-app .confirm-description{grid-column:2;font-size:10px;line-height:1.4}
+ .ashen-app .confirm-balance{grid-column:1 / -1;padding:4px 0;font-size:10px}
+ .ashen-app .confirm-actions{grid-column:1 / -1}
+ .ashen-app .confirm-actions>button{min-height:30px;padding:6px;font-size:11px}
+}

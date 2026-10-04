@@ -1,0 +1,243 @@
+/* Shared geometry follows the observed in-game Paperclip controls.
+   All pictograms are original generated PNGs; the painted game art stays live. */
+.ashen-app {
+  --pc-accent:#7de5e8; --pc-red:#ee435f; --pc-paper:#f4f3ef; --pc-ink:#11171b;
+  --hud-size:88px; font-family:AshenSans,Arial,sans-serif;
+}
+.pc-icon { display:block; width:100%; height:100%; object-fit:contain; pointer-events:none; user-select:none; }
+.ashen-app button { -webkit-tap-highlight-color:transparent; }
+.ashen-app button:focus-visible { outline:3px solid var(--pc-accent); outline-offset:4px; }
+.ashen-app button:disabled { opacity:.4; }
+.ashen-app .game-shell { padding:0 3%; max-width:none; grid-template-rows:30px minmax(0,1fr) 27px 104px 17px; }
+.ashen-app .game-header { grid-row:1; border:0; z-index:5; gap:8px; padding:0; }
+.ashen-app .header-center { left:0; top:10px; font-size:9px; letter-spacing:.06em; text-align:left; gap:3px; }
+.ashen-app .game-premise { font-size:8px; letter-spacing:.08em; color:#e0e6e7; }
+.ashen-app .header-center b { font-size:18px; }
+.ashen-app .header-center small { font-size:8px; color:#cdd3d7; }
+.ashen-app .wordmark { position:absolute; top:52px; right:3%; left:auto; width:168px; height:106px; pointer-events:none; }
+.ashen-app .header-right { margin-left:auto; gap:12px; }
+.ashen-app .session-chip { border:0; padding:0; color:#abb7be; font-size:7px; letter-spacing:.1em; }
+.ashen-app .header-right .info-button,.ashen-app .header-right .settings-button {
+  background:none!important; border:0!important; border-radius:0!important;
+  width:21px; height:21px; padding:3px; filter:none;
+}
+.ashen-app .game-stage { grid-row:2; padding:36px 0 48px; gap:0; }
+.ashen-app .reels-area { width:min(70vw,125cqh); max-height:100%; }
+.ashen-app .character-stage { right:-7%; top:12%; width:39%; height:94%; bottom:auto; }
+.ashen-app .stage-relic { left:1%; width:15%; }
+.ashen-app .message-bar { top:calc(106% + 4px); height:17px; font-family:inherit; font-style:normal; font-size:11px; font-weight:700; color:#e4ebed; gap:8px; text-shadow:0 2px 6px #000; }
+.ashen-app .feature-status { grid-row:3; gap:14px; font-size:8px; letter-spacing:.025em; color:#becbd1; min-height:0; margin:0; justify-content:center; }
+.ashen-app .feature-status strong { color:#f4f3ef; font-weight:700; }
+.ashen-app .feature-status.blue>span { color:var(--pc-accent); }
+.ashen-app .feature-status.red>span { color:#ff6c80; }
+.ashen-app .hud-dock { grid-row:4; width:min(920px,100%); height:100%; margin:auto; display:flex; align-items:center; gap:14px; position:relative; z-index:4; }
+.ashen-app .control-bar { grid-row:auto; display:flex; flex:1; min-width:0; height:calc(var(--hud-size) * .82); width:auto; max-width:none; margin:0; padding:0 13px; gap:16px; border:0; border-radius:9px; background:#080d12db; backdrop-filter:blur(12px); box-shadow:0 5px 20px #0003; overflow:visible; }
+.ashen-app .buy-button,.ashen-app .buy-button:hover:not(:disabled) { width:var(--hud-size); height:var(--hud-size); flex:none; padding:10px 13px 7px; border:0!important; border-radius:12px; background:var(--pc-accent)!important; filter:none; box-shadow:0 4px 12px #0005; gap:0; }
+.ashen-app .buy-button .pc-icon { width:60%; height:69%; filter:brightness(0); }
+.ashen-app .buy-button b { font-size:10px; font-weight:700; color:var(--pc-ink); letter-spacing:.03em; }
+.ashen-app .buy-button.mode-red { background:var(--pc-red)!important; }
+.ashen-app .buy-button:hover:not(:disabled) { background:#adf5f4!important; transform:translateY(-2px); }
+.ashen-app .menu-button { width:34px; height:38px; flex:none; padding:3px; border:0; border-radius:0; background:none; }
+.ashen-app .balance-block { min-width:115px; }
+.ashen-app .balance-block>span,.ashen-app .win-block>span,.ashen-app .bet-value>span { display:block; font-size:9px; letter-spacing:.025em; color:var(--pc-accent); margin:0 0 3px; font-weight:700; }
+.ashen-app .balance-block em { color:#98a6af; font-size:7px; }
+.ashen-app .balance-block strong,.ashen-app .bet-controls strong,.ashen-app .win-block strong { font-size:23px; letter-spacing:-.045em; font-weight:700; line-height:1.15; font-variant-numeric:tabular-nums; color:#fff; }
+.ashen-app .win-block { flex:1; min-width:50px; text-align:center; }
+.ashen-app .win-block:not(.has-win) strong { color:#a3afb6; }
+.ashen-app .win-block.has-win strong { color:var(--pc-accent); }
+.ashen-app .bet-controls { display:flex; align-items:center; gap:10px; flex:none; grid-area:auto; text-align:left; }
+.ashen-app .bet-controls>.bet-value { display:block; border-radius:5px; padding:7px 8px; background:#ffffff05; }
+.ashen-app .bet-controls>.bet-arrows { display:flex; flex-direction:column; gap:0; }
+.ashen-app .bet-controls strong { min-width:57px; display:block; }
+.ashen-app .bet-arrows button { width:26px; height:26px; padding:3px; border:0; border-radius:0; background:none; }
+.ashen-app .spin-controls { display:flex; flex:none; gap:9px; grid-area:auto; margin:0; width:auto; padding:0; justify-content:flex-start; }
+.ashen-app .spin-button,.ashen-app .spin-button:hover:not(:disabled) { position:relative; width:calc(var(--hud-size) * 1.17); height:calc(var(--hud-size) * 1.17); border:5px solid #0b1015!important; outline:0; border-radius:50%; background:var(--pc-paper)!important; padding:calc(var(--hud-size) * .22); box-shadow:none; filter:none; flex:none; }
+.ashen-app .spin-button .pc-icon { width:100%; height:100%; filter:brightness(0); }
+.ashen-app .spin-button:hover:not(:disabled) { background:#fff!important; transform:scale(1.025); }
+.ashen-app .spin-button.busy { opacity:.75; }
+.ashen-app .spin-button.busy:not(.auto-running) .pc-icon { animation:pc-spin 1.2s linear infinite; }
+.ashen-app .spin-button.auto-running { opacity:1; padding:calc(var(--hud-size) * .35); }
+.ashen-app .spin-count { position:absolute; inset:0; display:grid; place-items:center; color:white; font-size:18px; font-weight:700; }
+.ashen-app .spin-options { display:flex; flex-direction:column; justify-content:center; gap:7px; }
+.ashen-app .auto-button,.ashen-app .turbo-button { position:relative; width:31px; height:31px; padding:6px; background:var(--pc-paper)!important; border-radius:50%!important; border:0!important; filter:none; }
+.ashen-app .auto-button .pc-icon,.ashen-app .turbo-button .pc-icon { filter:brightness(0); }
+.ashen-app .auto-button.active,.ashen-app .turbo-button.active { background:var(--pc-accent)!important; filter:none; }
+.ashen-app .auto-button.active:after { display:none; }
+.ashen-app .footer-notes { grid-row:5; width:min(920px,100%); margin:auto; font-size:6px; color:#bec7cd; opacity:.65; letter-spacing:.08em; }
+.ashen-app .session-info { position:absolute; bottom:0; left:0; right:0; z-index:7; background:#0b121eee; }
+.ashen-app .game-shell>.replay-info { top:28px; font-size:8px; z-index:6; }
+@keyframes pc-spin { to { transform:rotate(360deg); } }
+
+/* Welcome retains the three factual panels with the same clear, rounded controls. */
+.ashen-app .startup-title>.eyebrow { letter-spacing:.16em; color:#e8f5f5; }
+.ashen-app .startup-title>p { letter-spacing:.17em; }
+.ashen-app .fact-cards { gap:14px; }
+.ashen-app .fact-cards article { border:0; border-radius:12px; padding:4px 8px 14px; background:linear-gradient(180deg,#08121b20,#08121be8 64%); box-shadow:0 8px 18px #0002; }
+.ashen-app .fact-cards article:nth-child(2) { background:linear-gradient(180deg,#260d1420,#220b14e8 64%); }
+.ashen-app .fact-cards h3 { font-family:inherit; font-size:12px; font-weight:700; letter-spacing:.025em; color:#fff; }
+.ashen-app .fact-cards p { color:#c8d5da; font-size:10px; }
+.ashen-app .fact-cards article>b { font-family:inherit; font-weight:700; letter-spacing:-.07em; }
+.ashen-app .enter-button.primary { border:0; border-radius:9px; background:var(--pc-accent); box-shadow:0 5px 20px #0004; color:var(--pc-ink); font-size:13px; font-weight:700; letter-spacing:.04em; }
+.ashen-app .enter-button.primary:hover { background:#b4f7f6; }
+.ashen-app .welcome-audio { font-size:10px; color:#d1dcdf; gap:8px; }
+.ashen-app input[type=checkbox] { accent-color:var(--pc-accent); }
+.ashen-app .loading-track { height:6px; border:0; border-radius:9px; overflow:hidden; background:#ffffff25; }
+.ashen-app .loading-track i { background:var(--pc-accent); box-shadow:0 0 20px #7de5e855; }
+.ashen-app>.wheel-ceremony-v4 h2 { font-family:AshenSans,Arial,sans-serif; font-weight:700; letter-spacing:-.035em; color:var(--pc-paper); }
+.ashen-app .wheel-v4 .dial-result strong { font-family:AshenSans,Arial,sans-serif; font-weight:700; color:var(--pc-paper); }
+.ashen-app>.wheel-ceremony-v4 .wheel-tally b { font-weight:700; letter-spacing:-.04em; color:var(--pc-paper); }
+
+@media(min-width:1500px) {
+  .ashen-app { --hud-size:100px; }
+  .ashen-app .game-shell { grid-template-rows:36px minmax(0,1fr) 30px 118px 20px; }
+  .ashen-app .hud-dock,.ashen-app .footer-notes { width:1080px; }
+  .ashen-app .control-bar { gap:24px; padding:0 20px; }
+  .ashen-app .balance-block strong,.ashen-app .bet-controls strong,.ashen-app .win-block strong { font-size:27px; }
+  .ashen-app .wordmark { width:215px; height:145px; }
+}
+@media(max-height:600px) and (orientation:landscape) {
+  .ashen-app { --hud-size:68px; }
+  .ashen-app .game-shell { grid-template-rows:25px minmax(0,1fr) 23px 82px 13px; }
+  .ashen-app .game-stage { padding:27px 0 38px; }
+  .ashen-app .hud-dock,.ashen-app .footer-notes { width:min(790px,100%); }
+  .ashen-app .control-bar { gap:12px; }
+  .ashen-app .wordmark { width:125px; height:84px; top:45px; }
+  .ashen-app .balance-block strong,.ashen-app .bet-controls strong,.ashen-app .win-block strong { font-size:20px; }
+  .ashen-app .balance-block { min-width:100px; }
+  .ashen-app .auto-button,.ashen-app .turbo-button { width:26px; height:26px; padding:5px; }
+  .ashen-app .spin-options { gap:5px; }
+  .ashen-app .buy-button b { font-size:8px; }
+  .ashen-app .message-bar { font-size:9px; }
+}
+@media(max-height:480px) and (orientation:landscape) {
+  .ashen-app { --hud-size:55px; }
+  .ashen-app .game-shell { grid-template-rows:22px minmax(0,1fr) 20px 67px 11px; }
+  .ashen-app .game-stage { padding:18px 0 30px; }
+  .ashen-app .hud-dock { width:min(660px,100%); gap:9px; }
+  .ashen-app .control-bar { gap:9px; padding:0 9px; border-radius:6px; }
+  .ashen-app .buy-button { border-radius:8px; padding:5px 8px; }
+  .ashen-app .menu-button { width:26px; height:30px; }
+  .ashen-app .balance-block { min-width:85px; }
+  .ashen-app .balance-block strong,.ashen-app .bet-controls strong,.ashen-app .win-block strong { font-size:16px; }
+  .ashen-app .balance-block>span,.ashen-app .win-block>span,.ashen-app .bet-value>span { font-size:7px; margin-bottom:2px; }
+  .ashen-app .balance-block em { font-size:5px; }
+  .ashen-app .bet-controls { gap:3px; }
+  .ashen-app .bet-controls strong { min-width:44px; }
+  .ashen-app .bet-controls>.bet-value { padding:3px; }
+  .ashen-app .bet-arrows button { width:22px; height:21px; }
+  .ashen-app .spin-controls { gap:5px; }
+  .ashen-app .spin-button,.ashen-app .spin-button:hover:not(:disabled) { border-width:4px!important; }
+  .ashen-app .auto-button,.ashen-app .turbo-button { width:21px; height:21px; padding:4px; }
+  .ashen-app .feature-status { font-size:6px; }
+  .ashen-app .wordmark { top:28px; width:105px; height:75px; }
+  .ashen-app .spin-count { font-size:12px; }
+  .ashen-app .message-bar { font-size:8px; top:calc(105% + 1px); height:13px; }
+  .ashen-app .fact-cards h3 { font-size:9px; }
+  .ashen-app .fact-cards p { font-size:8px; }
+}
+@media(max-width:520px) and (orientation:landscape) {
+  .ashen-app { --hud-size:34px; }
+  .ashen-app .game-shell { padding:0 2%; grid-template-rows:16px minmax(0,1fr) 14px 43px 8px; }
+  .ashen-app .game-stage { padding:11px 0 17px; }
+  .ashen-app .hud-dock { gap:5px; }
+  .ashen-app .control-bar { gap:5px; height:32px; padding:0 5px; border-radius:5px; }
+  .ashen-app .menu-button { width:20px; height:24px; padding:2px; }
+  .ashen-app .buy-button,.ashen-app .buy-button:hover:not(:disabled) { padding:3px; border-radius:6px; }
+  .ashen-app .buy-button b { font-size:5px; }
+  .ashen-app .balance-block { min-width:60px; }
+  .ashen-app .balance-block strong,.ashen-app .bet-controls strong,.ashen-app .win-block strong { font-size:10px; letter-spacing:-.05em; }
+  .ashen-app .balance-block>span,.ashen-app .win-block>span,.ashen-app .bet-value>span { font-size:5px; margin:0 0 1px; }
+  .ashen-app .balance-block em { font-size:4px; }
+  .ashen-app .win-block { min-width:30px; }
+  .ashen-app .bet-controls { gap:0; }
+  .ashen-app .bet-controls strong { min-width:28px; }
+  .ashen-app .bet-arrows button { width:17px; height:15px; padding:2px; }
+  .ashen-app .spin-button,.ashen-app .spin-button:hover:not(:disabled) { border-width:2px!important; }
+  .ashen-app .spin-options { gap:2px; }
+  .ashen-app .auto-button,.ashen-app .turbo-button { width:14px; height:14px; padding:2px; }
+  .ashen-app .spin-controls { gap:3px; }
+  .ashen-app .spin-count { font-size:8px; }
+  .ashen-app .feature-status { font-size:4px; gap:7px; }
+  .ashen-app .message-bar { font-size:5px; height:8px; top:calc(105% + 1px); }
+  .ashen-app .footer-notes { font-size:3.5px; letter-spacing:0; }
+  .ashen-app .wordmark { width:62px; height:45px; top:24px; right:2%; }
+  .ashen-app .header-center { top:4px; }
+  .ashen-app .game-premise { font-size:5px; }
+  .ashen-app .header-center b { font-size:10px; }
+  .ashen-app .header-center small { font-size:4px; }
+  .ashen-app .header-center>span { font-size:5px; }
+  .ashen-app .header-right { gap:5px; }
+  .ashen-app .session-chip { font-size:4px; }
+  .ashen-app .header-right .info-button,.ashen-app .header-right .settings-button { width:14px; height:14px; padding:2px; }
+  .ashen-app .fact-cards { gap:7px; }
+  .ashen-app .fact-cards article { border-radius:6px; padding-bottom:5px; }
+  .ashen-app .fact-cards h3 { font-size:5px; margin:3px 0; }
+  .ashen-app .fact-cards p { font-size:4.5px; }
+  .ashen-app .enter-button.primary { font-size:7px; padding:7px; min-height:0; border-radius:5px; margin-top:8px; }
+  .ashen-app .welcome-audio { font-size:5px; margin-top:3px; }
+}
+@media(orientation:portrait) {
+  .ashen-app { --hud-size:64px; }
+  .ashen-app .game-shell { padding:0 3%; grid-template-rows:112px minmax(0,1fr) 36px 134px 23px; }
+  .ashen-app .game-header { align-items:flex-start; padding-top:10px; }
+  .ashen-app .header-center { top:14px; }
+  .ashen-app .game-premise { font-size:6px; }
+  .ashen-app .header-right { gap:8px; }
+  .ashen-app .session-chip { font-size:5px; }
+  .ashen-app .wordmark { left:1%; right:auto; top:31px; width:135px; height:91px; }
+  .ashen-app .game-stage { padding:28px 0 30px; }
+  .ashen-app .reels-area { width:min(88vw,125cqh); }
+  .ashen-app .character-stage { position:fixed; right:4%; top:15px; width:min(49vw,215px); height:178px; overflow:hidden; opacity:.9; z-index:1; }
+  .ashen-app .character-stage>.spine-view { position:absolute; height:330px; width:120%; top:-4px; left:-10%; }
+  .ashen-app .stage-relic { display:none; }
+  .ashen-app .message-bar { font-size:9px; top:calc(105% + 7px); height:22px; }
+  .ashen-app .feature-status { font-size:6px; flex-direction:column; gap:3px; line-height:1.4; justify-content:center; }
+  .ashen-app .feature-status.base>span { display:block; }
+  .ashen-app .feature-status strong { margin:0; }
+  .ashen-app .hud-dock { display:block; width:100%; height:122px; align-self:end; }
+  .ashen-app .control-bar { position:relative; display:block; width:100%; height:122px; padding:0; border-radius:12px; }
+  .ashen-app .buy-button,.ashen-app .buy-button:hover:not(:disabled) { position:absolute; z-index:2; left:54px; bottom:9px; width:62px; height:62px; padding:6px; border-radius:10px; }
+  .ashen-app .buy-button b { font-size:8px; }
+  .ashen-app .balance-block { position:absolute; top:10px; left:12px; min-width:0; text-align:left; }
+  .ashen-app .balance-block>span,.ashen-app .win-block>span,.ashen-app .bet-value>span { font-size:7px; margin-bottom:3px; }
+  .ashen-app .balance-block strong,.ashen-app .bet-controls strong,.ashen-app .win-block strong { font-size:18px; }
+  .ashen-app .balance-block em { font-size:5px; }
+  .ashen-app .win-block { position:absolute; top:10px; left:48%; transform:translateX(-50%); min-width:0; text-align:center; }
+  .ashen-app .bet-controls { position:absolute; top:6px; right:6px; gap:3px; }
+  .ashen-app .bet-controls>.bet-value { background:none; padding:3px; }
+  .ashen-app .bet-controls strong { min-width:41px; }
+  .ashen-app .bet-arrows button { width:21px; height:20px; padding:3px; }
+  .ashen-app .menu-button { position:absolute; left:12px; bottom:23px; width:27px; height:29px; }
+  .ashen-app .spin-controls { position:absolute; right:10px; bottom:0; gap:9px; }
+  .ashen-app .spin-button,.ashen-app .spin-button:hover:not(:disabled) { width:79px; height:79px; border-width:4px!important; }
+  .ashen-app .spin-count { font-size:15px; }
+  .ashen-app .spin-options { gap:7px; }
+  .ashen-app .auto-button,.ashen-app .turbo-button { width:27px; height:27px; padding:5px; }
+  .ashen-app .footer-notes { font-size:4px; padding:3px; letter-spacing:0; }
+  .ashen-app .footer-notes>span:nth-child(2) { display:none; }
+  .ashen-app .welcome { width:94%; }
+  .ashen-app .fact-cards { gap:7px; }
+  .ashen-app .fact-cards h3 { font-size:8px; }
+  .ashen-app .fact-cards p { font-size:7px; }
+  .ashen-app .fact-cards article { padding-left:3px; padding-right:3px; border-radius:9px; }
+  .ashen-app .welcome-audio { font-size:9px; }
+}
+@media(orientation:portrait) and (max-height:690px) {
+  .ashen-app .game-shell { grid-template-rows:86px minmax(0,1fr) 29px 126px 17px; }
+  .ashen-app .wordmark { width:113px; height:73px; top:24px; }
+  .ashen-app .character-stage { top:9px; height:138px; }
+  .ashen-app .game-stage { padding:21px 0 24px; }
+  .ashen-app .message-bar { font-size:8px; top:calc(105% + 3px); }
+}
+@media(orientation:portrait) and (max-width:340px) {
+  .ashen-app .game-shell { grid-template-rows:72px minmax(0,1fr) 27px 116px 15px; }
+  .ashen-app .wordmark { width:98px; height:65px; top:22px; }
+  .ashen-app .hud-dock,.ashen-app .control-bar { height:112px; }
+  .ashen-app .balance-block strong,.ashen-app .bet-controls strong,.ashen-app .win-block strong { font-size:15px; }
+  .ashen-app .spin-button,.ashen-app .spin-button:hover:not(:disabled) { width:71px; height:71px; }
+  .ashen-app .buy-button,.ashen-app .buy-button:hover:not(:disabled) { width:54px; height:54px; bottom:9px; }
+  .ashen-app .feature-status { font-size:5px; }
+  .ashen-app .fact-cards h3 { font-size:7px; }
+  .ashen-app .fact-cards p { font-size:6px; }
+  .ashen-app .enter-button.primary { font-size:11px; }
+}

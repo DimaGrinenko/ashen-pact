@@ -1,0 +1,55 @@
+/* The high-resolution world is sampled directly by the browser. Spine owns
+   the moving foreground; the full world no longer passes through a 1536px atlas. */
+.ashen-app .world-scene{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-4;background:#090e20}
+.ashen-app .world-plate{position:absolute;inset:-1%;background-position:center;background-size:cover;transition:opacity .85s ease;will-change:transform;animation:world-drift-v11 24s ease-in-out infinite alternate}
+.ashen-app .world-base{background-image:url('/ashen/background-v11.webp');opacity:1}
+.ashen-app .world-bonus{background-image:url('/ashen/bonus-background-v11.webp');opacity:0}
+.ashen-app .world-scene[data-location=bonus] .world-base{opacity:0}
+.ashen-app .world-scene[data-location=bonus] .world-bonus{opacity:1}
+.ashen-app .world-scene[data-paused=true] .world-plate{animation-play-state:paused}
+@keyframes world-drift-v11{from{transform:scale(1.012) translate3d(-.15%,0,0)}to{transform:scale(1.025) translate3d(.15%,.2%,0)}}
+.ashen-app .character-stage.character-stage-blue{left:-1%;right:auto;top:3%;width:24%;height:95%;overflow:visible}
+.ashen-app .character-stage.character-stage-red{right:-1%;left:auto;top:3%;width:24%;height:95%;overflow:visible}
+.ashen-app .character-stage>.spine-view{width:125%;left:-12.5%;height:100%;top:0}
+.ashen-app .reels-area{width:min(52vw,96cqh)}
+.ashen-app .wordmark{left:50%;transform:translateX(-50%);top:0;width:calc(132 * var(--g-unit));height:calc(62 * var(--g-unit))}
+.ashen-app .game-header{position:relative;z-index:3}
+.ashen-app .header-center{max-width:30%}
+.ashen-app .game-stage[data-bonus-stage=charge] .reel-board{filter:brightness(1.15)}
+.ashen-app .game-stage[data-bonus-stage=impact] .symbol-cell{animation:reel-shatter-v11 .9s cubic-bezier(.2,.7,.3,1) both;animation-delay:var(--break-delay,0ms)}
+.ashen-app .game-stage[data-bonus-stage=impact] .reel-board,.ashen-app .game-stage[data-bonus-stage=impact] .reel-column{overflow:visible}
+.ashen-app .game-stage[data-bonus-stage=ashes] .symbol-cell{opacity:0}
+.ashen-app .game-stage[data-bonus-stage=impact] .reel-frame-art{animation:frame-break-v11 1.1s ease both}
+.ashen-app .game-stage[data-bonus-stage=ashes] .reel-frame-art,.ashen-app .game-stage[data-bonus-stage=ashes] .reel-board{opacity:0}
+.ashen-app .game-stage[data-bonus-stage=reveal] .reels-area{animation:field-return-v11 .65s ease both}
+@keyframes reel-shatter-v11{0%{transform:none;opacity:1;filter:brightness(1)}22%{transform:scale(1.14);filter:brightness(2.1) saturate(1.2)}100%{transform:translate(var(--break-x),var(--break-y)) rotate(var(--break-turn)) scale(.25);opacity:0;filter:brightness(.5)}}
+@keyframes frame-break-v11{0%{transform:none;opacity:1}20%{transform:translateX(-3px)}35%{transform:translateX(3px)}50%{transform:translateX(-1px);opacity:1}100%{transform:scale(1.05);opacity:0}}
+@keyframes field-return-v11{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:none}}
+.bonus-arrival{position:fixed;inset:0;z-index:20;pointer-events:none;overflow:hidden}
+.ritual-stream{position:absolute;transform-origin:0 50%;opacity:0;transition:opacity .18s ease;filter:drop-shadow(0 0 8px #0bf6)}
+.ritual-stream-red{filter:drop-shadow(0 0 8px #f345)}
+.ritual-stream>.spine-view{width:100%;height:100%}
+.bonus-arrival[data-stage=impact] .ritual-stream{opacity:.96}
+.bonus-arrival[data-stage=ashes] .ritual-stream{opacity:0;transition-duration:.45s}
+.ritual-impact{position:absolute;pointer-events:none}
+.ritual-impact>.spine-view{height:100%;width:100%}
+.ritual-caption{position:absolute;left:15%;right:15%;top:14%;text-align:center;color:#fff1d2;font:700 clamp(12px,2vw,25px)/1.2 AshenDisplay,sans-serif;letter-spacing:.14em;text-shadow:0 2px 8px #000,0 0 20px #250924;animation:caption-reveal-v11 .4s ease both}
+@keyframes caption-reveal-v11{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.bonus-arrival[data-paused=true] *,.ashen-app.presentation-paused .game-stage *{animation-play-state:paused!important}
+.ashen-app .modal-backdrop:has(.bonus-intro,.deal-modal,.deal-wheel-modal){background:#09071b66;backdrop-filter:blur(2px)}
+.ashen-app .bonus-intro,.ashen-app .deal-modal,.ashen-app .deal-wheel-modal{background:#100d239c;box-shadow:0 20px 80px #06031055}
+@media(orientation:portrait){
+  .ashen-app .wordmark{left:50%;top:4px;transform:translateX(-50%);width:126px;height:82px}
+  .ashen-app .game-header .header-center{top:88px;max-width:none;width:100%;align-items:center;position:absolute;text-align:center}
+  .ashen-app .game-header .header-right{margin-left:auto}
+  /* Wider paint window keeps both palms attached in idle and cast, while
+     lower robes stay clipped behind the board without moving the bone hosts. */
+  .ashen-app .character-stage.character-stage-blue,.ashen-app .character-stage.character-stage-red{position:fixed;top:8px;width:29vw;height:130px;z-index:1;overflow:visible;mask-image:none;clip-path:inset(0 -70% 0)}
+  .ashen-app .character-stage.character-stage-blue{left:-4px;right:auto}
+  .ashen-app .character-stage.character-stage-red{right:-4px;left:auto}
+  .ashen-app .character-stage>.spine-view{width:195%;left:-47.5%;height:300px;top:-22px}
+  .ashen-app .reels-area{width:min(88vw,96cqh)}
+  .ritual-caption{top:23%;font-size:12px;letter-spacing:.09em;left:8%;right:8%}
+}
+@media(orientation:landscape) and (max-height:450px){.ashen-app .wordmark{height:calc(35 * var(--g-unit));width:calc(95 * var(--g-unit));top:0}.ritual-caption{top:8%;font-size:11px}}
+@media(prefers-reduced-motion:reduce){.world-plate{animation:none!important}.world-plate,.ritual-stream{transition:none!important}}

@@ -1,0 +1,42 @@
+{
+  "version": 11,
+  "generatedAt": "2026-09-27T18:53:27.522Z",
+  "prompt": "art-source/ashen/ui-v11/prompts.json",
+  "method": "Original generated raster sources; trim transparent margins, preserve alpha, and downsample only.",
+  "assets": [
+    {
+      "source": "art-source/ashen/ui-v11/hud-panel.png",
+      "sourceSha256": "cb7dbf9f6cbba4dfe176c3999489c2b703ebe05ab6df33ac1d8812838772b8f4",
+      "crop": {
+        "left": 31,
+        "top": 86,
+        "width": 2068,
+        "height": 569
+      },
+      "runtime": "public/ashen/ui/v11/hud-panel.webp",
+      "dimensions": [
+        1600,
+        440
+      ],
+      "hasAlpha": true,
+      "transparentSourcePixels": 519937
+    },
+    {
+      "source": "art-source/ashen/ui-v11/bonus-button.png",
+      "sourceSha256": "cdba09d1f59b669708eb877af8689aeaf5f582396127bac4b7f6bcb262902266",
+      "crop": {
+        "left": 67,
+        "top": 62,
+        "width": 1119,
+        "height": 1121
+      },
+      "runtime": "public/ashen/ui/v11/bonus-button.webp",
+      "dimensions": [
+        480,
+        480
+      ],
+      "hasAlpha": true,
+      "transparentSourcePixels": 595449
+    }
+  ]
+}

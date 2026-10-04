@@ -1,0 +1,77 @@
+{
+  "version": 10,
+  "generatedAt": "2026-09-27T18:53:06.036Z",
+  "sourcePrompts": "art-source/ashen/ui-v10/toon-prompts.json",
+  "method": "Original generated raster artwork; alpha-preserving crop and WebP downsample. No programmatic illustration.",
+  "assets": [
+    {
+      "name": "panel",
+      "source": "art-source/ashen/ui-v10/panel-toon.png",
+      "runtime": "public/ashen/ui/v10/panel.webp",
+      "sourceSha256": "5b52c4a43f57ec43303f397571e3dc65b3e83c38604f5ded74e84567ea0a4bf5",
+      "sourceDimensions": [
+        2172,
+        724
+      ],
+      "crop": {
+        "left": 42,
+        "top": 81,
+        "width": 2089,
+        "height": 551
+      },
+      "runtimeDimensions": [
+        1600,
+        422
+      ],
+      "nineSlice": 104,
+      "sourceTransparentPixels": 443166,
+      "sourceOpaquePixels": 1245
+    },
+    {
+      "name": "action",
+      "source": "art-source/ashen/ui-v10/action-toon.png",
+      "runtime": "public/ashen/ui/v10/action.webp",
+      "sourceSha256": "57a4654c5aa356075358ca2f3a3d886c14fdd4ab5d026c8a26eb0254df28ff46",
+      "sourceDimensions": [
+        2172,
+        724
+      ],
+      "crop": {
+        "left": 20,
+        "top": 138,
+        "width": 2132,
+        "height": 428
+      },
+      "runtimeDimensions": [
+        1200,
+        241
+      ],
+      "nineSlice": 56,
+      "sourceTransparentPixels": 665848,
+      "sourceOpaquePixels": 432
+    },
+    {
+      "name": "spin",
+      "source": "art-source/ashen/ui-v10/spin-toon.png",
+      "runtime": "public/ashen/ui/v10/spin.webp",
+      "sourceSha256": "4f947ef3ebded998d223751979ce1451915021350791a7cf199eba343cc5bce2",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "left": 67,
+        "top": 61,
+        "width": 1119,
+        "height": 1122
+      },
+      "runtimeDimensions": [
+        480,
+        481
+      ],
+      "nineSlice": null,
+      "sourceTransparentPixels": 596491,
+      "sourceOpaquePixels": 1369
+    }
+  ]
+}

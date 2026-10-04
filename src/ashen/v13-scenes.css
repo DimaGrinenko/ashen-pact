@@ -1,0 +1,68 @@
+/* Raster artwork is performed in Spine; these transforms stage the interface. */
+.ashen-app .startup-v13{perspective:1200px;}
+.ashen-app .welcome-portal{position:absolute;left:50%;top:28%;width:min(62vw,78dvh);aspect-ratio:1;transform:translate(-50%,-50%);opacity:.82;pointer-events:none;z-index:1;}
+.ashen-app .welcome-portal>.spine-view{width:100%;height:100%;}
+.ashen-app .startup-v13 .startup-title{animation:welcome-title-arrive-v13 1.35s cubic-bezier(.17,.75,.2,1) both;}
+.ashen-app .startup-v13 h1 img{animation:welcome-title-float-v13 9s ease-in-out infinite;}
+.ashen-app .startup-v13 .startup-character-blue{animation:keeper-arrive-blue-v13 1.25s cubic-bezier(.16,.8,.3,1) both;z-index:2;}
+.ashen-app .startup-v13 .startup-character-red{animation:keeper-arrive-red-v13 1.25s cubic-bezier(.16,.8,.3,1) both;z-index:2;}
+.ashen-app .startup-v13 .fact-cards{background:none;box-shadow:none;border:0;border-image:none;padding:0;gap:12px;}
+.ashen-app .startup-v13 .fact-cards article:nth-child(n){border:0 solid transparent;border-image:var(--v12-panel) 110 205 fill / 12px 16px / 0 stretch;padding:14px 8px;box-shadow:0 8px 18px #14072166;animation:fact-arrive-v13 .8s cubic-bezier(.15,.8,.3,1) both;}
+.ashen-app .startup-v13 .fact-cards article:nth-child(1){animation-delay:.28s;}
+.ashen-app .startup-v13 .fact-cards article:nth-child(2){animation-delay:.43s;}
+.ashen-app .startup-v13 .fact-cards article:nth-child(3){animation-delay:.58s;}
+.ashen-app .startup-v13 .fact-ultimate>b{animation:ultimate-breathe-v13 7s ease-in-out infinite;}
+.ashen-app .startup-v13 .enter-button{animation:entry-arrive-v13 1s .65s ease both;transition:filter .25s,transform .25s;}
+.ashen-app .startup-v13 .enter-button:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.2);}
+.ashen-app .startup-v13 .welcome-audio{animation:entry-arrive-v13 .6s 1s ease both;}
+.ashen-app .startup-v13.departing{animation:welcome-depart-v13 .65s ease both;pointer-events:none;}
+.ashen-app .game-shell{animation:game-arrive-v13 .7s cubic-bezier(.18,.8,.3,1) both;}
+.ashen-app .celebration-v13 .celebration-copy h2{animation:win-title-arrive-v13 .85s cubic-bezier(.14,.8,.22,1) both;text-shadow:0 4px 1px #4b1125,0 0 24px #f46a6a33;}
+.ashen-app .celebration-v13 .celebration-copy>strong{animation:win-number-arrive-v13 .85s .25s cubic-bezier(.13,.8,.24,1) both;}
+.ashen-app .celebration-v13 .celebration-copy>.primary{animation:entry-arrive-v13 .55s .75s both;}
+.ashen-app .celebration-v13[data-tier=max] .celebration-copy h2{color:#fff6db;text-shadow:0 4px #601428,0 0 26px #fa986788;}
+.ashen-app .bonus-intro{isolation:isolate;overflow:visible;}
+.ashen-app .bonus-gate-art{position:absolute;inset:-15%;z-index:-1;pointer-events:none;opacity:.9;}
+.ashen-app .bonus-gate-art>.spine-view{width:100%;height:100%;}
+.ashen-app .bonus-intro>h2{animation:win-title-arrive-v13 .85s cubic-bezier(.14,.8,.22,1) both;}
+.ashen-app .bonus-intro>.spine-view:not(.ceremony-environment){animation:bonus-seal-arrive-v13 1s cubic-bezier(.15,.8,.3,1) both;}
+.ashen-app .bonus-intro>.free-spin-count{animation:win-number-arrive-v13 1s .15s cubic-bezier(.13,.8,.24,1) both;}
+.ashen-app .bonus-intro>.bonus-rule{animation:entry-arrive-v13 .7s .55s both;}
+.ashen-app .bonus-intro>.primary{animation:entry-arrive-v13 .6s .7s both;}
+.ashen-app .game-stage[data-bonus-stage=charge] .reel-board{filter:brightness(1.08);}
+.ashen-app .game-stage[data-bonus-stage=impact] .symbol-cell{animation:reel-fracture-v13 .88s cubic-bezier(.15,.55,.5,1) both;animation-delay:var(--break-delay,0ms);transform-origin:50% 60%;}
+.ashen-app .game-stage[data-bonus-stage=impact] .reel-frame-art{animation:frame-fracture-v13 1.05s ease both;}
+.ashen-app .game-stage[data-bonus-stage=reveal] .reels-area{animation:field-forge-v13 .65s cubic-bezier(.1,.75,.25,1) both;}
+.arrival-portal{position:absolute;pointer-events:none;}
+.arrival-portal>.spine-view{width:100%;height:100%;}
+.ashen-app .bonus-arrival .ritual-stream{filter:none;}
+.ashen-app .bonus-arrival .ritual-caption{font-size:clamp(11px,1.3vw,18px);letter-spacing:.16em;top:auto;bottom:20%;animation:entry-arrive-v13 .35s ease both;}
+.ashen-app .bonus-arrival[data-stage=charge] .ritual-impact{opacity:0;}
+.ashen-app .bonus-arrival[data-stage=impact] .ritual-impact{opacity:1;}
+.ashen-app .bonus-arrival[data-stage=ashes] .ritual-impact{opacity:.65;transition:opacity .6s;}
+.ashen-app .bonus-arrival[data-stage=reveal] .ritual-impact{opacity:0;transition:opacity .45s;}
+@keyframes welcome-title-arrive-v13{from{opacity:0;filter:blur(6px);transform:translateY(-26px) scale(.86)}to{opacity:1;filter:none;transform:none}}
+@keyframes welcome-title-float-v13{0%,100%{transform:translateY(0) rotate(-.3deg)}50%{transform:translateY(-5px) rotate(.3deg)}}
+@keyframes keeper-arrive-blue-v13{from{opacity:0;transform:translate(-35px,12px)}to{opacity:1;transform:none}}
+@keyframes keeper-arrive-red-v13{from{opacity:0;transform:translate(35px,12px)}to{opacity:1;transform:none}}
+@keyframes fact-arrive-v13{from{opacity:0;transform:translateY(30px) rotateX(14deg)}to{opacity:1;transform:none}}
+@keyframes ultimate-breathe-v13{0%,100%{filter:brightness(1);transform:scale(1)}50%{filter:brightness(1.25);transform:scale(1.025)}}
+@keyframes entry-arrive-v13{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
+@keyframes welcome-depart-v13{0%{opacity:1;transform:none}100%{opacity:0;transform:scale(1.12);filter:blur(4px)}}
+@keyframes game-arrive-v13{from{opacity:0;transform:scale(.965)}to{opacity:1;transform:none}}
+@keyframes win-title-arrive-v13{0%{opacity:0;transform:translateY(-30px) scale(.72)}65%{opacity:1;transform:translateY(3px) scale(1.045)}100%{opacity:1;transform:none}}
+@keyframes win-number-arrive-v13{0%{opacity:0;scale:.55;translate:0 18px}70%{opacity:1;scale:1.04;translate:0 -2px}100%{opacity:1;scale:1;translate:0 0}}
+@keyframes bonus-seal-arrive-v13{0%{opacity:0;transform:translateX(-35px) rotate(-22deg) scale(.6)}70%{opacity:1;transform:rotate(2deg) scale(1.03)}100%{opacity:1;transform:none}}
+@keyframes reel-fracture-v13{0%{transform:none;opacity:1;filter:brightness(1)}15%{transform:scale(1.1) translateY(-3px);filter:brightness(1.9)}42%{opacity:1}100%{transform:translate(var(--break-x),var(--break-y)) rotate(var(--break-turn)) scale(.08);opacity:0;filter:brightness(1.3)}}
+@keyframes frame-fracture-v13{0%{opacity:1;transform:none}12%{transform:scale(1.01) translateX(-2px)}24%{transform:scale(1.015) translateX(2px)}50%{opacity:.9}100%{opacity:0;transform:scale(1.11) translateY(8px)}}
+@keyframes field-forge-v13{0%{opacity:0;transform:scale(.86) translateY(22px);filter:brightness(1.7)}70%{opacity:1;transform:scale(1.015) translateY(-2px)}100%{opacity:1;transform:none;filter:none}}
+@media(orientation:portrait){
+ .ashen-app .welcome-portal{width:90vw;top:22%;}
+ .ashen-app .startup-v13 .fact-cards{gap:5px;}
+ .ashen-app .startup-v13 .fact-cards article:nth-child(n){padding:10px 3px;border-image-width:9px 10px;}
+ .ashen-app .bonus-gate-art{inset:-10% -20%;}
+}
+@media(orientation:landscape) and (max-height:450px){.ashen-app .startup-v13 .fact-cards{gap:5px;}.ashen-app .startup-v13 .fact-cards article:nth-child(n){padding:5px 3px;border-image-width:5px 8px;}}
+.ashen-app.reduced-motion *,.ashen-app.reduced-motion *::before,.ashen-app.reduced-motion *::after{animation:none!important;transition:none!important;}
+.ashen-app.presentation-paused *,.ashen-app.presentation-paused *::before,.ashen-app.presentation-paused *::after{animation-play-state:paused!important;}
+@media(prefers-reduced-motion:reduce){.ashen-app *,.ashen-app *::before,.ashen-app *::after{animation:none!important;transition:none!important;}}

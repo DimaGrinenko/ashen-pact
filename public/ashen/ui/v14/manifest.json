@@ -1,0 +1,66 @@
+{
+  "revision": 19,
+  "method": "Generated native raster, alpha crop, lossless WebP; no vector illustration.",
+  "assets": [
+    {
+      "name": "panel",
+      "source": "surfaces.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 790,
+        "height": 400
+      },
+      "dimensions": [
+        729,
+        282
+      ],
+      "sha256": "193e5b792c634c839df536fd7bdf5d083db983cb5e1eadd7ee942c36254c62cd"
+    },
+    {
+      "name": "action",
+      "source": "surfaces.png",
+      "crop": {
+        "left": 790,
+        "top": 0,
+        "width": 746,
+        "height": 400
+      },
+      "dimensions": [
+        668,
+        159
+      ],
+      "sha256": "a02ecec4ad619558e9590331cbd11af37bfa556830a071b3639c4dc316874422"
+    },
+    {
+      "name": "spin",
+      "source": "surfaces.png",
+      "crop": {
+        "left": 0,
+        "top": 400,
+        "width": 768,
+        "height": 624
+      },
+      "dimensions": [
+        522,
+        493
+      ],
+      "sha256": "0c0e77640867d8fee7855a2d8b656aa983fdaf1b121d7adc1628fd0558f4f070"
+    },
+    {
+      "name": "bonus",
+      "source": "surfaces.png",
+      "crop": {
+        "left": 768,
+        "top": 400,
+        "width": 768,
+        "height": 624
+      },
+      "dimensions": [
+        521,
+        492
+      ],
+      "sha256": "b185f069d42cfe01279e48af8fb7fc8286436c6b5ce65ea367738ea62e5883b0"
+    }
+  ]
+}

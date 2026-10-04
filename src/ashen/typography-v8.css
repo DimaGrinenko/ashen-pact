@@ -1,0 +1,44 @@
+/* Painted ivory numerals and the engraved serif vocabulary of the slot art. */
+.ashen-app {--ritual-number-font:AshenSerif,Georgia,serif;}
+.ashen-app .wheel-v4 .dial-result {inset:0;background:none;display:block;animation:none;}
+.ashen-app .wheel-v4 .dial-result>strong {
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;
+  margin:0;padding:0;line-height:1;letter-spacing:0;white-space:nowrap;
+  font-size:clamp(44px,10.7vh,100px);text-shadow:none;
+  filter:drop-shadow(0 3px 3px #000c) drop-shadow(0 0 15px #69d9ea24);
+}
+.ashen-app .red .wheel-v4 .dial-result>strong {filter:drop-shadow(0 3px 3px #000c) drop-shadow(0 0 15px #fb425b28);}
+.ashen-app .wheel-v4 .dial-result>small {position:absolute;left:25%;right:25%;top:calc(50% + 6.1vh);max-width:none;line-height:1.4;letter-spacing:.18em;}
+.ashen-app .wheel-v4.settled .dial-result>strong>.raster-number {animation:none;opacity:var(--award-opacity,0);transform:scale(calc(.94 + .06 * var(--award-opacity,0)));}
+.ashen-app .wheel-v4 .dial-result>small {opacity:var(--award-opacity,0);}
+.ashen-app .wheel-v4 .dial-result.bonus-result {inset:0;background:none;}
+.ashen-app .wheel-v4 .dial-result.bonus-result>strong {visibility:hidden;}
+.ashen-app .wheel-v4 .dial-result.bonus-result>small {top:62%;}
+.ashen-app .wheel-v4 .dial-numbers.synced>span {font-family:AshenSerif,Georgia,serif;letter-spacing:0;font-weight:600;color:#f4e4c7;}
+.ashen-app>.wheel-ceremony-v4 h2,.ashen-app .celebration-copy h2 {
+  font-family:AshenSerif,Georgia,serif;font-weight:600;letter-spacing:.045em;
+  color:#efe1c3;text-shadow:0 1px 0 #746044,0 3px 10px #000,0 0 24px #9ad9dd14;
+}
+.ashen-app .celebration-copy>strong {display:flex;align-items:center;justify-content:center;font-family:var(--ritual-number-font);letter-spacing:0;filter:drop-shadow(0 4px 5px #000b);}
+.ashen-app>.wheel-ceremony-v4 .wheel-tally b {font-size:calc(36 * var(--g-scene));line-height:1.1;letter-spacing:0;filter:drop-shadow(0 3px 4px #000b);}
+.ashen-app .bonus-intro>.free-spin-count>.raster-number {font-size:inherit;line-height:1;letter-spacing:0;margin:0;}
+.ashen-app .hud-v8 .fit-amount .raster-number {vertical-align:middle;}
+.ashen-app .hud-v8 .has-win .raster-number {filter:drop-shadow(0 0 4px #7ee8e747);}
+.ashen-app .purchase-body .fit-amount .raster-number {filter:drop-shadow(0 2px 3px #0009);}
+.ashen-app .purchase-body .fit-amount[data-compact=true] .raster-number {filter:none;}
+.ashen-app .wheel-v4[data-paused=true] .dial-result>strong>.raster-number {opacity:1;transform:none;}
+.ashen-app .wheel-v4[data-paused=true] .dial-result>small {opacity:1;}
+.ashen-app .wheel-v4[data-paused=true] .dial-result:not(.bonus-result)::before {content:'';position:absolute;inset:26%;background:radial-gradient(ellipse,#070c13 55%,#070c13f5 66%,transparent 74%);}
+@media(max-aspect-ratio:1/1){
+  .ashen-app .wheel-v4 .dial-result>strong {font-size:clamp(48px,18vw,92px);}
+  .ashen-app .wheel-v4 .dial-result>small {top:calc(50% + 11vw);}
+  .ashen-app .celebration-copy h2 {font-size:clamp(38px,11.5vw,54px);letter-spacing:.02em;}
+  .ashen-app .celebration-copy>strong {font-size:clamp(30px,9.2vw,42px);}
+  .ashen-app>.wheel-ceremony-v4 .wheel-tally b {font-size:32px;}
+}
+@media(max-height:480px) and (orientation:landscape){
+  .ashen-app .wheel-v4 .dial-result>strong {font-size:10.6vh;}
+  .ashen-app .wheel-v4 .dial-result>small {top:calc(50% + 6.2vh);}
+  .ashen-app>.wheel-ceremony-v4 .wheel-tally b {font-size:4.9vh;}
+}
+@media(prefers-reduced-motion:reduce){.ashen-app .wheel-v4.settled .dial-result>strong>.raster-number {animation:none;}}

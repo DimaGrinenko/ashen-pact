@@ -1,0 +1,40 @@
+/* V13: finance stays centered independently of the vertical utility rail. */
+.ashen-app .hud-v13 .hud-center{display:flex;align-items:center;justify-content:center;gap:calc(18 * var(--g-unit));height:100%;align-self:stretch;}
+.ashen-app .hud-v13 .hud-money-grid{flex:1;align-items:center;align-self:center;min-width:0;}
+.ashen-app .hud-v13 .balance-block,.ashen-app .hud-v13 .win-block,.ashen-app .hud-v13 .bet-controls{align-self:center;}
+.ashen-app .hud-v13 .balance-block,.ashen-app .hud-v13 .win-block,.ashen-app .hud-v13 .bet-value{position:relative;inset:auto;transform:none;height:calc(var(--hud-amount-size) * 1.1);display:block;}
+.ashen-app .hud-v13 .balance-block>span,.ashen-app .hud-v13 .win-block>span,.ashen-app .hud-v13 .bet-value>span{position:absolute;left:0;right:0;bottom:calc(100% + 4 * var(--g-unit));height:auto;margin:0;text-align:center;}
+.ashen-app .hud-v13 .balance-block>.fit-amount,.ashen-app .hud-v13 .win-block>.fit-amount{height:100%;display:flex;align-items:center;justify-content:center;}
+.ashen-app .hud-v13 .bet-controls{height:calc(var(--hud-amount-size) * 1.1);}
+.ashen-app .hud-v13 .hud-utilities{display:grid;grid-template-columns:var(--hud-utility);grid-template-rows:repeat(3,var(--hud-utility));gap:calc(5 * var(--g-unit));height:auto;width:auto;flex:none;padding:calc(6 * var(--g-unit));border:0 solid transparent;border-image:var(--v12-panel) 110 205 fill / 7px / 0 stretch;}
+.ashen-app .hud-v13 .hud-utilities .spin-options{display:contents;}
+.ashen-app .hud-v13 .menu-button,.ashen-app .hud-v13 .auto-button,.ashen-app .hud-v13 .turbo-button{display:grid;place-items:center;margin:0;}
+.ashen-app .hud-v13 .hud-utilities .pc-icon{width:100%;height:100%;object-fit:contain;}
+.ashen-app .hud-v13 .hud-utilities button:focus-visible{outline:2px solid #8cecff;outline-offset:2px;}
+.ashen-app .hud-v13 .control-bar{overflow:visible;position:relative;}
+.ashen-app .hud-v13 .hud-utilities{position:absolute;right:calc(-1 * (var(--hud-utility) + 22 * var(--g-unit)));top:50%;transform:translateY(-50%);}
+.ashen-app .hud-v13{--hud-utility:calc(23 * var(--g-unit));}
+@media(orientation:landscape) and (min-width:700px){.ashen-app .hud-v13{--hud-utility:23px;}}
+@media(orientation:portrait){
+ .ashen-app .hud-v13{--hud-utility:22px;--hud-amount-size:17px;}
+ .ashen-app .hud-v13 .control-bar{grid-template-columns:var(--hud-action) minmax(0,1fr) var(--hud-action);grid-template-rows:60px minmax(0,1fr);column-gap:10px;row-gap:8px;padding:0;border-image:none;background:none;box-shadow:none;}
+ .ashen-app .hud-v13 .hud-center{display:contents;}
+ .ashen-app .hud-v13 .hud-money-grid{grid-column:1 / -1;grid-row:1;align-self:stretch;width:100%;gap:5px;height:100%;padding:0 12px;border:0 solid transparent;border-image:var(--v12-panel) 110 205 fill / 12px 18px / 0 stretch;}
+ .ashen-app .hud-v13 .hud-utilities{position:relative;inset:auto;transform:none;grid-column:2;grid-row:2;align-self:center;justify-self:center;padding:5px;gap:4px;}
+ .ashen-app .hud-v13 .hud-action-left{grid-column:1;grid-row:2;justify-self:start;}
+ .ashen-app .hud-v13 .hud-action-right{grid-column:3;grid-row:2;justify-self:end;}
+ .ashen-app .hud-v13 .bet-stepper{grid-template-columns:16px minmax(0,1fr) 16px;gap:1px;}
+ .ashen-app .hud-v13 .bet-stepper>button{width:16px;font-size:12px;}
+ .ashen-app .hud-v13 .balance-block strong,.ashen-app .hud-v13 .bet-controls strong,.ashen-app .hud-v13 .win-block strong{font-size:17px;}
+}
+@media(orientation:portrait) and (max-width:340px){
+ .ashen-app .hud-v13{--hud-utility:20px;--hud-amount-size:15px;}
+ .ashen-app .hud-v13 .control-bar{grid-template-rows:52px minmax(0,1fr);column-gap:7px;row-gap:6px;}
+ .ashen-app .hud-v13 .hud-utilities{padding:4px;gap:3px;}
+ .ashen-app .hud-v13 .balance-block strong,.ashen-app .hud-v13 .bet-controls strong,.ashen-app .hud-v13 .win-block strong{font-size:15px;}
+}
+@media(orientation:landscape) and (max-width:699px){
+ .ashen-app .hud-v13{--hud-utility:10px;}
+ .ashen-app .hud-v13 .hud-center{gap:5px;}
+ .ashen-app .hud-v13 .hud-utilities{padding:3px;gap:2px;border-image-width:4px;}
+}

@@ -1,0 +1,104 @@
+/* Real materials; one fixed composition. Illustration is generated raster/Spine. */
+.ashen-app{
+ overflow:clip;
+ --v9-ui-font:AshenSans,Arial,sans-serif;
+ --v12-panel:url('/ashen/ui/v14/panel.webp');--v12-action:url('/ashen/ui/v14/action.webp');
+ --v12-spin:url('/ashen/ui/v14/spin.webp');--v12-bonus:url('/ashen/ui/v14/bonus.webp');
+ --v9-ivory:#e9e1d2;--v10-ivory:#e9e1d2;--v9-muted:#aab4b9;--v10-muted:#aab4b9;
+ --pc-paper:#e9e1d2;--pc-accent:#bacaCE;--cyan:#88bacd;--red:#c26057;
+ color:#e9e1d2;
+}
+.ashen-app .world-scene{background:#10151a}
+.ashen-app .world-base{background-image:url('/ashen/background-v14.webp')}
+.ashen-app .world-bonus{background-image:url('/ashen/bonus-background-v14.webp')}
+/* Smoke carries the destination reveal; plates stay registered to their live layers. */
+.ashen-app .world-scene .world-plate{transition:none;animation:none;transform:none;inset:0}
+.ashen-app .reel-board{background:linear-gradient(#0c1116c9,#0c1116e0),url('/ashen/ui/v14/reel-bed.webp') center/100% 100% no-repeat;box-shadow:inset 0 5px 20px #0008,0 14px 32px #0008}
+.ashen-app .symbol-cell{box-shadow:inset -1px -1px #c5d1d10b}
+.ashen-app .reel-column:last-child .symbol-cell{box-shadow:inset 0 -1px #c5d1d10b}
+.ashen-app .symbol-cell.winning{background:#829fa813}
+.ashen-app .reel-frame-art{filter:drop-shadow(0 3px 5px #000a)}
+.ashen-app .hud-v14 .control-bar{border-image:var(--v12-panel) 55 60 fill / calc(12 * var(--g-unit)) calc(15 * var(--g-unit)) / 0 stretch;box-shadow:0 8px 24px #0007;backdrop-filter:none}
+.ashen-app .hud-v14 .hud-center{padding-inline:calc(30 * var(--g-unit))}
+.ashen-app .hud-v14 .hud-utilities{left:auto;right:calc(var(--hud-inset) + var(--hud-action) + 5 * var(--g-unit));border-image:none;padding:0;background:none;gap:calc(4 * var(--g-unit))}
+.ashen-app .hud-v14 .balance-block>span,.ashen-app .hud-v14 .win-block>span,.ashen-app .hud-v14 .bet-value>span{color:#a6b5bc;text-shadow:none;font-weight:600;letter-spacing:.08em}
+.ashen-app .hud-v14 .balance-block strong,.ashen-app .hud-v14 .bet-controls strong,.ashen-app .hud-v14 .win-block strong{font-weight:700;color:#ebe5d9;text-shadow:0 1px 2px #000}
+.ashen-app .hud-v14 .win-block.has-win strong{color:#a8d7df;text-shadow:0 1px 4px #16303b}
+.ashen-app .hud-v14 .balance-block em{color:#7d8b92}
+.ashen-app .hud-v14 .buy-button,.ashen-app .hud-v14 .spin-button{filter:drop-shadow(0 3px 4px #0008);transition:filter .18s ease}
+.ashen-app .hud-v14 .buy-button .pc-icon,.ashen-app .hud-v14 .spin-button .pc-icon{filter:none}
+.ashen-app .hud-v14 .menu-button,.ashen-app .hud-v14 .auto-button,.ashen-app .hud-v14 .turbo-button{background:#10161bc9!important;border-color:#858b8452!important;border-radius:3px!important;box-shadow:none}
+.ashen-app .hud-v14 .auto-button.active,.ashen-app .hud-v14 .turbo-button.active{background:#2b414c!important;border-color:#a7c3cb!important;box-shadow:inset 0 -1px #a7c3cb}
+.ashen-app .hud-v14 .bet-stepper>button{background:#0c10147d;border-color:#858b843d;border-radius:3px;color:#c5c8c4}
+.ashen-app .game-premise,.ashen-app .message-bar,.ashen-app .message-bar strong{color:#dadbd3;text-shadow:0 1px 3px #000}
+.ashen-app .feature-status,.ashen-app .footer-notes{color:#a3b1b9;text-shadow:0 1px 3px #000}
+.ashen-app .startup-v14 .welcome-portal{display:none}
+.ashen-app .startup-v14 .startup-title{animation:material-arrive-v14 .9s ease-out both}
+.ashen-app .startup-v14 h1 img{animation:none;filter:drop-shadow(0 4px 5px #0009)}
+.ashen-app .startup-v14 .startup-title>.eyebrow{color:#b1c5cd;letter-spacing:.3em;text-shadow:0 1px 3px #000}
+.ashen-app .startup-v14 .startup-title>p{color:#b4aa9c;letter-spacing:.2em;text-shadow:0 1px 3px #000}
+.ashen-app .startup-v14 .startup-character-blue,.ashen-app .startup-v14 .startup-character-red{animation:keeper-materialize-v14 1.4s ease-out both}
+@media(orientation:landscape){.ashen-app .startup-v14 .startup-character{top:10%;height:80%}}
+.ashen-app .startup-v14 .fact-cards article:nth-child(n){border-image:var(--v12-panel) 55 60 fill / 10px 12px / 0 stretch;box-shadow:0 6px 18px #0006;animation:material-arrive-v14 .7s ease-out both}
+.ashen-app .startup-v14 .fact-cards article:nth-child(n){grid-template-columns:minmax(0,1fr);justify-content:stretch;justify-items:stretch}
+.ashen-app .startup-v14 .fact-cards article>*{min-width:0;max-width:100%;text-align:center}
+.ashen-app .startup-v14 .fact-cards article:nth-child(2){animation-delay:.1s}
+.ashen-app .startup-v14 .fact-cards article:nth-child(3){animation-delay:.2s}
+.ashen-app .startup-v14 .fact-cards h3{color:#e2dfd3;font-weight:700;letter-spacing:.06em}
+.ashen-app .startup-v14 .fact-cards p{color:#a8bbc4}
+.ashen-app .startup-v14 .fact-ultimate>b{animation:none}
+.ashen-app .startup-v14 .enter-button{animation:material-arrive-v14 .7s .3s ease-out both}
+.ashen-app .startup-v14.departing{animation:welcome-fade-v14 .65s ease both}
+.ashen-app .game-shell{animation:material-arrive-v14 .65s ease-out both}
+.ashen-app button.primary,.ashen-app button.primary:hover:not(:disabled),.ashen-app .modal button.primary,.ashen-app .modal button.primary:hover:not(:disabled),.ashen-app .welcome button.enter-button.primary,.ashen-app .welcome button.enter-button.primary:hover:not(:disabled),.ashen-app .celebration-copy button.primary,.ashen-app .celebration-copy button.primary:hover:not(:disabled){border-image:var(--v12-action) 30 50 fill / 8px 13px / 0 stretch;color:#e9e1d2;text-shadow:0 1px 2px #000}
+.ashen-app button.secondary,.ashen-app button.secondary:hover:not(:disabled),.ashen-app .modal button.secondary,.ashen-app .modal button.secondary:hover:not(:disabled){border-image:var(--v12-panel) 55 60 fill / 9px 12px / 0 stretch}
+.ashen-app .modal:not(.buy-modal):not(.bonus-intro):not(.deal-modal):not(.deal-wheel-modal){border-image-slice:55 60;border-image-width:13px 16px}
+.ashen-app .modal h2,.ashen-app .modal h3{color:#e4dfd1}
+.ashen-app .modal p{color:#bdc5c7}
+.ashen-app .menu-options button,.ashen-app .autoplay-options button,.ashen-app .language-options button{background:#151b20;border-color:#536068;color:#d8ddd9;border-radius:3px}
+.ashen-app .buy-modal .purchase-cards article.purchase-card{border-image-slice:55 60;border-image-width:10px 13px}
+.ashen-app .buy-modal .purchase-footer{background:#0a1015d9;border-color:#7b868544}
+.ashen-app .buy-modal button.purchase-action,.ashen-app .buy-modal button.purchase-action:hover:not(:disabled),.ashen-app .buy-modal .mode-red button.purchase-action,.ashen-app .buy-modal .mode-red button.purchase-action:hover:not(:disabled),.ashen-app .buy-modal .tier-2 button.purchase-action,.ashen-app .buy-modal .tier-2 button.purchase-action:hover:not(:disabled){border-image:var(--v12-action) 30 50 fill / 7px 11px / 0 stretch}
+.ashen-app .celebration-v14 .celebration-copy h2,.ashen-app .bonus-intro>h2,.ashen-app>.wheel-ceremony-v4 h2{font-family:AshenSerif,Georgia,serif;font-weight:600;color:#e6decd;letter-spacing:.085em;text-shadow:0 2px 7px #000;animation:material-arrive-v14 .8s ease-out both}
+.ashen-app .celebration-v14 .celebration-copy>strong,.ashen-app .bonus-intro>.free-spin-count{animation:award-materialize-v14 .85s .15s ease-out both}
+.ashen-app .celebration-v14[data-tier=max] .celebration-copy h2{color:#f3e2c1;text-shadow:0 2px 8px #000,0 0 20px #cf813d24}
+.ashen-app .bonus-gate-art{opacity:.28}
+.ashen-app .bonus-intro>.spine-view:not(.ceremony-environment){animation:material-arrive-v14 .85s ease-out both}
+.ashen-app .game-stage[data-bonus-stage=charge] .reel-board{filter:brightness(1.03)}
+.ashen-app .game-stage[data-bonus-stage=impact] .symbol-cell,.ashen-app .game-stage[data-bonus-stage=impact] .reel-frame-art{animation:none;opacity:0}
+.ashen-app .game-stage[data-bonus-stage=impact] .reel-board{background:none;box-shadow:none}
+.ashen-app .game-stage[data-bonus-stage=impact] .symbol-cell{box-shadow:none;background:none}
+.reel-destruction{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.ashen-app:has(.bonus-arrival) .message-bar,.ashen-app:has(.bonus-arrival) .feature-status{visibility:hidden}
+.ashen-app .game-stage[data-bonus-stage=reveal] .reels-area{animation:none;opacity:var(--arrival-field-opacity,0);translate:none}
+.ashen-app .bonus-arrival[data-stage] .ritual-stream{opacity:var(--stream-opacity,0);transition:none}
+.ashen-app .bonus-arrival[data-stage] .ritual-impact{opacity:var(--impact-opacity,0);transition:none}
+.ashen-app .bonus-arrival[data-stage] .ritual-caption{opacity:var(--caption-opacity,0);animation:none}
+.ashen-app .bonus-intro{animation:bonus-intro-settle-v14 .65s cubic-bezier(.2,.7,.25,1) both}
+.ashen-app .modal-backdrop:has(.bonus-intro){animation:bonus-backdrop-settle-v14 .65s ease-out both}
+.ashen-app.presentation-paused .modal-backdrop:has(.bonus-intro),.ashen-app.presentation-paused .bonus-intro,.ashen-app.presentation-paused .bonus-intro *{animation-play-state:paused!important}
+@keyframes bonus-intro-settle-v14{from{opacity:0;translate:0 6px}to{opacity:1;translate:0 0}}
+@keyframes bonus-backdrop-settle-v14{from{opacity:0}to{opacity:1}}
+@keyframes material-arrive-v14{from{opacity:0;translate:0 8px}to{opacity:1;translate:0 0}}
+@keyframes keeper-materialize-v14{from{opacity:0;translate:0 6px}to{opacity:1;translate:0 0}}
+@keyframes welcome-fade-v14{from{opacity:1}to{opacity:0}}
+@keyframes award-materialize-v14{from{opacity:0;scale:.96;translate:0 8px}to{opacity:1;scale:1;translate:0 0}}
+@keyframes relic-fracture-v14{0%{transform:none;opacity:1;filter:brightness(1)}18%{transform:translateY(-2px);opacity:1;filter:brightness(1.25)}55%{opacity:.8}100%{transform:translate(calc(var(--break-x) * .45),calc(var(--break-y) * .55)) rotate(calc(var(--break-turn) * .32)) scale(.88);opacity:0;filter:brightness(.65)}}
+@keyframes frame-fade-v14{0%,25%{opacity:1;transform:none}100%{opacity:0;transform:translateY(5px)}}
+@keyframes field-reveal-v14{from{opacity:0;translate:0 8px}to{opacity:1;translate:0 0}}
+@media(orientation:portrait){
+ .ashen-app .hud-v14 .hud-money-grid{border-image:var(--v12-panel) 55 60 fill / 10px 12px / 0 stretch}
+ .ashen-app .hud-v14 .hud-center{padding:0}
+ .ashen-app .hud-v14 .hud-utilities{position:absolute;left:auto;right:calc(var(--hud-action) + 14px);top:calc(60px + 8px + (100% - 68px) / 2);transform:translateY(-50%);gap:4px;padding:0;grid-column:auto;grid-row:auto}
+ .ashen-app .character-stage.character-stage-blue,.ashen-app .character-stage.character-stage-red{top:18px;height:170px;clip-path:none;mask-image:none}
+ .ashen-app .character-stage>.spine-view{top:-10px;mask-image:linear-gradient(#000 100px,transparent 180px)}
+ .ashen-app .startup-v14 .fact-cards article:nth-child(n){border-image-width:7px 8px}
+}
+@media(orientation:portrait) and (max-width:340px){.ashen-app .hud-v14 .hud-utilities{top:calc(52px + 6px + (100% - 58px) / 2);right:calc(var(--hud-action) + 12px)}}
+@media(orientation:landscape){.ashen-app .character-stage.character-stage-blue,.ashen-app .character-stage.character-stage-red{top:14%;height:89%}}
+@media(orientation:landscape) and (max-width:699px){
+ .ashen-app .hud-v14 .hud-utilities{gap:2px}
+ .ashen-app .startup-v14 .fact-cards article:nth-child(n){border-image-width:5px 6px}
+}
+.ashen-app.reduced-motion *,.ashen-app.reduced-motion *::before,.ashen-app.reduced-motion *::after{animation:none!important;transition:none!important}
+@media(prefers-reduced-motion:reduce){.ashen-app *,.ashen-app *::before,.ashen-app *::after{animation:none!important;transition:none!important}}

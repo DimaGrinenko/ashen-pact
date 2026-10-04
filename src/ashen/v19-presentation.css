@@ -1,0 +1,159 @@
+/* V19 illustrated presentation. Raster materials provide the artwork; these
+   transforms stage it without shifting control targets or the shared HUD. */
+.ashen-app {--cyan:#69d7f6;--red:#f07b85;--pc-accent:#a9e5f6;}
+/* The complete control tray uses the same painted enamel and silver as the
+   reel frame. Nine-slicing preserves its corners without altering hit boxes. */
+.ashen-app .pact-controls .control-bar {border:0 solid transparent;border-image:var(--v12-panel) 48 60 fill / 6px 9px / 0 stretch;background:#08162c;background-blend-mode:normal;box-shadow:0 5px 12px #03071bcc;}
+.ashen-app .pact-controls .pact-money {border-inline-color:#adc8e43b;}
+.ashen-app .pact-controls .pact-label {color:#c1def1;text-shadow:0 1px 2px #061021;}
+.ashen-app .pact-controls .pact-label em {color:#99b9d4;}
+.ashen-app .pact-controls .fit-amount {color:#fff1d4;}
+.ashen-app .pact-controls .win-block .fit-amount {color:#cde8f3;}
+.ashen-app .pact-controls .has-win .fit-amount {color:#92f0e8;}
+.ashen-app .pact-controls .pact-utilities button {background:#081c38 url('/ashen/ui/v14/reel-bed.webp') center/160px auto no-repeat!important;border-color:#8baec25e!important;color:#d1e9f7;box-shadow:inset 0 1px #d8edff29,inset 0 -2px #030a2199!important;}
+.ashen-app .pact-controls .pact-utilities button:hover:not(:disabled) {border-color:#c2e6f0!important;background-color:#123451!important;color:#fff0d5;}
+.ashen-app .pact-controls .pact-utilities button.active {background:#17667f!important;border-color:#9df0e5!important;color:#f1fff8;box-shadow:inset 0 -2px #80dbe0!important;}
+.ashen-app .pact-controls .bet-selector {background:#0a23435c;box-shadow:inset 0 -1px #9dcfe660;}
+.ashen-app .pact-controls .pact-bet-step {background:#102b47;border-color:#88b3c35c;color:#e9f6fb;}
+.ashen-app .startup-v14 .startup-title>.eyebrow {color:#b5edf8;letter-spacing:.23em;}
+.ashen-app .startup-v14 .startup-title>p {color:#f0d9c0;}
+.ashen-app .startup-v14 .startup-title {animation:none;}
+.ashen-app .startup-v14 h1 img {opacity:0;animation:none;filter:drop-shadow(0 5px 4px #060715aa);}
+.ashen-app .startup-v14 h1 img[data-render-ready=true] {opacity:1;animation:v19-title-enter .7s cubic-bezier(.18,.72,.23,1) both;}
+.ashen-app .startup-v14 .welcome-portal {display:block;top:28%;width:min(54vw,68dvh);opacity:.4;z-index:1;}
+.ashen-app .startup-v14 .welcome-portal>.spine-view {opacity:0;}
+.ashen-app .startup-v14 .welcome-portal>.spine-view[data-render-ready=true] {opacity:1;animation:v19-keeper-arrive .8s ease-out both;}
+.ashen-app .startup-v14 .startup-character-blue,.ashen-app .startup-v14 .startup-character-red {opacity:0;animation:none;filter:none;}
+/* Start the two entrances together only after both canvases have real pixels. */
+.ashen-app .startup-v14:has(.startup-character-blue [data-render-ready=true]):has(.startup-character-red [data-render-ready=true]) .startup-character {opacity:1;animation:v19-keeper-arrive .85s cubic-bezier(.2,.7,.25,1) both;}
+.ashen-app .startup-v14 .fact-cards article:nth-child(n) {background:none;border-image:var(--v12-panel) 55 60 fill / 10px 12px / 0 stretch;border-radius:0;box-shadow:0 6px 12px #03051370;opacity:0;animation:none;}
+.ashen-app .startup-v14.assets-ready .fact-cards article:nth-child(n) {opacity:1;animation:v19-fact-enter .7s cubic-bezier(.2,.8,.3,1) both;}
+.ashen-app .startup-v14.assets-ready .fact-cards article:nth-child(2) {animation-delay:.1s;}
+.ashen-app .startup-v14.assets-ready .fact-cards article:nth-child(3) {animation-delay:.2s;}
+.ashen-app .startup-v14 .fact-cards h3 {color:#fff0d6;letter-spacing:.045em;}
+.ashen-app .startup-v14 .fact-cards p {color:#c3d9e5;}
+.ashen-app .startup-v14 .fact-ultimate>b {color:#fff0ce;text-shadow:0 2px #111830;}
+/* A loaded welcome screen never hides the available primary action. */
+.ashen-app .startup-v14 .enter-button {animation:none;opacity:1;translate:none;line-height:1.2;transition:filter .18s,transform .18s;}
+.ashen-app .startup-v14 .welcome-audio {animation:none;opacity:1;color:#d8e6ef;}
+.ashen-app .startup-v14:not(.assets-ready) .enter-button,.ashen-app .startup-v14:not(.assets-ready) .welcome-audio {visibility:hidden;}
+.ashen-app .startup-v14 .welcome-action-area {position:relative;min-height:0;}
+.ashen-app .startup-v14 .welcome-action-area>.loading-block {position:absolute;inset:0;width:100%;height:100%;margin:0;padding:4px 2px;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto 5px;gap:8px 12px;align-content:center;text-align:left;}
+.ashen-app .startup-v14 .loading-block[hidden] {display:none;}
+.ashen-app .startup-v14 .loading-block>span {font-size:10px;line-height:1.2;letter-spacing:.1em;color:#d2e5ef;}
+.ashen-app .startup-v14 .loading-block>small {grid-column:2;grid-row:1;margin:0;font-size:10px;line-height:1.2;color:#9eddf2;}
+.ashen-app .startup-v14 .loading-block>.loading-track {grid-column:1/-1;grid-row:2;margin:0;}
+.ashen-app .startup-v14 .loading-block.has-error {top:auto;bottom:0;height:auto;min-height:100%;background:#081225;padding:12px;}
+.ashen-app .startup-v14 .loading-block.has-error>button {grid-column:1/-1;min-height:44px;}
+.ashen-app .startup-v14.departing {animation:v19-welcome-exit .65s ease-in both;pointer-events:none;}
+.ashen-app .loading-track {height:5px;background:#0d1a30;box-shadow:inset 0 0 0 1px #83b1c445;}
+.ashen-app .loading-track i {width:100%;transform-origin:left center;background:#81dff2;box-shadow:none;transition:transform .2s linear;}
+.ashen-app .modal h2,.ashen-app .modal h3 {color:#ffeed3;}
+.ashen-app .modal p {color:#c8d8e4;}
+/* Legacy header icon classes remain QA/accessibility hooks on these menu rows.
+   Reset their old icon-only presentation so both words and icons stay visible. */
+.ashen-app .menu-options button {background:#102139!important;border-radius:3px!important;font-size:14px!important;box-shadow:none!important;}
+.ashen-app .menu-options button:hover:not(:disabled) {background:#19364e!important;}
+.ashen-app .modal .raster-modal-title {display:flex;align-items:center;justify-content:center;text-shadow:none;}
+.ashen-app .modal .raster-modal-title>img {display:block;width:100%;height:100%;object-fit:contain;max-width:100%;}
+
+/* Bonus arrivals: title resolves first, seal and count settle together, then
+   remain quiet enough to read. The CTA stays on its own 44px touch row. */
+.ashen-app .modal.bonus-intro {
+ width:min(100%,760px);height:auto;min-height:0;max-height:calc(100dvh - 24px);
+ display:grid;grid-template-columns:repeat(2,minmax(0,240px));
+ grid-template-rows:14px clamp(72px,21dvh,150px) clamp(100px,29dvh,220px) auto 48px;
+ gap:12px 24px;align-items:center;align-content:center;justify-content:center;
+ padding:18px 24px;overflow:visible;isolation:isolate;
+ animation:v19-ceremony-enter .7s cubic-bezier(.2,.7,.25,1) both;
+}
+.ashen-app .bonus-intro>.eyebrow {grid-column:1/-1;grid-row:1;color:#d1e3ed;font-size:10px;letter-spacing:.2em;}
+.ashen-app .bonus-intro>h2.raster-modal-title {grid-column:1/-1;grid-row:2;width:100%;height:100%;max-width:510px;margin:0;padding:0;justify-self:center;animation:v19-bonus-title .95s cubic-bezier(.16,.72,.23,1) both;}
+.ashen-app .bonus-intro>.spine-view:not(.ceremony-environment) {grid-column:1;grid-row:3;align-self:center;width:100%;height:100%;margin:0;filter:none;animation:v19-seal-enter 1s cubic-bezier(.16,.7,.23,1) both;}
+.ashen-app .bonus-intro>.free-spin-count {grid-column:2;grid-row:3;font-size:clamp(74px,14dvh,136px);margin:0;line-height:1;animation:v19-count-enter .9s .1s cubic-bezier(.16,.72,.23,1) both;filter:none;}
+.ashen-app .bonus-intro>.free-spin-count>.raster-number {font-size:inherit;margin:0;line-height:1;}
+.ashen-app .bonus-intro>.free-spin-count>span:not(.raster-number) {font-size:11px;line-height:1.35;margin:14px 0 0;letter-spacing:.14em;color:#ecdfcf;}
+.ashen-app .bonus-intro>.bonus-rule {grid-column:1/-1;grid-row:4;font-size:11px;line-height:1.4;margin:0;letter-spacing:.06em;color:#c6e4f1;animation:v19-rule-enter .6s .3s both;}
+.ashen-app .bonus-intro.bonus-tier-2>.bonus-rule,.ashen-app .bonus-intro.bonus-tier-3>.bonus-rule {color:#f1c8d1;}
+.ashen-app .bonus-intro>.primary {grid-column:1/-1;grid-row:5;justify-self:center;width:min(100%,300px);min-width:0;min-height:48px;height:48px;padding:10px 16px;margin:0;font-size:13px;line-height:1.3;animation:none;opacity:1;translate:none;transform:none;}
+.ashen-app .bonus-intro>.primary:disabled {opacity:.55;}
+.ashen-app .bonus-intro .bonus-gate-art {inset:6% -12% -8%;opacity:.44;z-index:-1;}
+.ashen-app .bonus-intro>.ceremony-environment {opacity:.2;filter:none;pointer-events:none;}
+.ashen-app .modal-backdrop:has(.bonus-intro) {background:#050819b8;backdrop-filter:none;}
+
+.ashen-app .ritual-choice-card {--ritual-color:#99e8ff;border-image:var(--v12-panel) 55 60 fill / 10px 12px / 0 stretch;}
+.ashen-app .ritual-choice-tier-2 {--ritual-color:#ffc3c2;}
+.ashen-app .ritual-choice-tier-3 {--ritual-color:#e3bdff;}
+.ashen-app .ritual-choice-plate {object-position:50% 30%;opacity:1;}
+.ashen-app .ritual-choice-art::after {background:none;box-shadow:inset 0 -25px 20px -20px #091326;}
+.ashen-app .ritual-choice-copy {background:#0712259e;}
+.ashen-app .ritual-choice-copy h3 {color:#fff0d4!important;}
+.ashen-app .ritual-choice-copy ul {color:#c2d7e5;}
+.ashen-app .ritual-choice-cost>.fit-amount {color:#fff1d9;}
+
+@keyframes v19-title-enter {from{opacity:0;translate:0 -12px;scale:.95}to{opacity:1;translate:0 0;scale:1}}
+@keyframes v19-logo-drift {0%,100%{translate:0 0}50%{translate:0 -3px}}
+@keyframes v19-keeper-arrive {from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
+@keyframes v19-fact-enter {from{opacity:0;translate:0 14px}to{opacity:1;translate:0 0}}
+@keyframes v19-welcome-exit {to{opacity:0;translate:0 -8px}}
+@keyframes v19-ceremony-enter {from{opacity:0;translate:0 8px}to{opacity:1;translate:0 0}}
+@keyframes v19-bonus-title {0%{opacity:0;translate:0 -18px;scale:.8}65%{opacity:1;translate:0 2px;scale:1.035}100%{opacity:1;translate:0 0;scale:1}}
+@keyframes v19-seal-enter {0%{opacity:0;translate:-24px 4px;rotate:-9deg;scale:.8}70%{opacity:1;translate:1px 0;rotate:1deg;scale:1.02}100%{opacity:1;translate:0 0;rotate:0deg;scale:1}}
+@keyframes v19-count-enter {0%{opacity:0;translate:18px 6px;scale:.8}70%{opacity:1;translate:0 -1px;scale:1.035}100%{opacity:1;translate:0 0;scale:1}}
+@keyframes v19-rule-enter {from{opacity:.3;translate:0 4px}to{opacity:1;translate:0 0}}
+
+@media(orientation:portrait) {
+ /* Both full-body Keepers belong to the stage above the field. Their canvas
+    uses its own complete rig bounds, without a bust crop or robe mask. */
+ .ashen-app {--g-header:clamp(128px,20dvh,156px);--v19-mobile-edge:max(8px,env(safe-area-inset-left),env(safe-area-inset-right));}
+ .ashen-app .game-shell {padding-inline:var(--v19-mobile-edge);}
+ .ashen-app .game-stage {align-items:flex-start;}
+ .ashen-app .reels-area {width:min(88vw,calc((100cqh - 4px) / 1.04));margin-top:calc(min(88vw,calc((100cqh - 4px) / 1.04)) * .12 + 2px);}
+ .ashen-app .character-stage.character-stage-blue,.ashen-app .character-stage.character-stage-red {top:env(safe-area-inset-top);height:calc(var(--g-header) - 14px);width:30vw;overflow:visible;clip-path:none;mask-image:none;}
+ .ashen-app .character-stage.character-stage-blue {left:0;right:auto;}
+ .ashen-app .character-stage.character-stage-red {right:0;left:auto;}
+ .ashen-app .character-stage>.spine-view {top:0;left:0;width:100%;height:100%;mask-image:none;}
+ .ashen-app .wordmark {top:4px;height:calc(var(--g-header) - 39px);width:126px;z-index:4;}
+ .ashen-app .game-header .header-center {left:0;top:auto;bottom:3px;width:100%;max-width:none;z-index:4;}
+ .ashen-app .header-center .game-premise {font-size:8px;line-height:12px;letter-spacing:.015em;}
+ .ashen-app .game-header .header-right {display:none;}
+ .ashen-app .pact-controls.hud-dock {width:calc(100% + var(--v19-mobile-edge) * 2);margin-inline:calc(var(--v19-mobile-edge) * -1);}
+ .ashen-app .pact-controls .control-bar {border-radius:0;padding-left:max(10px,env(safe-area-inset-left));padding-right:max(10px,env(safe-area-inset-right));}
+ .ashen-app .startup-v14 .welcome-portal {top:23%;width:92vw;opacity:.32;}
+ .ashen-app .startup-v14 .fact-cards article:nth-child(n) {border-image-width:7px 9px;}
+ .ashen-app .modal.bonus-intro {width:100%;padding:20px 12px;grid-template-columns:repeat(2,minmax(0,160px));grid-template-rows:14px min(29vw,128px) min(42vw,175px) auto 48px;gap:16px 4px;max-height:calc(100dvh - 24px);}
+ .ashen-app .bonus-intro>.eyebrow {font-size:10px;}
+ .ashen-app .bonus-intro>.free-spin-count {font-size:clamp(68px,23vw,104px);}
+ .ashen-app .bonus-intro>.free-spin-count>span:not(.raster-number) {font-size:9px;letter-spacing:.08em;margin-top:10px;}
+ .ashen-app .bonus-intro>.bonus-rule {font-size:10px;max-width:270px;justify-self:center;}
+ .ashen-app .bonus-intro>.primary {width:min(100%,280px);}
+ .ashen-app .bonus-intro .bonus-gate-art {inset:0 -20% -5%;}
+ .ashen-app .ritual-choice-plate {object-position:50% 29%;}
+}
+@media(orientation:landscape) and (max-height:480px) {
+ .ashen-app .menu-options button {font-size:12px!important;}
+ .ashen-app .startup-v14 .fact-cards article:nth-child(n) {border-image-width:5px 7px;}
+ .ashen-app .startup-v14 .welcome-portal {top:27%;width:62dvh;opacity:.3;}
+ .ashen-app .modal.bonus-intro {padding:8px 16px;grid-template-columns:repeat(2,minmax(0,155px));grid-template-rows:12px min(19dvh,76px) min(27dvh,115px) auto 44px;gap:6px 18px;max-height:calc(100dvh - 16px);}
+ .ashen-app .bonus-intro>.eyebrow {font-size:9px;}
+ .ashen-app .bonus-intro>.free-spin-count {font-size:70px;}
+ .ashen-app .bonus-intro>.free-spin-count>span:not(.raster-number) {font-size:9px;margin-top:6px;}
+ .ashen-app .bonus-intro>.bonus-rule {font-size:9px;}
+ .ashen-app .bonus-intro>.primary {height:44px;min-height:44px;width:230px;font-size:11px;}
+}
+/* At 400x225 the ceremony is a compact landscape card, never tiny controls. */
+@media(orientation:landscape) and (max-height:280px) {
+ .ashen-app .startup-v14 .welcome-action-area button.enter-button.primary {min-height:44px;font-size:10px!important;padding:8px 10px!important;}
+ .ashen-app .menu-options button {font-size:9px!important;}
+ .ashen-app .modal.bonus-intro {grid-template-columns:88px minmax(0,210px);grid-template-rows:10px 62px auto 44px;column-gap:12px;row-gap:5px;padding:8px 12px;}
+ .ashen-app .bonus-intro>.eyebrow {grid-column:2;grid-row:1;font-size:8px;}
+ .ashen-app .bonus-intro>h2.raster-modal-title {grid-column:2;grid-row:2;}
+ .ashen-app .bonus-intro>.spine-view:not(.ceremony-environment) {grid-column:1;grid-row:1/3;width:88px;height:80px;}
+ .ashen-app .bonus-intro>.free-spin-count {grid-column:1;grid-row:3/5;font-size:44px;}
+ .ashen-app .bonus-intro>.free-spin-count>span:not(.raster-number) {font-size:8px;margin-top:5px;}
+ .ashen-app .bonus-intro>.bonus-rule {grid-column:2;grid-row:3;font-size:8px;letter-spacing:.02em;}
+ .ashen-app .bonus-intro>.primary {grid-column:2;grid-row:4;width:100%;font-size:11px;}
+}
+.ashen-app.presentation-paused .startup-v14 *,.ashen-app.presentation-paused .bonus-intro * {animation-play-state:paused!important;}
+.ashen-app.reduced-motion .startup-v14 *,.ashen-app.reduced-motion .bonus-intro * {animation:none!important;transition:none!important;}
+@media(prefers-reduced-motion:reduce) {.ashen-app .startup-v14 *,.ashen-app .bonus-intro * {animation:none!important;transition:none!important;}}

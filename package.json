@@ -1,0 +1,33 @@
+{
+  "name": "ashen-pact",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "@esotericsoftware/spine-canvas": "~4.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "tsx": "^4.23.13",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.2",
+    "@tailwindcss/vite": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --import tsx --test src/ashen/engine.test.ts src/ashen/rgs.test.ts src/ashen/useRgsSession.test.ts src/ashen/i18n.test.ts src/ashen/countUpValue.test.ts src/ashen/animationClock.test.ts",
+    "math:test": "node --import tsx --test math/ashen/statistics.test.ts math/ashen/optimize.test.ts math/ashen/candidates.test.ts math/ashen/verify-books.test.ts math/ashen/registration.test.ts",
+    "typecheck": "tsc -b"
+  }
+}
